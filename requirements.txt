@@ -16,3 +16,4 @@ pillow==11.3.0
 # Environment / secrets management
 python-decouple==3.8
 python-dotenv==1.2.2
+dj-database-url
