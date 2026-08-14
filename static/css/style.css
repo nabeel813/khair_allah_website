@@ -351,6 +351,19 @@ Hero
     z-index:2;
 
 }
+body.arabic .hero h1{
+
+    letter-spacing:0;
+
+    word-spacing:3px;
+
+}
+
+body.arabic .hero p{
+
+    line-height:2;
+
+}
 
 .hero-container{
 
@@ -867,7 +880,51 @@ Mobile Menu
 }
 
 }
+/* ===========================================
+   Arabic Hero Layout
+=========================================== */
 
+body.arabic .hero-content{
+
+    max-width:680px;
+
+    margin-left:auto;
+
+    margin-right:8%;
+
+    align-items:flex-end;
+
+    text-align:right;
+
+}
+
+body.arabic .hero h1{
+
+    font-size:56px;
+
+    line-height:1.32;
+
+}
+
+body.arabic .hero p{
+
+    max-width:100%;
+
+    text-align:right;
+
+}
+
+body.arabic .hero-buttons{
+
+    justify-content:flex-end;
+
+}
+
+body.arabic .hero-badge{
+
+    align-self:flex-end;
+
+}
 /*=================================================
 ABOUT PREVIEW
 =================================================*/
@@ -5537,5 +5594,11 @@ LOADER
     .logistics-trust-content h2 {
         font-size: 26px;
     }
+
+}
+
+body.arabic .hero-background{
+
+    background-position:25% center;
 
 }
