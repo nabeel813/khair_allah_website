@@ -1,0 +1,859 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Our Clients | Khair Allah Medical Tourism</title>
+
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+</head>
+
+<body>
+
+    <!-- =========================================
+         NAVBAR
+    ========================================== -->
+
+  <nav class="navbar">
+
+    <div class="container nav-wrapper">
+       <a href="{% url 'home' %}" class="logo">
+
+    <img src="{% static 'assets/logo.png' %}" alt="Khair Allah Logo" class="logo-mark">
+    <span class="logo-text">
+        <span class="logo-title">Khair Allah</span>
+        <span class="logo-subtitle">Medical &amp; Tourism</span>
+    </span>
+
+
+     </a>
+        
+        <ul class="nav-menu">
+
+            <li><a href="{% url 'home' %}" class="active">Home</a></li>
+
+            <li><a href="{% url 'about' %}">About</a></li>
+            <li><a href="{% url 'medical' %}">Medical</a></li>
+            <li><a href="{% url 'tourism' %}">Tourism</a></li>
+            <li><a href="{% url 'logistics' %}" data-i18n="Logistics">Logistics</a></li>
+             <li><a href="{% url 'clients' %}">Clients</a></li>
+            <li><a href="{% url 'terms' %}">Terms & Conditions</a></li>
+            
+
+        </ul>
+
+        <a href="https://wa.me/919895099669" class="nav-button" target="_blank" rel="noopener noreferrer">
+
+            <i class="fa-brands fa-whatsapp"></i>
+
+            Plan Your Visit
+
+        </a>
+
+        <button class="mobile-toggle">
+
+            <i class="fa-solid fa-bars"></i>
+
+        </button>
+
+    </div>
+
+        <div class="language-switcher" aria-label="Language selection">
+
+            <i class="fa-solid fa-globe" aria-hidden="true"></i>
+            <button id="lang-en" class="lang-btn active" type="button">EN</button>
+
+            <span aria-hidden="true">|</span>
+
+            <button id="lang-ar" class="lang-btn" type="button">العربية</button>
+
+        </div>
+
+    </div>
+
+</nav>
+
+
+
+    <!-- =========================================
+         HERO
+    ========================================== -->
+
+    <section class="clients-hero">
+
+        <div class="clients-overlay"></div>
+
+        <div class="container clients-hero-content">
+
+            <span class="hero-badge"
+                  data-i18n="clients.hero.tag">
+
+                OUR CLIENTS
+
+            </span>
+
+
+            <h1>
+
+                <span data-i18n="clients.hero.every_smile">
+                    Every Smile
+                </span>
+
+                <br>
+
+                <span data-i18n="clients.hero.tells_story">
+                    Tells A Story
+                </span>
+
+                <br>
+
+                <span data-i18n="clients.hero.of">
+                    Of
+                </span>
+
+                <span data-i18n="clients.hero.trust">
+                    Trust
+                </span>
+
+            </h1>
+
+
+            <p data-i18n="clients.hero.description">
+
+                We are honored to serve clients from around the world.
+                Every successful journey reflects our commitment to quality,
+                compassion, and excellence.
+
+            </p>
+
+
+            <div class="hero-buttons">
+
+                <a href="#gallery"
+                   class="btn-primary"
+                   data-i18n="clients.hero.gallery">
+
+                    View Gallery
+
+                </a>
+
+
+                <a href="{% url 'contact' %}"
+                   class="btn-secondary"
+                   data-i18n="Contact Us">
+
+                    Contact Us
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================================
+         ABOUT CLIENTS
+    ========================================== -->
+
+    <section class="clients-about">
+
+        <div class="container">
+
+            <div class="clients-about-grid">
+
+
+                <!-- IMAGE -->
+
+                <div class="clients-about-image reveal">
+
+                    <img
+                        src="{% static 'assets/about-company.jpg' %}"
+                        alt="Khair Allah Medical Tourism">
+
+                </div>
+
+
+                <!-- CONTENT -->
+
+                <div class="clients-about-content reveal">
+
+                    <span class="section-tag"
+                          data-i18n="clients.about.tag">
+
+                        OUR CLIENTS
+
+                    </span>
+
+
+                    <h2 data-i18n="clients.about.title">
+
+                        Building Relationships Through Care & Trust
+
+                    </h2>
+
+
+                    <p data-i18n="clients.about.description">
+
+                        At Khair Allah Medical Tourism, every client is treated
+                        with professionalism, respect, and personalized attention.
+
+                        From the first consultation until returning home,
+                        our team ensures every journey is comfortable,
+                        transparent, and stress-free.
+
+                    </p>
+
+
+                    <div class="client-features">
+
+
+                        <div>
+
+                            <i class="fa-solid fa-check"></i>
+
+                            <span data-i18n="clients.feature.personalized">
+
+                                Personalized Medical Assistance
+
+                            </span>
+
+                        </div>
+
+
+                        <div>
+
+                            <i class="fa-solid fa-check"></i>
+
+                            <span data-i18n="clients.feature.international">
+
+                                International Client Support
+
+                            </span>
+
+                        </div>
+
+
+                        <div>
+
+                            <i class="fa-solid fa-check"></i>
+
+                            <span data-i18n="clients.feature.travel">
+
+                                Complete Travel Coordination
+
+                            </span>
+
+                        </div>
+
+
+                        <div>
+
+                            <i class="fa-solid fa-check"></i>
+
+                            <span data-i18n="clients.feature.partners">
+
+                                Trusted Healthcare Partners
+
+                            </span>
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================================
+         CLIENT GALLERY
+    ========================================== -->
+
+    <section class="client-gallery" id="gallery">
+
+        <div class="container">
+
+
+            <div class="section-heading reveal">
+
+                <span class="section-tag"
+                      data-i18n="clients.gallery.tag">
+
+                    CLIENT GALLERY
+
+                </span>
+
+
+                <h2 data-i18n="clients.gallery.title">
+
+                    Moments That Matter
+
+                </h2>
+
+
+                <p data-i18n="clients.gallery.description">
+
+                    A collection of memorable moments shared with our valued
+                    clients throughout their healthcare journey in Kerala.
+
+                </p>
+
+            </div>
+
+
+            <!-- FILTER -->
+
+            <div class="gallery-filter reveal">
+
+                <button
+                    class="active"
+                    data-i18n="clients.gallery.all">
+
+                    All
+
+                </button>
+
+            </div>
+
+
+            <!-- GALLERY -->
+
+            <div class="gallery-grid">
+
+                {% if client_photos %}
+                    {% for photo in client_photos %}
+                        <div class="gallery-item reveal">
+                            <img
+                                src="{{ photo.image.url }}"
+                                alt="{% if photo.name %}{{ photo.name }}{% else %}Client{% endif %}">
+                        </div>
+                    {% endfor %}
+                {% else %}
+                    {% for i in "12345678" %}
+                        <div class="gallery-item reveal">
+                            <img
+                                src="{% static 'assets/clients/placeholder.jpg' %}"
+                                alt="Client">
+                        </div>
+                    {% endfor %}
+                {% endif %}
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================
+         CLIENT JOURNEY
+    ========================================== -->
+
+    <section class="client-journey">
+
+        <div class="container">
+
+
+            <div class="section-heading reveal">
+
+                <span class="section-tag"
+                      data-i18n="clients.journey.tag">
+
+                    CLIENT JOURNEY
+
+                </span>
+
+
+                <h2 data-i18n="clients.journey.title">
+
+                    Your Journey With Us
+
+                </h2>
+
+
+                <p data-i18n="clients.journey.description">
+
+                    From your first consultation to your safe return home,
+                    we are with you every step of the way.
+
+                </p>
+
+            </div>
+
+
+            <div class="journey-grid">
+
+
+                <!-- CONSULTATION -->
+
+                <div class="journey-card reveal">
+
+                    <div class="journey-icon">
+
+                        <img
+                            src="{% static 'assets/journey/consult.jpg' %}"
+                            alt="Consultation"
+                            class="journey-img">
+
+                    </div>
+
+
+                    <h3 data-i18n="clients.journey.consultation.title">
+
+                        Consultation
+
+                    </h3>
+
+
+                    <p data-i18n="clients.journey.consultation.text">
+
+                        Share your medical reports and discuss your treatment
+                        options with our experienced coordinators.
+
+                    </p>
+
+                </div>
+
+
+                <!-- TRAVEL PLANNING -->
+
+                <div class="journey-card reveal">
+
+                    <div class="journey-icon">
+
+                        <img
+                            src="{% static 'assets/journey/trvlpln.jpg' %}"
+                            alt="Travel Planning"
+                            class="journey-img">
+
+                    </div>
+
+
+                    <h3 data-i18n="clients.journey.travel.title">
+
+                        Travel Planning
+
+                    </h3>
+
+
+                    <p data-i18n="clients.journey.travel.text">
+
+                        We arrange travel guidance, visa support,
+                        accommodation, and airport reception.
+
+                    </p>
+
+                </div>
+
+
+                <!-- TREATMENT -->
+
+                <div class="journey-card reveal">
+
+                    <div class="journey-icon">
+
+                        <img
+                            src="{% static 'assets/journey/trtmnt.jpg' %}"
+                            alt="Treatment"
+                            class="journey-img">
+
+                    </div>
+
+
+                    <h3 data-i18n="clients.journey.treatment.title">
+
+                        Treatment
+
+                    </h3>
+
+
+                    <p data-i18n="clients.journey.treatment.text">
+
+                        Receive quality healthcare from our trusted hospital
+                        partners in Kerala.
+
+                    </p>
+
+                </div>
+
+
+                <!-- RECOVERY -->
+
+                <div class="journey-card reveal">
+
+                    <div class="journey-icon">
+
+                        <img
+                            src="{% static 'assets/journey/recovery.jpg' %}"
+                            alt="Recovery"
+                            class="journey-img">
+
+                    </div>
+
+
+                    <h3 data-i18n="clients.journey.recovery.title">
+
+                        Recovery
+
+                    </h3>
+
+
+                    <p data-i18n="clients.journey.recovery.text">
+
+                        Continue your recovery comfortably with dedicated
+                        support and follow-up assistance.
+
+                    </p>
+
+                </div>
+
+
+                <!-- TOURISM -->
+
+                <div class="journey-card reveal">
+
+                    <div class="journey-icon">
+
+                        <img
+                            src="{% static 'assets/journey/trvlpln.jpg' %}"
+                            alt="Tourism"
+                            class="journey-img">
+
+                    </div>
+
+
+                    <h3 data-i18n="clients.journey.tourism.title">
+
+                        Tourism
+
+                    </h3>
+
+
+                    <p data-i18n="clients.journey.tourism.text">
+
+                        Explore Kerala's beautiful destinations while enjoying
+                        a relaxing recovery experience.
+
+                    </p>
+
+                </div>
+
+
+                <!-- RETURN HOME -->
+
+                <div class="journey-card reveal">
+
+                    <div class="journey-icon">
+
+                        <img
+                            src="{% static 'assets/journey/returnhome.jpg' %}"
+                            alt="Return Home"
+                            class="journey-img">
+
+                    </div>
+
+
+                    <h3 data-i18n="clients.journey.return.title">
+
+                        Return Home
+
+                    </h3>
+
+
+                    <p data-i18n="clients.journey.return.text">
+
+                        Travel home safely with post-treatment guidance and
+                        continued support whenever required.
+
+                    </p>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================================
+         FOOTER
+    ========================================== -->
+
+    <footer class="footer">
+
+        <div class="container">
+
+            <div class="footer-grid">
+
+
+                <!-- COMPANY -->
+
+                <div class="footer-column">
+
+                    <img
+                        src="{% static 'assets/about-company.jpg' %}"
+                        alt="Khair Allah Medical Tourism"
+                        class="footer-logo">
+
+
+                    <p data-i18n="footer-desc">
+
+                        Khair Allah Medical Tourism connects international
+                        clients with trusted hospitals and healthcare services
+                        in Kerala, ensuring a safe, comfortable, and
+                        stress-free medical journey.
+
+                    </p>
+
+
+                    <div class="footer-social">
+
+
+                        <a
+                            href="https://instagram.com/khairallah_kochi"
+                            target="_blank">
+
+                            <i class="fa-brands fa-instagram"></i>
+
+                        </a>
+
+
+                        <a
+                            href="https://wa.me/919895099669"
+                            target="_blank">
+
+                            <i class="fa-brands fa-whatsapp"></i>
+
+                        </a>
+
+
+                        <a
+                            href="mailto:khairallahmedicaltourism@gmail.com">
+
+                            <i class="fa-solid fa-envelope"></i>
+
+                        </a>
+
+
+                    </div>
+
+                </div>
+
+
+                <!-- QUICK LINKS -->
+
+                <div class="footer-column">
+
+                    <h3 data-i18n="Quick Links">
+                        Quick Links
+                    </h3>
+
+
+                    <ul>
+
+                        <li>
+                            <a href="{% url 'home' %}"
+                               data-i18n="Home">
+                                Home
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="{% url 'about' %}"
+                               data-i18n="About">
+                                About
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="{% url 'medical' %}"
+                               data-i18n="Medical">
+                                Medical
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="{% url 'tourism' %}"
+                               data-i18n="Tourism">
+                                Tourism
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="{% url 'clients' %}"
+                               data-i18n="Clients">
+                                Clients
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="{% url 'contact' %}"
+                               data-i18n="Contact">
+                                Contact
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+
+                <!-- SERVICES -->
+
+                <div class="footer-column">
+
+                    <h3 data-i18n="Medical Services">
+                        Medical Services
+                    </h3>
+
+
+                    <ul>
+
+                        <li data-i18n="Medical Consultation">
+                            Medical Consultation
+                        </li>
+
+                        <li data-i18n="Hospital Coordination">
+                            Hospital Coordination
+                        </li>
+
+                        <li data-i18n="Airport Reception">
+                            Airport Reception
+                        </li>
+
+                        <li data-i18n="Accommodation">
+                            Accommodation
+                        </li>
+
+                        <li data-i18n="Language Assistance">
+                            Language Assistance
+                        </li>
+
+                        <li data-i18n="Post-Treatment Support">
+                            Post-Treatment Support
+                        </li>
+
+                    </ul>
+
+                </div>
+
+
+                <!-- CONTACT -->
+
+                <div class="footer-column">
+
+                    <h3 data-i18n="Contact Us">
+                        Contact Us
+                    </h3>
+
+
+                    <p>
+
+                        <i class="fa-solid fa-location-dot"></i>
+
+                        Nettoor, Maradu,<br>
+                        Ernakulam, Kerala - 682040
+
+                    </p>
+
+
+                    <p>
+
+                        <i class="fa-solid fa-phone"></i>
+
+                        <a href="tel:+919895099669">
+                            +91 98950 99669
+                        </a>
+
+                    </p>
+
+
+                    <p>
+
+                        <i class="fa-solid fa-envelope"></i>
+
+                        <a href="mailto:khairallahmedicaltourism@gmail.com">
+
+                            khairallahmedicaltourism@gmail.com
+
+                        </a>
+
+                    </p>
+
+                </div>
+
+
+            </div>
+
+
+            <hr>
+
+
+            <div class="footer-bottom">
+
+                <p data-i18n="footer-copyright">
+
+                    © 2026 Khair Allah Medical Tourism.
+                    All Rights Reserved.
+
+                </p>
+
+
+                <div>
+
+                    <a
+                        href="#"
+                        data-i18n="Privacy Policy">
+
+                        Privacy Policy
+
+                    </a>
+
+                    |
+
+                    <a
+                        href="{% url 'terms' %}"
+                        data-i18n="Terms & Conditions">
+
+                        Terms & Conditions
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <!-- =========================================
+         JAVASCRIPT
+    ========================================== -->
+
+    <script src="{% static 'js/main.js' %}"></script>
+
+    <script src="{% static 'js/language.js' %}"></script>
+
+</body>
+
+</html>

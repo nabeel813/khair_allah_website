@@ -1,0 +1,18 @@
+# Core framework
+Django==6.0.7
+
+# Production server & static files
+gunicorn==26.0.0
+whitenoise==6.12.0
+
+# Database (Phase 4 - Render Postgres)
+psycopg2-binary==2.9.12
+
+# Media storage (Phase 6 - Cloudinary)
+cloudinary==1.45.0
+django-cloudinary-storage==0.3.0
+pillow==11.3.0
+
+# Environment / secrets management
+python-decouple==3.8
+python-dotenv==1.2.2

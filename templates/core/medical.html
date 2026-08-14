@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Medical Services | Khair Allah Medical Tourism</title>
+<link rel="icon" type="image/png" href="{% static 'assets/favicon.png' %}">
+<link rel="apple-touch-icon" href="{% static 'assets/favicon-180.png' %}">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cairo:wght@400;600;900&family=Work+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body class="medical-page">
+<!-- ================= MEDICAL SECTION LOADER ================= -->
+<!-- ================= MEDICAL SECTION LOADER ================= -->
+<div id="medicalLoader" class="medical-loader">
+
+    <div class="ml-wrap">
+
+        <h1 class="ml-arabic" lang="ar" dir="rtl" data-text="لَا تَحْزَنْ إِنَّ اللَّهَ مَعَنَا">لَا تَحْزَنْ إِنَّ اللَّهَ مَعَنَا</h1>
+
+        <div class="ml-percent">
+            <span data-i18n="loading">loading…</span> <span class="ml-percent-num">0</span>%
+        </div>
+
+    </div>
+
+</div>
+
+<!-- NAVBAR -->
+
+<nav class="navbar">
+  <div class="container nav-wrapper">
+    <a href="{% url 'home' %}" class="logo">
+      <img src="{% static 'assets/logo.png' %}" alt="Khair Allah Logo" class="logo-mark">
+      <span class="logo-text">
+        
+      </span>
+    </a>
+
+    <ul class="nav-menu">
+      <li><a href="{% url 'home' %}">Home</a></li>
+      <li><a href="{% url 'about' %}">About</a></li>
+      <li><a href="{% url 'medical' %}">Medical</a></li>
+      <li><a href="{% url 'tourism' %}">Tourism</a></li>
+      <li><a href="{% url 'logistics' %}" data-i18n="Logistics">Logistics</a></li>
+      <li><a href="{% url 'clients' %}">Clients</a></li>
+      <li><a href="{% url 'terms' %}">Terms</a></li>   <!-- shortened -->
+      <li><a href="{% url 'contact' %}" class="active">Contact</a></li>
+    </ul>
+
+    <a href="https://wa.me/919895099669" class="nav-button" target="_blank" rel="noopener noreferrer">
+      <i class="fa-brands fa-whatsapp"></i>
+      Plan Your Visit
+    </a>
+
+    <div class="language-switcher" aria-label="Language selection">
+      <i class="fa-solid fa-globe" aria-hidden="true"></i>
+      <button id="lang-en" class="lang-btn active" type="button">EN</button>
+      <span aria-hidden="true">|</span>
+      <button id="lang-ar" class="lang-btn" type="button">العربية</button>
+    </div>
+
+    <button class="mobile-toggle">
+      <i class="fa-solid fa-bars"></i>
+    </button>
+  </div>
+</nav>
+<!-- HERO -->
+<header class="about-hero hero-elegant" style="height:70vh;">
+<div class="hero-pattern-left" aria-hidden="true"></div>
+<div class="hero-glow-right" aria-hidden="true"></div>
+<div class="about-overlay"></div>
+<div class="container">
+<div class="hero-elegant-content">
+<span class="section-tag" data-i18n="MEDICAL SERVICES">MEDICAL SERVICES</span>
+
+<div class="hero-ornament" aria-hidden="true">
+<span class="hero-ornament-line"></span>
+<span class="hero-ornament-diamond"></span>
+<span class="hero-ornament-line"></span>
+</div>
+
+<h1 class="hero-arabic-highlight" lang="ar" dir="rtl">لَا تَحْزَنْ إِنَّ اللَّهَ مَعَنَا</h1>
+<p class="hero-arabic-meaning" data-i18n="hero-arabic-meaning">"Do not grieve; indeed, God is with us."</p>
+
+<h2 class="hero-sub-heading" data-i18n-html="medical-hero-heading">World-Class Healthcare<br>in Kerala</h2>
+<span class="hero-underline" aria-hidden="true"></span>
+<p class="hero-desc-gray" data-i18n="medical-hero-desc">Complete medical coordination and support for international patients with trusted hospitals and specialists.</p>
+</div>
+</div>
+</header>
+
+
+<!-- BIG NUMBERS -->
+<section class="stats-section" style="padding:100px 0;">
+<div class="stats-overlay"></div>
+<div class="container">
+<div class="section-heading light reveal">
+<span class="section-tag" data-i18n="OUR IMPACT">OUR IMPACT</span>
+<h2 data-i18n="Trusted by Thousands">Trusted by Thousands</h2>
+<p data-i18n="medical-stats-desc">Numbers that reflect the trust and care we deliver every day.</p>
+</div>
+<div class="stats-grid">
+<div class="stat-card reveal">
+<i class="fa-solid fa-users"></i>
+<h3>10,000+</h3>
+<p data-i18n="Happy International Guests">Happy International Guests</p>
+</div>
+<div class="stat-card reveal">
+<i class="fa-solid fa-calendar-check"></i>
+<h3>15+</h3>
+<p data-i18n="Years of Trusted Service">Years of Trusted Service</p>
+</div>
+<div class="stat-card reveal">
+<i class="fa-solid fa-user-doctor"></i>
+<h3>22+</h3>
+<p data-i18n="Dedicated Professionals">Dedicated Professionals</p>
+</div>
+<div class="stat-card reveal">
+<i class="fa-solid fa-hospital"></i>
+<h3>GCC</h3>
+<p data-i18n="Primary Client Base">Primary Client Base</p>
+</div>
+</div>
+</div>
+</section>
+
+<!-- MEDICAL SERVICES CARDS -->
+<section class="services" style="padding:120px 0; background:#f8fbfd;">
+<div class="container">
+<div class="section-heading reveal">
+<span class="section-tag" data-i18n="WHAT WE OFFER">WHAT WE OFFER</span>
+<h2 data-i18n="Medical Support Services">Medical Support Services</h2>
+<p data-i18n="medical-services-desc">We handle every medical aspect of your journey so you can focus on recovery.</p>
+</div>
+<div class="services-grid">
+<div class="service-card reveal">
+<img src="{% static 'assets/Card-bg/medicalcon.jpg' %}" alt="Medical Consultation" data-i18n-alt="Medical Consultation">
+<h3 data-i18n="Medical Consultation">Medical Consultation</h3>
+<p data-i18n="medical-card-desc-1">Pre-arrival consultation and doctor matching based on your medical needs.</p>
+</div>
+<div class="service-card reveal">
+<img src="{% static 'assets/Card-bg/hospitalcord.jpg' %}" alt="Medical Consultation" data-i18n-alt="Medical Consultation">
+<h3 data-i18n="Hospital Coordination">Hospital Coordination</h3>
+<p data-i18n="medical-card-desc-2">Appointments, medical records transfer, and specialist coordination.</p>
+</div>
+<div class="service-card reveal">
+<img src="{% static 'assets/Card-bg/airportrecep.jpg' %}" alt="Medical Consultation" data-i18n-alt="Medical Consultation">
+<h3 data-i18n="Airport Reception">Airport Reception</h3>
+<p data-i18n="medical-card-desc-3">Comfortable airport pickup and drop with dedicated assistance.</p>
+</div>
+<div class="service-card reveal">
+<img src="{% static 'assets/Card-bg/accomodation.jpg' %}" alt="Medical Consultation" data-i18n-alt="Medical Consultation">
+<h3 data-i18n="Accommodation">Accommodation</h3>
+<p data-i18n="medical-card-desc-4">Safe and comfortable stay close to your hospital.</p>
+</div>
+<div class="service-card reveal">
+<img src="{% static 'assets/Card-bg/languageassist.jpg' %}" alt="Medical Consultation" data-i18n-alt="Medical Consultation">
+<h3 data-i18n="Language Assistance">Language Assistance</h3>
+<p data-i18n="medical-card-desc-5">Arabic and multilingual support throughout your treatment.</p>
+</div>
+<div class="service-card reveal">
+<img src="{% static 'assets/Card-bg/transport.jpg' %}" alt="Medical Consultation" data-i18n-alt="Medical Consultation">
+<h3 data-i18n="Local Transportation">Local Transportation</h3>
+<p data-i18n="medical-card-desc-6">Reliable transport for hospital visits and daily needs.</p>
+</div>
+<div class="service-card reveal">
+<img src="{% static 'assets/Card-bg/guidance.jpg' %}" alt="Medical Consultation" data-i18n-alt="Medical Consultation">
+<h3 data-i18n="Treatment Guidance">Treatment Guidance</h3>
+<p data-i18n="medical-card-desc-7">Clear guidance on procedures, costs, and recovery plans.</p>
+</div>
+<div class="service-card reveal">
+<img src="{% static 'assets/Card-bg/abcd.jpg' %}" alt="Medical Consultation" data-i18n-alt="Medical Consultation">
+<h3 data-i18n="Post-Treatment Support">Post-Treatment Support</h3>
+<p data-i18n="medical-card-desc-8">Continued assistance even after your treatment is complete.</p>
+</div>
+</div>
+</div>
+</section>
+
+<!-- CTA -->
+<section class="cta">
+<div class="container">
+<div class="cta-box reveal">
+<span class="section-tag" style="color:#D6B35A;" data-i18n="START YOUR JOURNEY">START YOUR JOURNEY</span>
+<h2 data-i18n="Ready for Medical Care in Kerala?">Ready for Medical Care in Kerala?</h2>
+<p data-i18n="medical-cta-desc">Contact our team today. We will help you plan a safe and comfortable medical trip.</p>
+<div class="cta-buttons">
+<a href="#" class="btn-primary"><i class="fa-brands fa-whatsapp"></i> <span data-i18n="WhatsApp Us">WhatsApp Us</span></a>
+<a href="#" class="btn-secondary" data-i18n="Send Enquiry">Send Enquiry</a>
+</div>
+</div>
+</div>
+</section>
+
+<!-- FOOTER -->
+<!-- ================= FOOTER ================= -->
+
+<footer class="footer">
+
+    <div class="container">
+
+        <div class="footer-grid">
+
+            <!-- Company -->
+
+            <div class="footer-column">
+
+                <img src="{% static 'assets/about-company.jpg' %}"
+                     alt="Khair Allah Medical Tourism" data-i18n-alt="Khair Allah Medical Tourism"
+                     class="footer-logo">
+
+                <p data-i18n="footer-desc">
+
+                    Khair Allah Medical Tourism connects international clients
+                    with trusted hospitals and healthcare services in Kerala,
+                    ensuring a safe, comfortable, and stress-free medical journey.
+
+                </p>
+
+                <div class="footer-social">
+
+                    <a href="https://instagram.com/khairallah_kochi"
+                       target="_blank">
+
+                        <i class="fa-brands fa-instagram"></i>
+
+                    </a>
+
+                    <a href="https://wa.me/919895099669"
+                       target="_blank">
+
+                        <i class="fa-brands fa-whatsapp"></i>
+
+                    </a>
+
+                    <a href="mailto:khairallahmedicaltourism@gmail.com">
+
+                        <i class="fa-solid fa-envelope"></i>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+            <!-- Quick Links -->
+
+            <div class="footer-column">
+
+                <h3 data-i18n="Quick Links">Quick Links</h3>
+
+                <ul>
+
+                    <li><a href="{% url 'home' %}" data-i18n="Home">Home</a></li>
+
+                    <li><a href="{% url 'about' %}" data-i18n="About">About</a></li>
+
+                    <li><a href="{% url 'medical' %}" data-i18n="Medical">Medical</a></li>
+
+                    <li><a href="{% url 'tourism' %}" data-i18n="Tourism">Tourism</a></li>
+
+                    <li><a href="{% url 'clients' %}" data-i18n="Clients">Clients</a></li>
+
+                    <li><a href="{% url 'contact' %}" data-i18n="Contact">Contact</a></li>
+
+                </ul>
+
+            </div>
+
+            <!-- Services -->
+
+            <div class="footer-column">
+
+                <h3 data-i18n="Medical Services">Medical Services</h3>
+
+                <ul>
+
+                    <li data-i18n="Medical Consultation">Medical Consultation</li>
+
+                    <li data-i18n="Hospital Coordination">Hospital Coordination</li>
+
+                    <li data-i18n="Airport Reception">Airport Reception</li>
+
+                    <li data-i18n="Accommodation">Accommodation</li>
+
+                    <li data-i18n="Language Assistance">Language Assistance</li>
+
+                    <li data-i18n="Post-Treatment Support">Post-Treatment Support</li>
+
+                </ul>
+
+            </div>
+
+            <!-- Contact -->
+
+            <div class="footer-column">
+
+                <h3 data-i18n="Contact Us">Contact Us</h3>
+
+                <p>
+
+                    <i class="fa-solid fa-location-dot"></i>
+
+                    Nettoor, Maradu,<br>
+                    Ernakulam, Kerala - 682040
+
+                </p>
+
+                <p>
+
+                    <i class="fa-solid fa-phone"></i>
+
+                    <a href="tel:+919895099669">
+                        +91 98950 99669
+                    </a>
+
+                </p>
+
+                <p>
+
+                    <i class="fa-solid fa-envelope"></i>
+
+                    <a href="mailto:khairallahmedicaltourism@gmail.com">
+                        khairallahmedicaltourism@gmail.com
+                    </a>
+
+                </p>
+
+            </div>
+
+        </div>
+
+        <hr>
+
+        <div class="footer-bottom">
+
+            <p>
+
+                © 2026 Khair Allah Medical Tourism. All Rights Reserved.
+
+            </p>
+
+            <div>
+
+                <a href="#" data-i18n="Privacy Policy">Privacy Policy</a>
+
+                |
+
+                <a href="{% url 'terms' %}" data-i18n="Terms & Conditions">Terms & Conditions</a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</footer>
+<script src="{% static 'js/main.js' %}"></script>
+<script src="{% static 'js/language.js' %}"></script>
+<script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+
+<!-- Medical loader split-open animation -->
+<script>
+(function () {
+    var loader = document.getElementById("medicalLoader");
+    if (!loader) return;
+
+    var numEl = loader.querySelector(".ml-percent-num");
+    var duration = 1500;
+    var start = null;
+
+    function easeInOutCubic(t){
+        return t < 0.5 ? 4*t*t*t : 1 - Math.pow(-2*t + 2, 3) / 2;
+    }
+
+    function step(timestamp){
+        if (!start) start = timestamp;
+        var elapsed = timestamp - start;
+        var t = Math.min(elapsed / duration, 1);
+        var eased = easeInOutCubic(t);
+        var pct = Math.round(eased * 100);
+
+        loader.style.setProperty("--ml-fill", pct);
+        if (numEl) numEl.textContent = pct;
+
+        if (t < 1) {
+            requestAnimationFrame(step);
+        } else {
+            setTimeout(function () {
+                loader.classList.add("ml-done");
+                setTimeout(function () {
+                    loader.style.display = "none";
+                }, 900);
+            }, 400);
+        }
+    }
+
+    window.addEventListener("load", function () {
+        requestAnimationFrame(step);
+    });
+})();
+</script>
+</body>
+</html>

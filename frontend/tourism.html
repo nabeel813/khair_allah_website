@@ -1,0 +1,1580 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tourism & Sightseeing | Khair Allah Medical Tourism</title>
+<link rel="icon" type="image/png" href="assets/favicon.png">
+<link rel="apple-touch-icon" href="assets/favicon-180.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Work+Sans:wght@300;400;500;600;700&family=Archivo+Black&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+<link rel="stylesheet" href="css/style.css">
+
+<style>
+/* Tourism Gallery Styles */
+.tourism-gallery {
+    padding: 100px 0 120px;
+    background: #f8fbfd;
+}
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin-top: 60px;
+}
+.gallery-item {
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    height: 280px;
+    background: #e0e7ef;
+    box-shadow: 0 15px 40px rgba(0,0,0,.08);
+    transition: .4s;
+}
+.gallery-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 25px 50px rgba(0,0,0,.14);
+}
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: .5s;
+}
+.gallery-item:hover img {
+    transform: scale(1.08);
+}
+.gallery-placeholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #063A63, #0F8F73);
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+.gallery-placeholder i {
+    font-size: 42px;
+    margin-bottom: 15px;
+    opacity: .85;
+}
+.gallery-placeholder span {
+    font-size: 16px;
+    font-weight: 500;
+}
+.gallery-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 18px 20px;
+    background: linear-gradient(transparent, rgba(4,26,46,.85));
+    color: #fff;
+    font-weight: 500;
+    font-size: 16px;
+}
+@media(max-width:991px){
+    .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media(max-width:600px){
+    .gallery-grid { grid-template-columns: 1fr; }
+    .gallery-item { height: 240px; }
+}
+
+/* ======================================
+   COVERFLOW GALLERY
+   Deep charcoal 3D stage. Independent of
+   the light theme by design — this
+   section reads as a dramatic break in
+   the page, like a spotlight.
+====================================== */
+
+.cf-stage{
+    --cf-card: 340px;
+    --cf-spacing: 230px;
+    --cf-duration: .65s;
+    --cf-ease: cubic-bezier(.22,1,.36,1);
+
+    position:relative;
+    background:#0B0B0A;
+    padding:110px 0 90px;
+    overflow:hidden;
+    perspective:1500px;
+    isolation:isolate;
+}
+
+.cf-glow{
+    position:absolute;
+    inset:0;
+    background:radial-gradient(ellipse 900px 500px at 50% 45%, rgba(15,143,115,.18), transparent 70%);
+    pointer-events:none;
+}
+
+.cf-grid-texture{
+    position:absolute;
+    inset:0;
+    background-image:
+        linear-gradient(rgba(255,255,255,.035) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,.035) 1px, transparent 1px);
+    background-size:64px 64px;
+    pointer-events:none;
+    mask-image:radial-gradient(ellipse 70% 70% at 50% 50%, #000 40%, transparent 90%);
+}
+
+.cf-stage__head{
+    position:relative;
+    z-index:2;
+    text-align:center;
+    margin-bottom:60px;
+}
+
+.cf-eyebrow{
+    font-family:'Space Mono', monospace;
+    font-size:12px;
+    letter-spacing:.14em;
+    color:#5FCBA6;
+    margin-bottom:14px;
+}
+
+.cf-title{
+    font-family:'Archivo Black','Arial Black',sans-serif;
+    font-size:clamp(26px,3.6vw,42px);
+    text-transform:uppercase;
+    color:#F3F2EC;
+    line-height:1.15;
+}
+
+.cf-toggle{
+    position:absolute;
+    top:28px;
+    right:28px;
+    z-index:5;
+    width:38px;
+    height:38px;
+    border-radius:50%;
+    border:1px solid rgba(255,255,255,.22);
+    background:rgba(255,255,255,.04);
+    color:#EDEBE1;
+    font-family:'Space Mono',monospace;
+    font-size:13px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    cursor:pointer;
+    transition:.25s;
+}
+
+.cf-toggle:hover,
+.cf-toggle.is-on{
+    background:#EDEBE1;
+    color:#0B0B0A;
+    border-color:#EDEBE1;
+}
+
+.cf-track{
+    position:relative;
+    z-index:2;
+    height:calc(var(--cf-card) + 40px);
+    max-width:100%;
+}
+
+.cf-card{
+    position:absolute;
+    top:50%;
+    left:50%;
+    width:var(--cf-card);
+    height:var(--cf-card);
+    margin-top:calc(var(--cf-card) / -2);
+    margin-left:calc(var(--cf-card) / -2);
+    border:none;
+    padding:0;
+    border-radius:20px;
+    overflow:hidden;
+    cursor:pointer;
+    background:#151512;
+    box-shadow:0 30px 70px rgba(0,0,0,.55), 0 10px 24px rgba(0,0,0,.4);
+    transition:
+        transform var(--cf-duration) var(--cf-ease),
+        opacity var(--cf-duration) var(--cf-ease),
+        filter var(--cf-duration) var(--cf-ease);
+    will-change:transform, opacity, filter;
+    transform-style:preserve-3d;
+}
+
+.cf-card img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+    background:linear-gradient(135deg, #063A63, #0F8F73);
+    transform:scale(1.1);
+    transition:transform 0.85s var(--cf-ease);
+    pointer-events:none;
+}
+
+.cf-card.is-active img{
+    transform:scale(1);
+}
+
+.cf-card__sheen{
+    position:absolute;
+    inset:0;
+    background:linear-gradient(115deg, rgba(255,255,255,.14) 0%, rgba(255,255,255,0) 30%, rgba(255,255,255,0) 70%, rgba(255,255,255,.06) 100%);
+    pointer-events:none;
+}
+
+.cf-caption{
+    position:absolute;
+    left:0;
+    right:0;
+    bottom:0;
+    padding:26px 22px 20px;
+    background:linear-gradient(to top, rgba(0,0,0,.75), rgba(0,0,0,0));
+    opacity:0;
+    transform:translateY(6px);
+    transition:opacity .4s ease, transform .4s ease;
+    pointer-events:none;
+    text-align:left;
+}
+
+.cf-stage.captions-on .cf-card.is-active .cf-caption{
+    opacity:1;
+    transform:none;
+}
+
+.cf-caption__eyebrow{
+    display:block;
+    font-family:'Space Mono',monospace;
+    font-size:10px;
+    letter-spacing:.12em;
+    text-transform:uppercase;
+    color:#5FCBA6;
+    margin-bottom:6px;
+}
+
+.cf-caption__title{
+    display:block;
+    font-family:'Work Sans',sans-serif;
+    font-weight:700;
+    font-size:17px;
+    line-height:1.3;
+    color:#F6F5EF;
+}
+
+.cf-nav{
+    position:absolute;
+    top:50%;
+    z-index:6;
+    width:46px;
+    height:46px;
+    margin-top:-23px;
+    border-radius:50%;
+    border:1px solid rgba(255,255,255,.2);
+    background:rgba(255,255,255,.04);
+    color:#EDEBE1;
+    font-size:22px;
+    line-height:1;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    cursor:pointer;
+    transition:.25s;
+}
+
+.cf-nav:hover{
+    background:#EDEBE1;
+    color:#0B0B0A;
+    border-color:#EDEBE1;
+}
+
+.cf-nav--prev{ left:3%; }
+.cf-nav--next{ right:3%; }
+
+.cf-dots{
+    position:relative;
+    z-index:2;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:8px;
+    margin-top:50px;
+}
+
+.cf-dot{
+    width:6px;
+    height:6px;
+    border-radius:50%;
+    border:none;
+    padding:0;
+    background:rgba(255,255,255,.28);
+    cursor:pointer;
+    transition:width .4s var(--cf-ease), border-radius .4s var(--cf-ease), background .3s ease;
+}
+
+.cf-dot.is-active{
+    width:28px;
+    border-radius:4px;
+    background:#EDEBE1;
+}
+
+.cf-empty{
+    position:relative;
+    z-index:2;
+    text-align:center;
+    color:#9A988C;
+    font-family:'Work Sans',sans-serif;
+    padding:60px 20px;
+}
+
+@media(max-width:992px){
+    .cf-stage{ --cf-card:260px; --cf-spacing:170px; padding:90px 0 70px; }
+    .cf-nav{ width:40px; height:40px; font-size:19px; }
+}
+
+@media(max-width:600px){
+    .cf-stage{ --cf-card:190px; --cf-spacing:110px; padding:70px 0 56px; }
+    .cf-toggle{ top:18px; right:18px; width:34px; height:34px; font-size:12px; }
+    .cf-nav{ display:none; }
+    .cf-caption__title{ font-size:14px; }
+    .cf-caption{ padding:18px 14px 14px; }
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+  <div class="container nav-wrapper">
+    <a href="index.html" class="logo">
+      <img src="assets/logo.png" alt="Khair Allah Logo" class="logo-mark">
+      <span class="logo-text">
+        
+      </span>
+    </a>
+
+    <ul class="nav-menu">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="medical.html">Medical</a></li>
+      <li><a href="tourism.html">Tourism</a></li>
+      <li><a href="logistics.html" data-i18n="Logistics">Logistics</a></li>
+      <li><a href="clients.html">Clients</a></li>
+      <li><a href="terms.html">Terms</a></li>   <!-- shortened -->
+      <li><a href="contact.html" class="active">Contact</a></li>
+    </ul>
+
+    <a href="https://wa.me/919895099669" class="nav-button" target="_blank" rel="noopener noreferrer">
+      <i class="fa-brands fa-whatsapp"></i>
+      Plan Your Visit
+    </a>
+
+    <div class="language-switcher" aria-label="Language selection">
+      <i class="fa-solid fa-globe" aria-hidden="true"></i>
+      <button id="lang-en" class="lang-btn active" type="button">EN</button>
+      <span aria-hidden="true">|</span>
+      <button id="lang-ar" class="lang-btn" type="button">العربية</button>
+    </div>
+
+    <button class="mobile-toggle">
+      <i class="fa-solid fa-bars"></i>
+    </button>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header class="about-hero" style="height:55vh;">
+<div class="about-overlay"></div>
+
+<div class="container">
+<div class="about-hero-content">
+
+<span class="section-tag"
+      data-i18n="TOURISM & SIGHTSEEING">
+    TOURISM & SIGHTSEEING
+</span>
+
+<h1 data-i18n-html="tourism-hero-heading">
+    Discover the Beauty<br>
+    of Kerala
+</h1>
+
+<p data-i18n="tourism-hero-desc">
+    While you recover, explore God’s Own Country with carefully planned sightseeing experiences.
+</p>
+
+</div>
+</div>
+</header>
+
+
+<!-- ================= COVERFLOW SHOWCASE ================= -->
+
+<section class="cf-stage" id="coverflow">
+
+    <div class="cf-glow" aria-hidden="true"></div>
+    <div class="cf-grid-texture" aria-hidden="true"></div>
+
+    <button type="button"
+            class="cf-toggle"
+            aria-label="Toggle captions">
+        i
+    </button>
+
+    <div class="cf-stage__head">
+
+        <div class="cf-eyebrow"
+             data-i18n="SWIPE, CLICK, OR USE ARROW KEYS">
+            SWIPE, CLICK, OR USE ARROW KEYS
+        </div>
+
+        <h2 class="cf-title"
+            data-i18n="Explore Kerala">
+            Explore Kerala
+        </h2>
+
+    </div>
+
+
+    <div class="cf-track" id="cfTrack">
+
+
+        <button type="button"
+                class="cf-card"
+                data-index="0"
+                aria-label="Alleppey Backwaters">
+
+            <img src="assets/cardflow/boat.jpg"
+                 alt="Alleppey Backwaters"
+                 data-i18n-alt="Alleppey Backwaters"
+                 loading="lazy">
+
+            <!-- TODO: add your image here, e.g. <img src="assets/gallery/your-photo.jpg" alt="Alleppey Backwaters" loading="lazy"> -->
+
+            <span class="cf-card__sheen"
+                  aria-hidden="true">
+            </span>
+
+            <span class="cf-caption">
+
+                <span class="cf-caption__eyebrow">
+                    KERALA / #01
+                </span>
+
+                <span class="cf-caption__title"
+                      data-i18n="Alleppey Backwaters">
+                    Alleppey Backwaters
+                </span>
+
+            </span>
+
+        </button>
+
+
+        <button type="button"
+                class="cf-card"
+                data-index="1"
+                aria-label="Munnar Hills">
+
+            <img src="assets/cardflow/dance.jpg"
+                 alt="Alleppey Backwaters"
+                 data-i18n-alt="Alleppey Backwaters"
+                 loading="lazy">
+
+            <!-- TODO: add your image here, e.g. <img src="assets/gallery/your-photo.jpg" alt="Munnar Hills" loading="lazy"> -->
+
+            <span class="cf-card__sheen"
+                  aria-hidden="true">
+            </span>
+
+            <span class="cf-caption">
+
+                <span class="cf-caption__eyebrow">
+                    KERALA / #02
+                </span>
+
+                <span class="cf-caption__title"
+                      data-i18n="Munnar Hills">
+                    Munnar Hills
+                </span>
+
+            </span>
+
+        </button>
+
+
+        <button type="button"
+                class="cf-card"
+                data-index="1"
+                aria-label="Munnar Hills">
+
+            <img src="assets/cardflow/elephant.jpg"
+                 alt="Alleppey Backwaters"
+                 data-i18n-alt="Alleppey Backwaters"
+                 loading="lazy">
+
+            <!-- TODO: add your image here, e.g. <img src="assets/gallery/your-photo.jpg" alt="Kovalam Beach" loading="lazy"> -->
+
+            <span class="cf-card__sheen"
+                  aria-hidden="true">
+            </span>
+
+            <span class="cf-caption">
+
+                <span class="cf-caption__eyebrow">
+                    KERALA / #03
+                </span>
+
+                <span class="cf-caption__title"
+                      data-i18n="Kovalam Beach">
+                    Kovalam Beach
+                </span>
+
+            </span>
+
+        </button>
+
+
+        <button type="button"
+                class="cf-card"
+                data-index="1"
+                aria-label="Munnar Hills">
+
+            <img src="assets/cardflow/jadayu.jpg"
+                 alt="Alleppey Backwaters"
+                 data-i18n-alt="Alleppey Backwaters"
+                 loading="lazy">
+
+            <!-- TODO: add your image here, e.g. <img src="assets/gallery/your-photo.jpg" alt="Thekkady Wildlife" loading="lazy"> -->
+
+            <span class="cf-card__sheen"
+                  aria-hidden="true">
+            </span>
+
+            <span class="cf-caption">
+
+                <span class="cf-caption__eyebrow">
+                    KERALA / #04
+                </span>
+
+                <span class="cf-caption__title"
+                      data-i18n="Thekkady Wildlife">
+                    Thekkady Wildlife
+                </span>
+
+            </span>
+
+        </button>
+
+
+        <button type="button"
+                class="cf-card"
+                data-index="1"
+                aria-label="Munnar Hills">
+
+            <img src="assets/cardflow/race.jpg"
+                 alt="Alleppey Backwaters"
+                 data-i18n-alt="Alleppey Backwaters"
+                 loading="lazy">
+
+            <!-- TODO: add your image here, e.g. <img src="assets/gallery/your-photo.jpg" alt="Fort Kochi" loading="lazy"> -->
+
+            <span class="cf-card__sheen"
+                  aria-hidden="true">
+            </span>
+
+            <span class="cf-caption">
+
+                <span class="cf-caption__eyebrow">
+                    KERALA / #05
+                </span>
+
+                <span class="cf-caption__title"
+                      data-i18n="Fort Kochi">
+                    Fort Kochi
+                </span>
+
+            </span>
+
+        </button>
+
+
+        <button type="button"
+                class="cf-card"
+                data-index="1"
+                aria-label="Munnar Hills">
+
+            <img src="assets/cardflow/tiger.jpg"
+                 alt="Alleppey Backwaters"
+                 data-i18n-alt="Alleppey Backwaters"
+                 loading="lazy">
+
+            <!-- TODO: add your image here, e.g. <img src="assets/gallery/your-photo.jpg" alt="Houseboat Experience" loading="lazy"> -->
+
+            <span class="cf-card__sheen"
+                  aria-hidden="true">
+            </span>
+
+            <span class="cf-caption">
+
+                <span class="cf-caption__eyebrow">
+                    KERALA / #06
+                </span>
+
+                <span class="cf-caption__title"
+                      data-i18n="Houseboat Experience">
+                    Houseboat Experience
+                </span>
+
+            </span>
+
+        </button>
+
+
+        <button type="button"
+                class="cf-card"
+                data-index="1"
+                aria-label="Munnar Hills">
+
+            <img src="assets/cardflow/tmpl.jpg"
+                 alt="Alleppey Backwaters"
+                 data-i18n-alt="Alleppey Backwaters"
+                 loading="lazy">
+
+            <!-- TODO: add your image here, e.g. <img src="assets/gallery/your-photo.jpg" alt="Ayurvedic Wellness" loading="lazy"> -->
+
+            <span class="cf-card__sheen"
+                  aria-hidden="true">
+            </span>
+
+            <span class="cf-caption">
+
+                <span class="cf-caption__eyebrow">
+                    KERALA / #07
+                </span>
+
+                <span class="cf-caption__title"
+                      data-i18n="Ayurvedic Wellness">
+                    Ayurvedic Wellness
+                </span>
+
+            </span>
+
+        </button>
+
+
+        <button type="button"
+                class="cf-card"
+                data-index="1"
+                aria-label="Munnar Hills">
+
+            <img src="assets/cardflow/varkala.jpg"
+                 alt="Alleppey Backwaters"
+                 data-i18n-alt="Alleppey Backwaters"
+                 loading="lazy">
+
+            <!-- TODO: add your image here, e.g. <img src="assets/gallery/your-photo.jpg" alt="Athirappilly Falls" loading="lazy"> -->
+
+            <span class="cf-card__sheen"
+                  aria-hidden="true">
+            </span>
+
+            <span class="cf-caption">
+
+                <span class="cf-caption__eyebrow">
+                    KERALA / #08
+                </span>
+
+                <span class="cf-caption__title"
+                      data-i18n="Athirappilly Falls">
+                    Athirappilly Falls
+                </span>
+
+            </span>
+
+        </button>
+
+
+        <button type="button"
+                class="cf-card"
+                data-index="1"
+                aria-label="Munnar Hills">
+
+            <img src="assets/cardflow/mnr.jpg"
+                 alt="Alleppey Backwaters"
+                 data-i18n-alt="Alleppey Backwaters"
+                 loading="lazy">
+
+            <!-- TODO: add your image here, e.g. <img src="assets/gallery/your-photo.jpg" alt="Cherai Beach Sunset" loading="lazy"> -->
+
+            <span class="cf-card__sheen"
+                  aria-hidden="true">
+            </span>
+
+            <span class="cf-caption">
+
+                <span class="cf-caption__eyebrow">
+                    KERALA / #09
+                </span>
+
+                <span class="cf-caption__title"
+                      data-i18n="Cherai Beach Sunset">
+                    Cherai Beach Sunset
+                </span>
+
+            </span>
+
+        </button>
+
+    </div>
+
+
+    <button type="button"
+            class="cf-nav cf-nav--prev"
+            aria-label="Previous image">
+        &#8249;
+    </button>
+
+    <button type="button"
+            class="cf-nav cf-nav--next"
+            aria-label="Next image">
+        &#8250;
+    </button>
+
+    <div class="cf-dots"
+         role="tablist"
+         aria-label="Gallery navigation">
+    </div>
+
+</section>
+
+
+<!-- GALLERY -->
+
+<section class="tourism-gallery">
+
+<div class="container">
+
+<div class="section-heading reveal">
+
+<span class="section-tag"
+      data-i18n="FULL ARCHIVE">
+    FULL ARCHIVE
+</span>
+
+<h2 data-i18n="Tourism Gallery">
+    Tourism Gallery
+</h2>
+
+<p data-i18n="tourism-gallery-desc">
+    From serene backwaters to lush hill stations — experience the best of Kerala during your stay.
+</p>
+
+</div>
+
+
+<div class="gallery-grid">
+
+
+<div class="gallery-item reveal">
+
+<div class="gallery-item reveal">
+
+    <img src="assets/tourist/alleppey.jpg"
+         alt="Alleppey Backwaters"
+         data-i18n-alt="Alleppey Backwaters"
+         loading="lazy">
+
+    <div class="gallery-caption"
+         data-i18n="Alleppey Backwaters">
+        Alleppey Backwaters
+    </div>
+
+</div>
+
+<!-- TODO: add your image here -->
+
+
+<!-- TODO: add your image here -->
+
+<div class="gallery-caption"
+     data-i18n="Alleppey Backwaters">
+    Alleppey Backwaters
+</div>
+
+</div><!-- Placeholder 1 -->
+
+
+<!-- Placeholder 2 -->
+
+<div class="gallery-item reveal">
+
+<img src="assets/tourist/munnar.jpg"
+     alt="Munnar Hills"
+     data-i18n-alt="Munnar Hills"
+     loading="lazy">
+
+<!-- TODO: add your image here, e.g. <img src="assets/gallery/your-photo.jpg" alt="Munnar Hills" loading="lazy"> -->
+
+<div class="gallery-caption"
+     data-i18n="Munnar Hills">
+    Munnar Hills
+</div>
+
+</div>
+
+
+<!-- Placeholder 3 -->
+
+<div class="gallery-item reveal">
+
+<img src="assets/tourist/kovalam.jpg"
+     alt="Kovalam Beach"
+     data-i18n-alt="Kovalam Beach"
+     loading="lazy">
+
+<!-- TODO: add your image here, e.g. <img src="assets/gallery/your-photo.jpg" alt="Kovalam Beach" loading="lazy"> -->
+
+<div class="gallery-caption"
+     data-i18n="Kovalam Beach">
+    Kovalam Beach
+</div>
+
+</div>
+
+
+<!-- Placeholder 4 -->
+
+<div class="gallery-item reveal">
+
+<img src="assets/tourist/thekkady.jpg"
+     alt="Thekkady Wildlife"
+     data-i18n-alt="Thekkady Wildlife"
+     loading="lazy">
+
+<!-- TODO: add your image here, e.g. <img src="assets/gallery/your-photo.jpg" alt="Thekkady Wildlife" loading="lazy"> -->
+
+<div class="gallery-caption"
+     data-i18n="Thekkady Wildlife">
+    Thekkady Wildlife
+</div>
+
+</div>
+
+
+<!-- Placeholder 5 -->
+
+<div class="gallery-item reveal">
+
+<img src="assets/tourist/kochi.jpg"
+     alt="Fort Kochi"
+     data-i18n-alt="Fort Kochi"
+     loading="lazy">
+
+<!-- TODO: add your image here, e.g. <img src="assets/gallery/your-photo.jpg" alt="Fort Kochi" loading="lazy"> -->
+
+<div class="gallery-caption"
+     data-i18n="Fort Kochi">
+    Fort Kochi
+</div>
+
+</div>
+
+
+<!-- Placeholder 6 -->
+
+<div class="gallery-item reveal">
+
+<img src="assets/tourist/houseboat.jpg"
+     alt="Houseboat Experience"
+     data-i18n-alt="Houseboat Experience"
+     loading="lazy">
+
+<!-- TODO: add your image here, e.g. <img src="assets/gallery/your-photo.jpg" alt="Houseboat Experience" loading="lazy"> -->
+
+<div class="gallery-caption"
+     data-i18n="Houseboat Experience">
+    Houseboat Experience
+</div>
+
+</div>
+
+
+<!-- Placeholder 7 -->
+
+<div class="gallery-item reveal">
+
+<img src="assets/tourist/ayurvedic.jpg"
+     alt="Ayurvedic Wellness"
+     data-i18n-alt="Ayurvedic Wellness"
+     loading="lazy">
+
+<!-- TODO: add your image here, e.g. <img src="assets/gallery/your-photo.jpg" alt="Ayurvedic Wellness" loading="lazy"> -->
+
+<div class="gallery-caption"
+     data-i18n="Ayurvedic Wellness">
+    Ayurvedic Wellness
+</div>
+
+</div>
+
+
+<!-- Placeholder 8 -->
+
+<div class="gallery-item reveal">
+
+<img src="assets/tourist/athirapally.jpg"
+     alt="Athirappilly Falls"
+     data-i18n-alt="Athirappilly Falls"
+     loading="lazy">
+
+<!-- TODO: add your image here, e.g. <img src="assets/gallery/your-photo.jpg" alt="Athirappilly Falls" loading="lazy"> -->
+
+<div class="gallery-caption"
+     data-i18n="Athirappilly Falls">
+    Athirappilly Falls
+</div>
+
+</div>
+
+
+<!-- Placeholder 9 -->
+
+<div class="gallery-item reveal">
+
+<img src="assets/tourist/cherai.jpg"
+     alt="Cherai Beach Sunset"
+     data-i18n-alt="Cherai Beach Sunset"
+     loading="lazy">
+
+<!-- TODO: add your image here, e.g. <img src="assets/gallery/your-photo.jpg" alt="Cherai Beach Sunset" loading="lazy"> -->
+
+<div class="gallery-caption"
+     data-i18n="Cherai Beach Sunset">
+    Cherai Beach Sunset
+</div>
+
+</div>
+
+
+</div>
+</div>
+</section>
+
+
+<!-- CTA -->
+
+<section class="cta">
+
+<div class="container">
+
+<div class="cta-box reveal">
+
+<span class="section-tag"
+      style="color:#D6B35A;"
+      data-i18n="PLAN YOUR TRIP">
+    PLAN YOUR TRIP
+</span>
+
+<h2 data-i18n="Combine Healing with Exploration">
+    Combine Healing with Exploration
+</h2>
+
+<p data-i18n="tourism-cta-desc">
+    Let us arrange comfortable sightseeing packages while you recover in Kerala.
+</p>
+
+<div class="cta-buttons">
+
+<a href="#"
+   class="btn-primary">
+    <i class="fa-brands fa-whatsapp"></i>
+    <span data-i18n="WhatsApp Us">
+        WhatsApp Us
+    </span>
+</a>
+
+<a href="#"
+   class="btn-secondary"
+   data-i18n="Send Enquiry">
+    Send Enquiry
+</a>
+
+</div>
+</div>
+</div>
+</section>
+
+
+<!-- FOOTER -->
+
+<!-- ================= FOOTER ================= -->
+
+<footer class="footer">
+
+    <div class="container">
+
+        <div class="footer-grid">
+
+
+            <!-- Company -->
+
+            <div class="footer-column">
+
+                <img src="assets/about-company.jpg"
+                     alt="Khair Allah Medical Tourism"
+                     data-i18n-alt="Khair Allah Medical Tourism"
+                     class="footer-logo">
+
+                <p data-i18n="footer-desc">
+
+                    Khair Allah Medical Tourism connects international clients
+                    with trusted hospitals and healthcare services in Kerala,
+                    ensuring a safe, comfortable, and stress-free medical journey.
+
+                </p>
+
+                <div class="footer-social">
+
+                    <a href="https://instagram.com/khairallah_kochi"
+                       target="_blank">
+
+                        <i class="fa-brands fa-instagram"></i>
+
+                    </a>
+
+                    <a href="https://wa.me/919895099669"
+                       target="_blank">
+
+                        <i class="fa-brands fa-whatsapp"></i>
+
+                    </a>
+
+                    <a href="mailto:khairallahmedicaltourism@gmail.com">
+
+                        <i class="fa-solid fa-envelope"></i>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- Quick Links -->
+
+            <div class="footer-column">
+
+                <h3 data-i18n="Quick Links">
+                    Quick Links
+                </h3>
+
+                <ul>
+
+                    <li>
+                        <a href="index.html"
+                           data-i18n="Home">
+                            Home
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="about.html"
+                           data-i18n="About">
+                            About
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="medical.html"
+                           data-i18n="Medical">
+                            Medical
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="tourism.html"
+                           data-i18n="Tourism">
+                            Tourism
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="clients.html"
+                           data-i18n="Clients">
+                            Clients
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="contact.html"
+                           data-i18n="Contact">
+                            Contact
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+            <!-- Services -->
+
+            <div class="footer-column">
+
+                <h3 data-i18n="Medical Services">
+                    Medical Services
+                </h3>
+
+                <ul>
+
+                    <li data-i18n="Medical Consultation">
+                        Medical Consultation
+                    </li>
+
+                    <li data-i18n="Hospital Coordination">
+                        Hospital Coordination
+                    </li>
+
+                    <li data-i18n="Airport Reception">
+                        Airport Reception
+                    </li>
+
+                    <li data-i18n="Accommodation">
+                        Accommodation
+                    </li>
+
+                    <li data-i18n="Language Assistance">
+                        Language Assistance
+                    </li>
+
+                    <li data-i18n="Post-Treatment Support">
+                        Post-Treatment Support
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+            <!-- Contact -->
+
+            <div class="footer-column">
+
+                <h3 data-i18n="Contact Us">
+                    Contact Us
+                </h3>
+
+                <p>
+
+                    <i class="fa-solid fa-location-dot"></i>
+
+                    <span data-i18n="footer-address">
+                        Nettoor, Maradu,<br>
+                        Ernakulam, Kerala - 682040
+                    </span>
+
+                </p>
+
+                <p>
+
+                    <i class="fa-solid fa-phone"></i>
+
+                    <a href="tel:+919895099669">
+                        +91 98950 99669
+                    </a>
+
+                </p>
+
+                <p>
+
+                    <i class="fa-solid fa-envelope"></i>
+
+                    <a href="mailto:khairallahmedicaltourism@gmail.com">
+                        khairallahmedicaltourism@gmail.com
+                    </a>
+
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <hr>
+
+
+        <div class="footer-bottom">
+
+            <p data-i18n="footer-copyright">
+
+                © 2026 Khair Allah Medical Tourism. All Rights Reserved.
+
+            </p>
+
+            <div>
+
+                <a href="privacy.html"
+                   data-i18n="Privacy Policy">
+                    Privacy Policy
+                </a>
+
+                |
+
+                <a href="terms.html"
+                   data-i18n="Terms & Conditions">
+                    Terms & Conditions
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+<script src="js/main.js"></script>
+
+<script src="js/language.js"></script>
+
+<script>
+document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
+
+<script>
+
+(function(){
+
+    var stage = document.getElementById("coverflow");
+
+    if(!stage) return;
+
+    var track = document.getElementById("cfTrack");
+
+    var cards =
+        Array.prototype.slice.call(
+            track.querySelectorAll(".cf-card")
+        );
+
+    var dotsWrap =
+        stage.querySelector(".cf-dots");
+
+    var prevBtn =
+        stage.querySelector(".cf-nav--prev");
+
+    var nextBtn =
+        stage.querySelector(".cf-nav--next");
+
+    var toggleBtn =
+        stage.querySelector(".cf-toggle");
+
+    var active = 0;
+
+
+    // Build dots
+
+    cards.forEach(function(card, i){
+
+        var dot =
+            document.createElement("button");
+
+        dot.type = "button";
+
+        dot.className = "cf-dot";
+
+        dot.setAttribute(
+            "aria-label",
+            "Go to slide " + (i + 1)
+        );
+
+        dot.addEventListener(
+            "click",
+            function(){
+                setActive(i);
+            }
+        );
+
+        dotsWrap.appendChild(dot);
+
+    });
+
+
+    var dots =
+        Array.prototype.slice.call(
+            dotsWrap.querySelectorAll(".cf-dot")
+        );
+
+
+    function spacing(){
+
+        return parseFloat(
+            getComputedStyle(stage)
+                .getPropertyValue("--cf-spacing")
+        ) || 230;
+
+    }
+
+
+    function render(){
+
+        var gap = spacing();
+
+        cards.forEach(function(card, i){
+
+            var offset = i - active;
+
+            var abs = Math.abs(offset);
+
+            card.classList.toggle(
+                "is-active",
+                offset === 0
+            );
+
+
+            if(abs > 4){
+
+                card.style.opacity = "0";
+
+                card.style.pointerEvents = "none";
+
+                card.style.transform =
+                    "translateX(" +
+                    (offset * gap) +
+                    "px) scale(.6)";
+
+                return;
+
+            }
+
+
+            var scale =
+                offset === 0
+                    ? 1
+                    : Math.max(
+                        .62,
+                        1 - abs * .16
+                    );
+
+
+            var rotate =
+                offset === 0
+                    ? 0
+                    : (
+                        offset > 0
+                            ? -16
+                            : 16
+                    );
+
+
+            var z = -abs;
+
+
+            var opacity =
+                offset === 0
+                    ? 1
+                    : Math.max(
+                        .25,
+                        1 - abs * .28
+                    );
+
+
+            card.style.pointerEvents =
+                "auto";
+
+            card.style.opacity =
+                String(opacity);
+
+            card.style.zIndex =
+                String(100 - abs);
+
+            card.style.transform =
+                "translateX(" +
+                (offset * gap) +
+                "px) " +
+
+                "translateZ(" +
+                (z * 120) +
+                "px) " +
+
+                "rotateY(" +
+                rotate +
+                "deg) " +
+
+                "scale(" +
+                scale +
+                ")";
+
+        });
+
+
+        dots.forEach(function(dot, i){
+
+            dot.classList.toggle(
+                "is-active",
+                i === active
+            );
+
+        });
+
+    }
+
+
+    function setActive(i){
+
+        active =
+            Math.max(
+                0,
+                Math.min(
+                    cards.length - 1,
+                    i
+                )
+            );
+
+        render();
+
+    }
+
+
+    cards.forEach(function(card, i){
+
+        card.addEventListener(
+            "click",
+            function(){
+
+                if(i === active) return;
+
+                setActive(i);
+
+            }
+        );
+
+    });
+
+
+    prevBtn.addEventListener(
+        "click",
+        function(){
+            setActive(active - 1);
+        }
+    );
+
+
+    nextBtn.addEventListener(
+        "click",
+        function(){
+            setActive(active + 1);
+        }
+    );
+
+
+    toggleBtn.addEventListener(
+        "click",
+        function(){
+
+            var on =
+                stage.classList.toggle(
+                    "captions-on"
+                );
+
+            toggleBtn.classList.toggle(
+                "is-on",
+                on
+            );
+
+        }
+    );
+
+
+    document.addEventListener(
+        "keydown",
+        function(e){
+
+            var rect =
+                stage.getBoundingClientRect();
+
+            var inView =
+                rect.top < window.innerHeight &&
+                rect.bottom > 0;
+
+            if(!inView) return;
+
+            if(e.key === "ArrowLeft")
+                setActive(active - 1);
+
+            if(e.key === "ArrowRight")
+                setActive(active + 1);
+
+        }
+    );
+
+
+    // Basic swipe support
+
+    var startX = null;
+
+
+    track.addEventListener(
+        "touchstart",
+        function(e){
+
+            startX =
+                e.touches[0].clientX;
+
+        },
+        {passive:true}
+    );
+
+
+    track.addEventListener(
+        "touchend",
+        function(e){
+
+            if(startX === null) return;
+
+            var dx =
+                e.changedTouches[0].clientX -
+                startX;
+
+            if(Math.abs(dx) > 40){
+
+                setActive(
+                    active +
+                    (dx < 0 ? 1 : -1)
+                );
+
+            }
+
+            startX = null;
+
+        }
+    );
+
+
+    window.addEventListener(
+        "resize",
+        render
+    );
+
+
+    // Start on the middle card for a fuller initial spread
+
+    setActive(
+        Math.floor(cards.length / 2)
+    );
+
+})();
+
+</script>
+<script src="js/main.js"></script>
+<script src="js/language.js"></script>
+
+</body>
+</html>

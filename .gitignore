@@ -1,0 +1,27 @@
+# Virtual environment
+venv/
+env/
+.venv/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Django
+db.sqlite3
+staticfiles/
+media/*
+!media/.gitkeep
+
+# Environment / secrets
+.env
+
+# Editor/OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Archives kept only as a temporary migration reference
+frontend.zip

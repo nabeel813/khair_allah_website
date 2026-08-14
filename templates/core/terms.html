@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title data-i18n="terms.page.title">
+        Terms & Conditions | Khair Allah Medical Tourism
+    </title>
+
+    <link rel="icon" type="image/png" href="{% static 'assets/favicon.png' %}">
+
+    <link rel="apple-touch-icon" href="{% static 'assets/favicon-180.png' %}">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Work+Sans:wght@300;400;500;600;700&display=swap"
+          rel="stylesheet">
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+
+    <link rel="stylesheet"
+          href="{% static 'css/style.css' %}">
+
+</head>
+
+<body>
+
+
+<!-- =========================================
+     NAVBAR
+========================================= -->
+
+<nav class="navbar">
+  <div class="container nav-wrapper">
+    <a href="{% url 'home' %}" class="logo">
+      <img src="{% static 'assets/logo.png' %}" alt="Khair Allah Logo" class="logo-mark">
+      <span class="logo-text">
+        <span class="logo-title">Khair Allah</span>
+        <span class="logo-subtitle">Medical & Tourism</span>
+      </span>
+    </a>
+
+    <ul class="nav-menu">
+      <li><a href="{% url 'home' %}">Home</a></li>
+      <li><a href="{% url 'about' %}">About</a></li>
+      <li><a href="{% url 'medical' %}">Medical</a></li>
+      <li><a href="{% url 'tourism' %}">Tourism</a></li>
+      <li><a href="{% url 'logistics' %}" data-i18n="Logistics">Logistics</a></li>
+      <li><a href="{% url 'clients' %}">Clients</a></li>
+      <li><a href="{% url 'terms' %}">Terms</a></li>   <!-- shortened -->
+      <li><a href="{% url 'contact' %}" class="active">Contact</a></li>
+    </ul>
+
+    <a href="https://wa.me/919895099669" class="nav-button" target="_blank" rel="noopener noreferrer">
+      <i class="fa-brands fa-whatsapp"></i>
+      Plan Your Visit
+    </a>
+
+    <div class="language-switcher" aria-label="Language selection">
+      <i class="fa-solid fa-globe" aria-hidden="true"></i>
+      <button id="lang-en" class="lang-btn active" type="button">EN</button>
+      <span aria-hidden="true">|</span>
+      <button id="lang-ar" class="lang-btn" type="button">العربية</button>
+    </div>
+
+    <button class="mobile-toggle">
+      <i class="fa-solid fa-bars"></i>
+    </button>
+  </div>
+</nav>
+<!-- =========================================
+     HERO
+========================================= -->
+
+<header class="terms-hero">
+
+    <div class="terms-overlay"></div>
+
+    <div class="container">
+
+        <div class="about-hero-content">
+
+
+            <span class="section-tag"
+                  data-i18n="terms.hero.tag">
+
+                LEGAL INFORMATION
+
+            </span>
+
+
+            <h1 data-i18n="terms.hero.title">
+
+                Terms & Conditions
+
+            </h1>
+
+
+            <p data-i18n="terms.hero.description">
+
+                Please read these terms carefully before using
+                our services.
+
+            </p>
+
+
+        </div>
+
+    </div>
+
+</header>
+
+
+<!-- =========================================
+     TERMS & CONDITIONS
+========================================= -->
+
+<section class="terms-section">
+
+    <div class="container">
+
+        <div class="terms-box">
+
+
+            <!-- 1 -->
+
+            <h2 data-i18n="terms.section.1.title">
+
+                1. Acceptance of Terms
+
+            </h2>
+
+
+            <p data-i18n="terms.section.1.text">
+
+                By using Khair Allah Medical Tourism services,
+                you agree to these Terms & Conditions.
+
+            </p>
+
+
+            <!-- 2 -->
+
+            <h2 data-i18n="terms.section.2.title">
+
+                2. Our Services
+
+            </h2>
+
+
+            <p data-i18n="terms.section.2.text">
+
+                We provide medical tourism facilitation,
+                including hospital coordination,
+                travel assistance,
+                accommodation arrangements,
+                airport transfers,
+                and related support services.
+
+                We do not provide medical treatment ourselves.
+
+            </p>
+
+
+            <!-- 3 -->
+
+            <h2 data-i18n="terms.section.3.title">
+
+                3. Medical Decisions
+
+            </h2>
+
+
+            <p data-i18n="terms.section.3.text">
+
+                All medical advice,
+                diagnosis,
+                and treatment decisions are the sole
+                responsibility of the treating hospital
+                and medical professionals.
+
+            </p>
+
+
+            <!-- 4 -->
+
+            <h2 data-i18n="terms.section.4.title">
+
+                4. Payments
+
+            </h2>
+
+
+            <p data-i18n="terms.section.4.text">
+
+                Payments made for medical services,
+                hospital fees,
+                or accommodation are subject to
+                the terms of the respective service providers.
+
+            </p>
+
+
+            <!-- 5 -->
+
+            <h2 data-i18n="terms.section.5.title">
+
+                5. Cancellation
+
+            </h2>
+
+
+            <p data-i18n="terms.section.5.text">
+
+                Cancellation policies depend on hospitals,
+                hotels,
+                and other service providers.
+
+                Applicable charges may apply.
+
+            </p>
+
+
+            <!-- 6 -->
+
+            <h2 data-i18n="terms.section.6.title">
+
+                6. Privacy
+
+            </h2>
+
+
+            <p data-i18n="terms.section.6.text">
+
+                Your personal information is handled
+                with strict confidentiality and is shared
+                only when necessary to coordinate your treatment.
+
+            </p>
+
+
+            <!-- 7 -->
+
+            <h2 data-i18n="terms.section.7.title">
+
+                7. Liability
+
+            </h2>
+
+
+            <p data-i18n="terms.section.7.text">
+
+                Khair Allah Medical Tourism acts only
+                as a facilitator and is not responsible
+                for medical outcomes,
+                hospital decisions,
+                or unforeseen travel disruptions.
+
+            </p>
+
+
+            <!-- 8 -->
+
+            <h2 data-i18n="terms.section.8.title">
+
+                8. Changes
+
+            </h2>
+
+
+            <p data-i18n="terms.section.8.text">
+
+                We reserve the right to update these
+                Terms & Conditions at any time.
+
+            </p>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================
+     CTA
+========================================= -->
+
+<section class="contact-legal">
+
+    <div class="container">
+
+        <div class="cta-box">
+
+
+            <h2 data-i18n="terms.cta.title">
+
+                Questions About These Terms?
+
+            </h2>
+
+
+            <p data-i18n="terms.cta.description">
+
+                If you have any questions regarding
+                our Terms & Conditions,
+                please contact our team.
+
+            </p>
+
+
+            <div class="cta-buttons">
+
+
+                <a href="https://wa.me/919999999999"
+                   class="btn-primary"
+                   data-i18n="WhatsApp">
+
+                    WhatsApp
+
+                </a>
+
+
+                <a href="mailto:info@khairallah.com"
+                   class="btn-secondary"
+                   data-i18n="Email">
+
+                    Email
+
+                </a>
+
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================
+     FOOTER
+========================================= -->
+
+<footer class="footer">
+
+    <div class="container">
+
+        <div class="footer-grid">
+
+
+            <!-- COMPANY -->
+
+            <div class="footer-column">
+
+
+                <img src="{% static 'assets/about-company.jpg' %}"
+                     alt="Khair Allah Medical Tourism"
+                     data-i18n-alt="Khair Allah Medical Tourism"
+                     class="footer-logo">
+
+
+                <p data-i18n="footer-desc">
+
+                    Khair Allah Medical Tourism connects
+                    international clients with trusted hospitals
+                    and healthcare services in Kerala,
+                    ensuring a safe, comfortable,
+                    and stress-free medical journey.
+
+                </p>
+
+
+                <div class="footer-social">
+
+
+                    <a href="https://instagram.com/khairallah_kochi"
+                       target="_blank">
+
+                        <i class="fa-brands fa-instagram"></i>
+
+                    </a>
+
+
+                    <a href="https://wa.me/919895099669"
+                       target="_blank">
+
+                        <i class="fa-brands fa-whatsapp"></i>
+
+                    </a>
+
+
+                    <a href="mailto:khairallahmedicaltourism@gmail.com">
+
+                        <i class="fa-solid fa-envelope"></i>
+
+                    </a>
+
+
+                </div>
+
+            </div>
+
+
+            <!-- QUICK LINKS -->
+
+            <div class="footer-column">
+
+                <h3 data-i18n="Quick Links">
+                    Quick Links
+                </h3>
+
+
+                <ul>
+
+                    <li>
+                        <a href="{% url 'home' %}"
+                           data-i18n="Home">
+                            Home
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="{% url 'about' %}"
+                           data-i18n="About">
+                            About
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="{% url 'medical' %}"
+                           data-i18n="Medical">
+                            Medical
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="{% url 'tourism' %}"
+                           data-i18n="Tourism">
+                            Tourism
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="{% url 'clients' %}"
+                           data-i18n="Clients">
+                            Clients
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="{% url 'contact' %}"
+                           data-i18n="Contact">
+                            Contact
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+            <!-- SERVICES -->
+
+            <div class="footer-column">
+
+                <h3 data-i18n="Medical Services">
+                    Medical Services
+                </h3>
+
+
+                <ul>
+
+                    <li data-i18n="Medical Consultation">
+                        Medical Consultation
+                    </li>
+
+                    <li data-i18n="Hospital Coordination">
+                        Hospital Coordination
+                    </li>
+
+                    <li data-i18n="Airport Reception">
+                        Airport Reception
+                    </li>
+
+                    <li data-i18n="Accommodation">
+                        Accommodation
+                    </li>
+
+                    <li data-i18n="Language Assistance">
+                        Language Assistance
+                    </li>
+
+                    <li data-i18n="Post-Treatment Support">
+                        Post-Treatment Support
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+            <!-- CONTACT -->
+
+            <div class="footer-column">
+
+                <h3 data-i18n="Contact Us">
+                    Contact Us
+                </h3>
+
+
+                <p>
+
+                    <i class="fa-solid fa-location-dot"></i>
+
+                    <span data-i18n="footer-address">
+                        Nettoor, Maradu,<br>
+                        Ernakulam, Kerala - 682040
+                    </span>
+
+                </p>
+
+
+                <p>
+
+                    <i class="fa-solid fa-phone"></i>
+
+                    <a href="tel:+919895099669">
+
+                        +91 98950 99669
+
+                    </a>
+
+                </p>
+
+
+                <p>
+
+                    <i class="fa-solid fa-envelope"></i>
+
+                    <a href="mailto:khairallahmedicaltourism@gmail.com">
+
+                        khairallahmedicaltourism@gmail.com
+
+                    </a>
+
+                </p>
+
+            </div>
+
+
+        </div>
+
+
+        <hr>
+
+
+        <div class="footer-bottom">
+
+
+            <p data-i18n="footer-copyright">
+
+                © 2026 Khair Allah Medical Tourism.
+                All Rights Reserved.
+
+            </p>
+
+
+            <div>
+
+                <a href="#"
+                   data-i18n="Privacy Policy">
+
+                    Privacy Policy
+
+                </a>
+
+                |
+
+                <a href="{% url 'terms' %}"
+                   data-i18n="Terms & Conditions">
+
+                    Terms & Conditions
+
+                </a>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+<!-- =========================================
+     JAVASCRIPT
+========================================= -->
+
+<script src="{% static 'js/main.js' %}"></script>
+
+<script src="{% static 'js/language.js' %}"></script>
+
+
+</body>
+
+</html>
