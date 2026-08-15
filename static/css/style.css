@@ -5693,22 +5693,23 @@ body.arabic .hero-background{
 /*==========================================
 NEON TAGLINE — Tourism Hero (main statement)
 ==========================================*/
-
 .hero-neon-wrap{
 
     position:absolute;
 
-    top:90px;
+    top:50%;
 
-    left:50%;
+    right:5%;
 
-    transform:translateX(-50%);
+    left:auto;
+
+    transform:translateY(-50%);
 
     z-index:3;
 
-    width:100%;
+    max-width:400px;
 
-    text-align:center;
+    text-align:right;
 
     padding:0 20px;
 
@@ -5821,12 +5822,23 @@ NEON TAGLINE — Tourism Hero (main statement)
     }
 
 }
-
 @media(max-width:991px){
 
     .hero-neon-wrap{
 
-        top:80px;
+        top:auto;
+
+        bottom:6%;
+
+        right:50%;
+
+        left:auto;
+
+        transform:translateX(50%);
+
+        text-align:center;
+
+        max-width:85%;
 
     }
 
@@ -5856,7 +5868,7 @@ NEON TAGLINE — Tourism Hero (main statement)
 
     .hero-neon-wrap{
 
-        top:70px;
+        bottom:4%;
 
     }
 
@@ -5871,6 +5883,16 @@ NEON TAGLINE — Tourism Hero (main statement)
         font-size:32px;
 
     }
+
+    .hero-neon-caption{
+
+        font-size:10px;
+
+        letter-spacing:1.5px;
+
+    }
+
+}
 
     .hero-neon-caption{
 
