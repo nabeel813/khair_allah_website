@@ -345,12 +345,12 @@ if (
              */
 
             const movement =
-                distance * -0.06;
+                distance * -0.025;
 
 
             image.style.transform =
                 `translate3d(0, ${movement}px, 0)
-                 scale(1.08)`;
+                 scale(1.04)`;
         });
 
 
