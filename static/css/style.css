@@ -238,6 +238,8 @@ Navbar
     font-weight:600;
     font-size: 14px;
 
+    white-space:nowrap;
+
     transition:.4s;
 
     box-shadow:0 10px 25px rgba(0,0,0,.2);
@@ -2614,7 +2616,7 @@ body.tourism-page .nav-button::before{
 
     border-radius:50px;
 
-    padding:3px;
+    padding:2px;
 
     background:linear-gradient(90deg,#22D3EE,#A855F7,#EC4899,#F97316);
 
@@ -2624,11 +2626,61 @@ body.tourism-page .nav-button::before{
     -webkit-mask-composite:xor;
     mask-composite:exclude;
 
-    filter:blur(1px);
+    opacity:1;
+
+    z-index:-1;
+
+}
+
+/* ================================
+   NAV MENU HIGHLIGHT (Medical / Tourism)
+================================ */
+
+.nav-menu .nav-highlight{
+
+    position:relative;
+
+    z-index:1;
+
+    display:inline-block;
+
+    align-self:center;
+
+    padding:6px 14px;
+
+    border-radius:50px;
+
+}
+
+.nav-menu .nav-highlight::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:-2px;
+
+    border-radius:50px;
+
+    padding:2px;
+
+    background:linear-gradient(90deg,#22D3EE,#A855F7,#EC4899,#F97316);
+
+    -webkit-mask:
+        linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+    -webkit-mask-composite:xor;
+    mask-composite:exclude;
 
     opacity:1;
 
     z-index:-1;
+
+}
+
+.nav-menu .nav-highlight::after{
+
+    bottom:-4px;
 
 }
 
@@ -5940,4 +5992,3 @@ NEON TAGLINE — Tourism Hero (main statement)
 
     }
 
-}
