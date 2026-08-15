@@ -340,7 +340,12 @@ Hero
 
     inset:0;
 
-    background:linear-gradient(135deg,#063A63,#04314f);
+    background:linear-gradient(
+        100deg,
+        rgba(4,26,46,.90) 0%,
+        rgba(6,58,99,.75) 35%,
+        rgba(6,58,99,.10) 100%
+    );
 
     z-index:2;
 
@@ -364,6 +369,10 @@ body.arabic .hero p{
     position: relative;
 
     z-index: 5;
+
+    display:flex;
+
+    justify-content:flex-end;
 
 }
 .hero-grid{
@@ -414,7 +423,7 @@ body.arabic .hero p{
 
 .hero-content{
 
-    max-width: 560px;
+    max-width: 620px;
 
     color: #fff;
 
@@ -429,7 +438,6 @@ body.arabic .hero p{
     text-align:right;
 
 }
-
 .hero-badge{
 
     display:inline-block;
@@ -863,27 +871,7 @@ Mobile Menu
 
 }
 
-.hero-grid{
 
-    flex-direction:column;
-
-    gap:35px;
-
-}
-
-.hero-image{
-
-    flex:0 0 auto;
-
-    width:100%;
-
-}
-
-.hero-image img{
-
-    height:320px;
-
-}
 
 .hero-content{
 
@@ -937,11 +925,6 @@ Mobile Menu
 
 }
 
-.hero-image img{
-
-    height:240px;
-
-}
 
 .glass-card{
 
