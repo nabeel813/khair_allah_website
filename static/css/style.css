@@ -260,6 +260,16 @@ Navbar
 
 }
 
+/* ==========================
+   NAVBAR LOGO
+========================== */
+
+.navbar .logo-mark {
+    width: 160px;
+    height: auto;
+    display: block;
+    object-fit: contain;
+}
 
 /* ================================
    LANGUAGE SWITCHER
