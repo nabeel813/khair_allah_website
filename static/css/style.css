@@ -2614,7 +2614,7 @@ body.tourism-page .nav-button::before{
 
     border-radius:50px;
 
-    padding:2px;
+    padding:3px;
 
     background:linear-gradient(90deg,#22D3EE,#A855F7,#EC4899,#F97316);
 
@@ -2624,9 +2624,9 @@ body.tourism-page .nav-button::before{
     -webkit-mask-composite:xor;
     mask-composite:exclude;
 
-    filter:blur(3px);
+    filter:blur(1px);
 
-    opacity:.9;
+    opacity:1;
 
     z-index:-1;
 
