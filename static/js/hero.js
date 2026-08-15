@@ -283,4 +283,109 @@
 
     }
 
+    /* =========================================================
+   IMAGE PARALLAX
+   ========================================================= */
+
+const parallaxImages =
+    document.querySelectorAll(".parallax-image");
+
+
+if (
+    parallaxImages.length &&
+    !isMobile &&
+    !prefersReducedMotion
+) {
+
+    let parallaxTicking = false;
+
+
+    const updateParallax = () => {
+
+        const viewportHeight =
+            window.innerHeight;
+
+
+        parallaxImages.forEach(image => {
+
+            const rect =
+                image.getBoundingClientRect();
+
+
+            /*
+             * Ignore images completely outside
+             * the viewport.
+             */
+
+            if (
+                rect.bottom < 0 ||
+                rect.top > viewportHeight
+            ) {
+                return;
+            }
+
+
+            /*
+             * Calculate position relative
+             * to viewport center.
+             */
+
+            const imageCenter =
+                rect.top + rect.height / 2;
+
+            const viewportCenter =
+                viewportHeight / 2;
+
+            const distance =
+                imageCenter - viewportCenter;
+
+
+            /*
+             * Very subtle movement.
+             */
+
+            const movement =
+                distance * -0.06;
+
+
+            image.style.transform =
+                `translate3d(0, ${movement}px, 0)
+                 scale(1.08)`;
+        });
+
+
+        parallaxTicking = false;
+    };
+
+
+    const requestParallaxUpdate = () => {
+
+        if (!parallaxTicking) {
+
+            requestAnimationFrame(
+                updateParallax
+            );
+
+            parallaxTicking = true;
+        }
+    };
+
+
+    window.addEventListener(
+        "scroll",
+        requestParallaxUpdate,
+        { passive: true }
+    );
+
+
+    window.addEventListener(
+        "resize",
+        requestParallaxUpdate,
+        { passive: true }
+    );
+
+
+    requestParallaxUpdate();
+}
+
 })();
