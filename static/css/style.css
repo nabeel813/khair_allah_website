@@ -7434,21 +7434,3 @@ html[dir="rtl"] .hero-background-image {
 
 }
 
-/* =========================================================
-   PHASE 7 — IMAGE PARALLAX
-   ========================================================= */
-
-/* =========================================================
-   PHASE 7 — IMAGE PARALLAX
-   ========================================================= */
-
-.parallax-image {
-    will-change: transform;
-
-    transform:
-        translate3d(0, 0, 0)
-        scale(1.04);
-
-    transition:
-        transform 0.15s linear;
-}
