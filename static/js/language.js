@@ -1075,6 +1075,8 @@ document.addEventListener("DOMContentLoaded", () => {
 "team-role-6": "Job Role",
 "team-role-7": "Job Role",
 "team-role-8": "Job Role",
+"tourism-neon-text":
+    "“Makes you happy”",
         },
 
 
@@ -2220,6 +2222,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
 "team-role-8":
     "الوظيفة",
+    "tourism-neon-text":
+    "“يجعلك سعيدًا”",
 
         }
     };
@@ -2249,6 +2253,8 @@ document.addEventListener("DOMContentLoaded", () => {
             }
 
         });
+
+
 
 
         /* ================= HTML CONTENT ================= */
@@ -2339,7 +2345,11 @@ document.addEventListener("DOMContentLoaded", () => {
             language
         );
     }
-
+document.dispatchEvent(
+    new CustomEvent("languageChanged", {
+        detail: { language: language }
+    })
+);
 
     /* =========================================================
        ENGLISH BUTTON

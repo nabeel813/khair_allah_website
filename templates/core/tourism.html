@@ -394,7 +394,11 @@
 <div class="about-overlay"></div>
 
 <div class="hero-neon-wrap">
-  <span class="hero-neon-text" id="tourismNeonType"></span><span class="hero-neon-cursor">|</span>
+ <span
+    class="hero-neon-text"
+    id="tourismNeonType"
+    data-i18n="tourism-neon-text">
+</span> <span class="hero-neon-cursor">|</span>
   <span class="hero-neon-caption">Khair Allah Medical Tourism</span>
 </div>
 
@@ -1589,14 +1593,15 @@ document.getElementById("year").textContent = new Date().getFullYear();
 <script>
 
 
-   const tourismNeonType = document.getElementById("tourismNeonType");
+ const tourismNeonType =
+    document.getElementById("tourismNeonType");
 
-const tourismTexts = {
-    en: "“Makes you happy”",
-    ar: "“يجعلك سعيدًا”"
-};
+function startTourismNeonAnimation() {
 
-function typeTourismText(text) {
+    if (!tourismNeonType) return;
+
+    const text =
+        tourismNeonType.textContent.trim();
 
     tourismNeonType.textContent = "";
 
@@ -1606,7 +1611,9 @@ function typeTourismText(text) {
 
         if (i < text.length) {
 
-            tourismNeonType.textContent += text.charAt(i);
+            tourismNeonType.textContent +=
+                text.charAt(i);
+
             i++;
 
             setTimeout(typeWriter, 70);
@@ -1616,20 +1623,21 @@ function typeTourismText(text) {
     }
 
     typeWriter();
-}
-
-function updateTourismNeonText() {
-
-    const isArabic = document.body.classList.contains("arabic");
-
-    typeTourismText(
-        isArabic ? tourismTexts.ar : tourismTexts.en
-    );
-
-}
-
+}  
 /* Initial text */
 updateTourismNeonText();
+startTourismNeonAnimation();
+
+document.addEventListener(
+    "languageChanged",
+    function () {
+
+        setTimeout(() => {
+            startTourismNeonAnimation();
+        }, 50);
+
+    }
+);
 
 /* Listen for language changes */
 document.addEventListener("languageChanged", updateTourismNeonText);
