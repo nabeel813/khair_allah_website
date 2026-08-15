@@ -6200,7 +6200,7 @@ OUR TEAM
             rgba(3, 9, 15, 0.45) 58%,
             rgba(3, 9, 15, 0.72) 100%
         ),
-        url("../assets/hero/hero-main.jpg");
+        url("../assets/jj.jpg");
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
@@ -6980,7 +6980,7 @@ html[dir="rtl"] .hero-background-image {
     }
 
     .hero-background-image {
-        background-position: 58% center;
+        background-position: 25% center;
     }
 
     .hero-stats {
@@ -7024,8 +7024,7 @@ html[dir="rtl"] .hero-background-image {
     .hero-background-image {
         inset: -3%;
 
-        background-position:
-            62% center;
+        
 
         animation-duration: 30s;
     }
