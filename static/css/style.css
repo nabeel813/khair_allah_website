@@ -4997,6 +4997,14 @@ LOADER
     transition:opacity .7s ease, visibility .7s ease;
 
 }
+/* ==========================
+   PAGE TRANSITION STATE
+========================== */
+
+#loader.page-exit {
+    opacity: 1;
+    visibility: visible;
+}
 
 .loader-content{
 
@@ -7432,5 +7440,37 @@ html[dir="rtl"] .hero-background-image {
         transform: none;
     }
 
+}
+
+/* ==========================
+   SMOOTH PAGE TRANSITIONS
+========================== */
+
+.page-transition {
+
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 99999;
+
+    background: var(--bg-dark, #07110f);
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    pointer-events: none;
+
+    transition:
+        opacity 0.45s ease,
+        visibility 0.45s ease;
+}
+
+.page-transition.active {
+
+    opacity: 1;
+
+    visibility: visible;
 }
 

@@ -183,14 +183,90 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
 });
+/* ==========================
+   SMOOTH PAGE TRANSITIONS
+========================== */
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    const pageTransition =
+        document.querySelector(".page-transition");
+
+    if (!pageTransition) {
+        return;
+    }
+
+    document.querySelectorAll("a").forEach(link => {
+
+        link.addEventListener("click", function (e) {
+
+            const href = this.getAttribute("href");
+
+            /*
+             * Ignore links that should not trigger
+             * a page transition.
+             */
+
+            if (!href) {
+                return;
+            }
+
+            if (
+                href.startsWith("#") ||
+                href.startsWith("http://") ||
+                href.startsWith("https://") ||
+                href.startsWith("mailto:") ||
+                href.startsWith("tel:") ||
+                this.target === "_blank"
+            ) {
+                return;
+            }
+
+            /*
+             * Ignore modified clicks
+             * such as Ctrl + Click.
+             */
+
+            if (
+                e.ctrlKey ||
+                e.shiftKey ||
+                e.metaKey ||
+                e.altKey
+            ) {
+                return;
+            }
+
+            e.preventDefault();
+
+            pageTransition.classList.add("active");
+
+            setTimeout(() => {
+
+                window.location.href = href;
+
+            }, 450);
+
+        });
+
+    });
+
+});
 
 /* ==========================
    PAGE LOADER
 ========================== */
 
+/* ==========================
+   PAGE LOADER + TRANSITIONS
+========================== */
+
 window.addEventListener("load", function () {
 
     const loader = document.getElementById("loader");
+
+    if (!loader) {
+        return;
+    }
 
     setTimeout(function () {
 
@@ -198,5 +274,87 @@ window.addEventListener("load", function () {
         loader.style.visibility = "hidden";
 
     }, 1500);
+
+});
+
+
+/* ==========================
+   INTERNAL PAGE TRANSITION
+========================== */
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    const loader = document.getElementById("loader");
+
+    if (!loader) {
+        return;
+    }
+
+    document.querySelectorAll("a[href]").forEach(function (link) {
+
+        link.addEventListener("click", function (event) {
+
+            const href = link.getAttribute("href");
+
+            if (!href) {
+                return;
+            }
+
+            /*
+             * Don't interfere with:
+             * - same-page anchors
+             * - WhatsApp
+             * - external websites
+             * - email
+             * - telephone links
+             * - new tabs
+             */
+
+            if (
+                href.startsWith("#") ||
+                href.startsWith("http://") ||
+                href.startsWith("https://") ||
+                href.startsWith("mailto:") ||
+                href.startsWith("tel:") ||
+                link.target === "_blank"
+            ) {
+                return;
+            }
+
+            /*
+             * Don't interfere with modified clicks.
+             */
+
+            if (
+                event.ctrlKey ||
+                event.shiftKey ||
+                event.altKey ||
+                event.metaKey
+            ) {
+                return;
+            }
+
+            event.preventDefault();
+
+            /*
+             * Show your EXISTING loader.
+             */
+
+            loader.classList.add("page-exit");
+
+            /*
+             * Give the loader time to appear
+             * before changing the page.
+             */
+
+            setTimeout(function () {
+
+                window.location.href = href;
+
+            }, 500);
+
+        });
+
+    });
 
 });
