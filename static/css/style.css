@@ -5691,34 +5691,38 @@ body.arabic .hero-background{
 }
 
 /*==========================================
-NEON TAGLINE — Tourism Hero
+NEON TAGLINE — Tourism Hero (main statement)
 ==========================================*/
 
 .hero-neon-wrap{
 
     position:absolute;
 
-    top:50%;
+    top:90px;
 
-    right:6%;
+    left:50%;
 
-    transform:translateY(-50%);
+    transform:translateX(-50%);
 
     z-index:3;
 
-    max-width:340px;
+    width:100%;
 
-    text-align:right;
+    text-align:center;
+
+    padding:0 20px;
 
 }
 
 .hero-neon-text{
 
+    display:block;
+
     font-family:'Dancing Script', cursive;
 
     font-weight:700;
 
-    font-size:56px;
+    font-size:64px;
 
     letter-spacing:.5px;
 
@@ -5744,7 +5748,7 @@ NEON TAGLINE — Tourism Hero
 
     font-weight:600;
 
-    font-size:56px;
+    font-size:64px;
 
     color:#FFD98A;
 
@@ -5757,6 +5761,27 @@ NEON TAGLINE — Tourism Hero
     animation:neonCursorBlink 1s step-end infinite;
 
 }
+
+.hero-neon-caption{
+
+    display:block;
+
+    margin-top:8px;
+
+    font-family:'Work Sans', sans-serif;
+
+    font-size:12px;
+
+    font-weight:500;
+
+    letter-spacing:3px;
+
+    text-transform:uppercase;
+
+    color:rgba(255,255,255,.7);
+
+}
+
 @keyframes neonGlowPulse{
 
     0%,100%{
@@ -5801,29 +5826,27 @@ NEON TAGLINE — Tourism Hero
 
     .hero-neon-wrap{
 
-        top:auto;
-
-        bottom:8%;
-
-        right:50%;
-
-        transform:translateX(50%);
-
-        text-align:center;
-
-        max-width:80%;
+        top:80px;
 
     }
 
     .hero-neon-text{
 
-        font: size 42px;
+        font-size:44px;
 
     }
 
     .hero-neon-cursor{
 
-        font-size:42px;
+        font-size:44px;
+
+    }
+
+    .hero-neon-caption{
+
+        font-size:11px;
+
+        letter-spacing:2px;
 
     }
 
@@ -5831,6 +5854,12 @@ NEON TAGLINE — Tourism Hero
 
 @media(max-width:480px){
 
+    .hero-neon-wrap{
+
+        top:70px;
+
+    }
+
     .hero-neon-text{
 
         font-size:32px;
@@ -5840,6 +5869,14 @@ NEON TAGLINE — Tourism Hero
     .hero-neon-cursor{
 
         font-size:32px;
+
+    }
+
+    .hero-neon-caption{
+
+        font-size:10px;
+
+        letter-spacing:1.5px;
 
     }
 
