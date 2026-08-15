@@ -2594,6 +2594,44 @@ body.medical-page .nav-button{
 
 }
 
+body.medical-page .nav-button,
+body.tourism-page .nav-button{
+
+    position:relative;
+
+    z-index:1;
+
+}
+
+body.medical-page .nav-button::before,
+body.tourism-page .nav-button::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:-2px;
+
+    border-radius:50px;
+
+    padding:2px;
+
+    background:linear-gradient(90deg,#22D3EE,#A855F7,#EC4899,#F97316);
+
+    -webkit-mask:
+        linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+    -webkit-mask-composite:xor;
+    mask-composite:exclude;
+
+    filter:blur(3px);
+
+    opacity:.9;
+
+    z-index:-1;
+
+}
+
 @media (max-width:900px){
 
     .hero-pattern-left{ width:100%; }
