@@ -2724,7 +2724,7 @@ COMPANY INTRODUCTION
 .company-image img,
 .company-logo-img{
     width: auto;
-    max-width: 420px;
+    max-width: 100%;
     height: auto;
     border-radius: 20px;
     box-shadow: 0 20px 45px rgba(0,0,0,.12);
@@ -5992,3 +5992,48 @@ NEON TAGLINE — Tourism Hero (main statement)
 
     }
 
+@media (max-width:768px){
+ 
+     .hero-neon-wrap{
+        position: static;   /* was absolute — this is what caused the overlap */
+        top: auto;
+        bottom: auto;
+        right: auto;
+        left: auto;
+        transform: none;
+        max-width: 100%;
+        text-align: center;
+        margin: 24px 0;
+        padding: 0 20px;
+    }
+    .about-hero,
+    .about-hero.hero-elegant{
+        height:auto;
+        min-height:auto;
+        padding:140px 0 60px;   /* pushes content below the fixed navbar */
+        align-items:flex-start;
+    }
+
+    .about-hero h1{
+        font-size:34px;
+    }
+
+    .about-hero p{
+        font-size:16px;
+    }
+
+    .clients-hero{
+        min-height:auto;
+        padding:140px 0 60px;
+        align-items:flex-start;
+    }
+
+    .clients-hero h1{
+        font-size:38px;
+    }
+
+    .clients-hero p{
+        font-size:16px;
+    }
+
+}
