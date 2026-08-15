@@ -1054,6 +1054,27 @@ document.addEventListener("DOMContentLoaded", () => {
 "Plan Your Visit": "Plan Your Visit",
 "Khair Allah": "Khair Allah",
 "Medical & Tourism": "Medical & Tourism",
+"OUR TEAM": "OUR TEAM",
+"More Than Colleagues, We Are Family": "More Than Colleagues, We Are Family",
+"team-desc": "Every member of our team plays a role in caring for our guests like they are our own family.",
+
+"Muhammed Raziq": "Muhammed Raziq",
+"Fathima Azad": "Fathima Azad",
+"Muhammed Arshad A": "Muhammed Arshad A",
+"Salim K A": "Salim K A",
+"Shibili Zain": "Shibili Zain",
+"Shamsudheen": "Shamsudheen",
+"Jiyad Moideen": "Jiyad Moideen",
+"Razal Jaleel": "Razal Jaleel",
+
+"team-role-1": "Job Role",
+"team-role-2": "Job Role",
+"team-role-3": "Job Role",
+"team-role-4": "Job Role",
+"team-role-5": "Job Role",
+"team-role-6": "Job Role",
+"team-role-7": "Job Role",
+"team-role-8": "Job Role",
         },
 
 
@@ -2143,6 +2164,62 @@ document.addEventListener("DOMContentLoaded", () => {
 "Plan Your Visit": "خطط لزيارتك",
 "Khair Allah": "خير الله",
 "Medical & Tourism": "السياحة الطبية",
+"OUR TEAM":
+    "فريقنا",
+
+"More Than Colleagues, We Are Family":
+    "أكثر من زملاء، نحن عائلة",
+
+"team-desc":
+    "كل فرد من أعضاء فريقنا يلعب دورًا في رعاية ضيوفنا وكأنهم عائلتنا.",
+
+"Muhammed Raziq":
+    "محمد رازق",
+
+"Fathima Azad":
+    "فاطمة آزاد",
+
+"Muhammed Arshad A":
+    "محمد أرشد",
+
+"Salim K A":
+    "سالم ك أ",
+
+"Shibili Zain":
+    "شبلي زين",
+
+"Shamsudheen":
+    "شمس الدين",
+
+"Jiyad Moideen":
+    "جياد معين",
+
+"Razal Jaleel":
+    "رزال جليل",
+
+"team-role-1":
+    "الوظيفة",
+
+"team-role-2":
+    "الوظيفة",
+
+"team-role-3":
+    "الوظيفة",
+
+"team-role-4":
+    "الوظيفة",
+
+"team-role-5":
+    "الوظيفة",
+
+"team-role-6":
+    "الوظيفة",
+
+"team-role-7":
+    "الوظيفة",
+
+"team-role-8":
+    "الوظيفة",
 
         }
     };
