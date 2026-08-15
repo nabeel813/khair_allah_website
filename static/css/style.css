@@ -3075,6 +3075,18 @@ LEGACY
 
 }
 
+.legacy-icon img{
+
+    width:100%;
+
+    height:100%;
+
+    border-radius:50%;
+
+    object-fit:cover;
+
+}
+
 .legacy-card h3{
 
     color:#063A63;
