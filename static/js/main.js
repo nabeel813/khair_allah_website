@@ -109,35 +109,48 @@ document.addEventListener("DOMContentLoaded", () => {
 
     function animateCounter(counter) {
 
-        const target = +counter.dataset.count;
+    const target = Number(counter.dataset.count);
+    const suffix = counter.dataset.suffix || "";
 
-        const suffix = counter.dataset.suffix || "";
+    const duration = 1800;
+    const startTime = performance.now();
 
-        let current = 0;
+    function update(currentTime) {
 
-        const increment = target / 120;
+        const elapsed = currentTime - startTime;
 
-        function update() {
+        const progress = Math.min(
+            elapsed / duration,
+            1
+        );
 
-            current += increment;
+        /* Smooth ease-out */
+        const easedProgress =
+            1 - Math.pow(1 - progress, 3);
 
-            if (current < target) {
+        const currentValue =
+            Math.floor(
+                target * easedProgress
+            );
 
-                counter.innerText = Math.floor(current) + suffix;
+        counter.innerText =
+            currentValue.toLocaleString("en-US") +
+            suffix;
 
-                requestAnimationFrame(update);
+        if (progress < 1) {
 
-            } else {
+            requestAnimationFrame(update);
 
-                counter.innerText = target + suffix;
+        } else {
 
-            }
-
+            counter.innerText =
+                target.toLocaleString("en-US") +
+                suffix;
         }
-
-        update();
-
     }
+
+    requestAnimationFrame(update);
+}
 
     /*==============================
       Reveal Animation
