@@ -1587,29 +1587,52 @@ document.getElementById("year").textContent = new Date().getFullYear();
 <script src="{% static 'js/language.js' %}"></script>
 
 <script>
-document.addEventListener("DOMContentLoaded", function () {
 
-    var text = "“Makes you happy”";
-    var el = document.getElementById("tourismNeonType");
-    var wrap = el ? el.closest(".hero-neon-wrap") : null;
 
-    if (!el || !wrap) return;
+   const tourismNeonType = document.getElementById("tourismNeonType");
 
-    var i = 0;
+const tourismTexts = {
+    en: "“Makes you happy”",
+    ar: "“يجعلك سعيدًا”"
+};
 
-    function typeNext() {
+function typeTourismText(text) {
+
+    tourismNeonType.textContent = "";
+
+    let i = 0;
+
+    function typeWriter() {
+
         if (i < text.length) {
-            el.textContent += text.charAt(i);
+
+            tourismNeonType.textContent += text.charAt(i);
             i++;
-            setTimeout(typeNext, 85);
-        } else {
-            wrap.classList.add("typing-done");
+
+            setTimeout(typeWriter, 70);
+
         }
+
     }
 
-    setTimeout(typeNext, 600);
+    typeWriter();
+}
 
-});
+function updateTourismNeonText() {
+
+    const isArabic = document.body.classList.contains("arabic");
+
+    typeTourismText(
+        isArabic ? tourismTexts.ar : tourismTexts.en
+    );
+
+}
+
+/* Initial text */
+updateTourismNeonText();
+
+/* Listen for language changes */
+document.addEventListener("languageChanged", updateTourismNeonText);
 </script>
 </body>
 </html>
