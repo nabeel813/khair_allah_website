@@ -77,97 +77,232 @@
 </nav>
 
   <!-- ================= HERO ================= -->
- <header class="hero">
-   <div class="hero-background">
-   </div>
-   <div class="hero-overlay">
-   </div>
-   <div class="container hero-container">
-    <div class="hero-content">
-     <span class="hero-badge" data-i18n="KOCHI • KERALA • INDIA">
-      <i class="fa-solid fa-location-dot">
-      </i>
-      KOCHI • KERALA • INDIA
-     </span>
-     <h1 class="hero-heading-gold" data-i18n-html="hero-heading">
-      <span data-i18n="Every Journey">
-       Every Journey
-      </span>
-      <br/>
-      <span data-i18n="to Healing">
-       to Healing
-      </span>
-      <br/>
-      <span data-i18n="Begins with">
-       Begins with
-      </span>
-      <span data-i18n="Khair Allah">
-       Khair Allah
-      </span>
-     </h1>
-     <div class="hero-divider"></div>
-     <p data-i18n-html="hero-paragraph">
-      For more than
-      <strong>
-       15 years
-      </strong>
-      , we have welcomed thousands
+<header class="hero" id="hero">
+
+    <!-- Cinematic Background -->
+    <div class="hero-background" aria-hidden="true">
+        <div class="hero-background-image"></div>
+        <div class="hero-background-glow"></div>
+        <div class="hero-background-vignette"></div>
+    </div>
+
+    <!-- Cinematic Overlay -->
+    <div class="hero-overlay" aria-hidden="true"></div>
+
+    <!-- Decorative Light -->
+    <div class="hero-light hero-light-one" aria-hidden="true"></div>
+    <div class="hero-light hero-light-two" aria-hidden="true"></div>
+
+    <div class="container hero-container">
+
+        <div class="hero-content">
+
+            <!-- Location Badge -->
+            <span
+                class="hero-badge hero-reveal hero-reveal-1"
+                data-i18n="KOCHI • KERALA • INDIA"
+            >
+                <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+
+                <span data-i18n="KOCHI • KERALA • INDIA">
+                    KOCHI • KERALA • INDIA
+                </span>
+            </span>
+
+
+            <!-- Main Heading -->
+            <h1
+                class="hero-heading-gold cinematic-heading hero-reveal hero-reveal-2"
+            >
+
+                <span class="hero-heading-line">
+                    <span data-i18n="Every Journey">
+                        Every Journey
+                    </span>
+                </span>
+
+                <span class="hero-heading-line">
+                    <span data-i18n="to Healing">
+                        to Healing
+                    </span>
+                </span>
+
+                <span class="hero-heading-line">
+                    <span data-i18n="Begins with">
+                        Begins with
+                    </span>
+
+                    <span
+                        class="hero-heading-brand"
+                        data-i18n="Khair Allah"
+                    >
+                        Khair Allah
+                    </span>
+                </span>
+
+            </h1>
+
+
+            <!-- Gold Divider -->
+            <div
+                class="hero-divider hero-reveal hero-reveal-3"
+                aria-hidden="true"
+            >
+                <span></span>
+            </div>
+
+
+            <!-- Description -->
+            <p
+                class="hero-description hero-reveal hero-reveal-4"
+                data-i18n-html="hero-paragraph"
+            >
+                For more than
+                <strong>15 years</strong>,
+                we have welcomed thousands
                 of international guests, especially from the GCC,
                 providing trusted medical tourism services with compassion,
                 professionalism, and Kerala's renowned hospitality.
-     </p>
-     <div class="hero-buttons">
-      <a class="btn-primary" data-i18n="Plan Your Visit" href="https://wa.me/919778299669" rel="noopener noreferrer" target="_blank">
-       <i class="fa-solid fa-calendar-check">
-       </i>
-       Plan Your Visit
-      </a>
-      <a class="btn-secondary" data-i18n="Our Story" href="{% url 'about' %}">
-       Our Story
-       <i class="fa-solid fa-arrow-right">
-       </i>
-      </a>
-     </div>
-     <div class="hero-stats">
-      <div class="glass-card">
-       <i class="fa-solid fa-award">
-       </i>
-       <h2>
-        15+
-       </h2>
-       <p data-i18n="Years of Excellence">
-        Years of Excellence
-       </p>
-      </div>
-      <div class="glass-card">
-       <i class="fa-solid fa-users">
-       </i>
-       <h2>
-        10,000+
-       </h2>
-       <p data-i18n="Happy Guests">
-        Happy Guests
-       </p>
-      </div>
-      <div class="glass-card">
-       <i class="fa-solid fa-user-doctor">
-       </i>
-       <h2>
-        22+
-       </h2>
-       <p data-i18n="Team Members">
-        Team Members
-       </p>
-      </div>
-     </div>
+            </p>
+
+
+            <!-- CTA Buttons -->
+            <div class="hero-buttons hero-reveal hero-reveal-5">
+
+                <!-- Primary CTA -->
+                <a
+                    class="btn-primary hero-cta"
+                    href="https://wa.me/919778299669"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                >
+
+                    <i
+                        class="fa-solid fa-calendar-check"
+                        aria-hidden="true"
+                    ></i>
+
+                    <span data-i18n="Plan Your Visit">
+                        Plan Your Visit
+                    </span>
+
+                </a>
+
+
+                <!-- Secondary CTA -->
+                <a
+                    class="btn-secondary hero-cta"
+                    href="{% url 'about' %}"
+                >
+
+                    <span data-i18n="Our Story">
+                        Our Story
+                    </span>
+
+                    <i
+                        class="fa-solid fa-arrow-right"
+                        aria-hidden="true"
+                    ></i>
+
+                </a>
+
+            </div>
+
+
+            <!-- Hero Statistics -->
+            <div class="hero-stats hero-reveal hero-reveal-6">
+
+
+                <!-- Years -->
+                <div class="glass-card hero-stat-card">
+
+                    <div class="hero-stat-icon">
+                        <i
+                            class="fa-solid fa-award"
+                            aria-hidden="true"
+                        ></i>
+                    </div>
+
+                    <div class="hero-stat-content">
+
+                        <h2>15+</h2>
+
+                        <p data-i18n="Years of Excellence">
+                            Years of Excellence
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Guests -->
+                <div class="glass-card hero-stat-card">
+
+                    <div class="hero-stat-icon">
+                        <i
+                            class="fa-solid fa-users"
+                            aria-hidden="true"
+                        ></i>
+                    </div>
+
+                    <div class="hero-stat-content">
+
+                        <h2>10,000+</h2>
+
+                        <p data-i18n="Happy Guests">
+                            Happy Guests
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Team -->
+                <div class="glass-card hero-stat-card">
+
+                    <div class="hero-stat-icon">
+                        <i
+                            class="fa-solid fa-user-doctor"
+                            aria-hidden="true"
+                        ></i>
+                    </div>
+
+                    <div class="hero-stat-content">
+
+                        <h2>22+</h2>
+
+                        <p data-i18n="Team Members">
+                            Team Members
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
     </div>
-   </div>
-   <!-- Scroll Indicator -->
-   <div class="scroll-indicator">
-    <span>
-    </span>
-   </div>
-  </header>
+
+
+    <!-- Scroll Indicator -->
+    <div
+        class="hero-scroll-indicator hero-reveal hero-reveal-7"
+        aria-hidden="true"
+    >
+
+        <span class="hero-scroll-line"></span>
+
+        <span class="hero-scroll-text">
+            SCROLL
+        </span>
+
+    </div>
+
+</header>
   <!--=========================================
 WHY CHOOSE KHAIR ALLAH
 ==========================================-->
