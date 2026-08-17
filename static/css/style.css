@@ -7671,3 +7671,99 @@ html[dir="ltr"] .tourism-hero h1 {
     }
 
 }
+
+/* =========================================================
+   HERO STAT CARDS — MOBILE FIX
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+    .hero-stats {
+        width: 100%;
+        max-width: 100%;
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .hero-stat-card {
+        width: 100%;
+        min-width: 0;
+        max-width: 100%;
+
+        display: flex;
+        align-items: center;
+
+        padding: 14px 16px;
+
+        box-sizing: border-box;
+        overflow: hidden;
+    }
+
+    .hero-stat-icon {
+        flex: 0 0 38px;
+        width: 38px;
+        height: 38px;
+    }
+
+    .hero-stat-content {
+        flex: 1 1 auto;
+        min-width: 0;
+        width: 0;
+        overflow: hidden;
+    }
+
+    .hero-stat-content h2 {
+        width: 100%;
+        margin: 0 0 3px;
+
+        font-size: 1.25rem;
+        line-height: 1.15;
+
+        white-space: nowrap;
+        overflow: hidden;
+    }
+
+    .hero-stat-content p {
+        width: 100%;
+
+        font-size: 0.7rem;
+        line-height: 1.35;
+
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+}
+
+
+/* =========================================================
+   VERY SMALL PHONES
+   ========================================================= */
+
+@media (max-width: 480px) {
+
+    .hero-stat-card {
+        padding: 12px 14px;
+        gap: 10px;
+    }
+
+    .hero-stat-icon {
+        flex: 0 0 34px;
+
+        width: 34px;
+        height: 34px;
+    }
+
+    .hero-stat-icon i {
+        font-size: 0.8rem;
+    }
+
+    .hero-stat-content h2 {
+        font-size: 1.15rem;
+    }
+
+    .hero-stat-content p {
+        font-size: 0.65rem;
+    }
+
+}
