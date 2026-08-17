@@ -7854,4 +7854,52 @@ html[dir="ltr"] .tourism-hero h1 {
 
 }
 
-/*
+body.medical-page .services-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 30px;
+}
+
+body.medical-page .service-card {
+    width: 100%;
+    min-width: 0;
+}
+
+body.medical-page .service-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+body.medical-page .service-content {
+    padding: 22px 22px 26px;
+    box-sizing: border-box;
+}
+
+body.medical-page .service-content h3 {
+    font-size: 21px;
+    line-height: 1.35;
+    min-height: 0;
+    margin: 0 0 10px;
+    display: block;
+}
+
+body.medical-page .service-content p {
+    font-size: 15px;
+    line-height: 1.6;
+    margin: 0;
+}
+
+html[dir="rtl"] body.medical-page .service-content {
+    direction: rtl;
+    text-align: right;
+}
+
+html[dir="rtl"] body.medical-page .service-content h3 {
+    font-family: 'Amiri', serif;
+    line-height: 1.5;
+}
+
+html[dir="rtl"] body.medical-page .service-content p {
+    font-family: 'Amiri', serif;
+    line-height: 1.9;
+}
