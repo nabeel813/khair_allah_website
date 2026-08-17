@@ -1077,6 +1077,19 @@ document.addEventListener("DOMContentLoaded", () => {
 "team-role-8": "Job Role",
 "tourism-neon-text":
     "“Makes you happy”",
+    "senior-facilitator": "Senior Facilitator | 10+ Years of Experience",
+
+"coordinator-facilitation": "Coordinator | Facilitation Executive | Communication",
+
+"office-executive": "Office Executive",
+
+"hospital-facilitator": "Hospital Facilitator",
+
+"tour-guide-10-years": "Tour Guide | 10+ Years of Experience",
+
+"tour-guide-driver-7-years": "Tour Guide & Driver | 7+ Years of Experience",
+
+"tour-guide-driver": "Tour Guide & Driver",
         },
 
 
@@ -2224,6 +2237,20 @@ document.addEventListener("DOMContentLoaded", () => {
     "الوظيفة",
     "tourism-neon-text":
     "“يجعلك سعيدًا”",
+
+    "senior-facilitator": "منسق أول | خبرة أكثر من 10 سنوات",
+
+"coordinator-facilitation": "منسق | مسؤول خدمات التسهيل | التواصل",
+
+"office-executive": "مسؤول تنفيذي للمكتب",
+
+"hospital-facilitator": "منسق خدمات المستشفى",
+
+"tour-guide-10-years": "مرشد سياحي | خبرة أكثر من 10 سنوات",
+
+"tour-guide-driver-7-years": "مرشد سياحي وسائق | خبرة أكثر من 7 سنوات",
+
+"tour-guide-driver": "مرشد سياحي وسائق",
 
         }
     };
