@@ -2344,12 +2344,16 @@ document.addEventListener("DOMContentLoaded", () => {
             "khairAllahLanguage",
             language
         );
+
+        /* ================= NOTIFY LISTENERS ================= */
+
+        document.dispatchEvent(
+            new CustomEvent("languageChanged", {
+                detail: { language: language }
+            })
+        );
     }
-document.dispatchEvent(
-    new CustomEvent("languageChanged", {
-        detail: { language: language }
-    })
-);
+
 
     /* =========================================================
        ENGLISH BUTTON
