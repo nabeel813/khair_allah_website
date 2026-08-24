@@ -146,8 +146,14 @@ CLOUDINARY_STORAGE = {
     'API_SECRET': config('CLOUDINARY_API_SECRET', default=''),
 }
 
-# Use Cloudinary when credentials exist, otherwise local media folder
-if CLOUDINARY_STORAGE['CLOUD_NAME']:
+# Use Cloudinary only when ALL three credentials are present. Checking
+# CLOUD_NAME alone is not enough: if it's set but the API key/secret are
+# blank (e.g. partially filled in on the host's env vars), Cloudinary's
+# SDK raises "ValueError: Must supply api_key" as soon as an image is
+# saved, which Django can't catch -> 500 error on every image upload.
+CLOUDINARY_ENABLED = all(CLOUDINARY_STORAGE.values())
+
+if CLOUDINARY_ENABLED:
     MEDIA_URL = '/media/'
 else:
     MEDIA_URL = '/media/'
@@ -161,7 +167,7 @@ STORAGES = {
     'default': {
         'BACKEND': (
             'cloudinary_storage.storage.MediaCloudinaryStorage'
-            if CLOUDINARY_STORAGE['CLOUD_NAME']
+            if CLOUDINARY_ENABLED
             else 'django.core.files.storage.FileSystemStorage'
         ),
     },
