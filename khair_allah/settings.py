@@ -137,7 +137,6 @@ STATICFILES_DIRS = [
     BASE_DIR / 'static',
 ]
 STATIC_ROOT = BASE_DIR / 'staticfiles'
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 
 # --------------- Media / Cloudinary ---------------
@@ -149,11 +148,27 @@ CLOUDINARY_STORAGE = {
 
 # Use Cloudinary when credentials exist, otherwise local media folder
 if CLOUDINARY_STORAGE['CLOUD_NAME']:
-    DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
     MEDIA_URL = '/media/'
 else:
     MEDIA_URL = '/media/'
     MEDIA_ROOT = BASE_DIR / 'media'
+
+# Django 4.2+ uses the STORAGES dict instead of the old
+# DEFAULT_FILE_STORAGE / STATICFILES_STORAGE settings. As of Django 6.0,
+# the old-style settings are silently ignored (no auto-conversion), so
+# both backends must be declared here explicitly.
+STORAGES = {
+    'default': {
+        'BACKEND': (
+            'cloudinary_storage.storage.MediaCloudinaryStorage'
+            if CLOUDINARY_STORAGE['CLOUD_NAME']
+            else 'django.core.files.storage.FileSystemStorage'
+        ),
+    },
+    'staticfiles': {
+        'BACKEND': 'whitenoise.storage.CompressedManifestStaticFilesStorage',
+    },
+}
 
 
 # --------------- Production security (only when DEBUG=False) ---------------
