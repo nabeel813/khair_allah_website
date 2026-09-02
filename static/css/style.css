@@ -8053,3 +8053,94 @@ html[dir="rtl"] body.medical-page .service-content p {
         right:18px;
     }
 }
+
+/* =========================================================
+   TEAM SUBSECTION HEADINGS
+   Premium centered headings — About Page
+   ========================================================= */
+
+.team-subheading {
+    position: relative;
+
+    text-align: center;
+
+    margin: 70px auto 40px;
+
+    font-family: 'Amiri', serif;
+    font-size: 32px;
+    font-weight: 700;
+
+    line-height: 1.3;
+
+    color: #173f35;
+
+    letter-spacing: 0.3px;
+}
+
+/* Elegant gold accent underneath */
+.team-subheading::after {
+    content: "";
+
+    display: block;
+
+    width: 55px;
+    height: 3px;
+
+    margin: 14px auto 0;
+
+    background: #b58a4a;
+
+    border-radius: 10px;
+}
+
+/* First subsection spacing */
+.team-subsection:first-of-type .team-subheading {
+    margin-top: 55px;
+}
+
+/* =========================================================
+   TEAM SUBSECTION
+   ========================================================= */
+
+.team-subsection {
+    width: 100%;
+    margin-bottom: 25px;
+}
+
+/* =========================================================
+   TEAM GRID
+   ========================================================= */
+
+.team-subsection .team-grid {
+    margin-top: 0;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+    .team-subheading {
+        font-size: 27px;
+        margin: 55px auto 30px;
+    }
+
+    .team-subheading::after {
+        width: 45px;
+        height: 2px;
+        margin-top: 11px;
+    }
+
+}
+
+
+@media (max-width: 480px) {
+
+    .team-subheading {
+        font-size: 24px;
+        margin: 45px auto 25px;
+    }
+
+}
