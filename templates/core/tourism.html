@@ -420,7 +420,7 @@
  <span
     class="hero-neon-text"
     id="tourismNeonType"
-    data-i18n="tourism-neon-text">Makes You Happy</span> <span class="hero-neon-cursor">|</span>
+    data-i18n-html="tourism-neon-text">Makes <span class="hero-neon-u">Ü</span> Happy</span> <span class="hero-neon-cursor">|</span>
   <span class="hero-neon-caption">Khair Allah Medical Tourism</span>
 </div>
 
@@ -1566,7 +1566,7 @@ function startTourismNeonAnimation() {
     const text =
         tourismNeonType.textContent.trim();
 
-    tourismNeonType.textContent = "";
+    tourismNeonType.innerHTML = "";
     tourismNeonType.style.animationPlayState = "paused";
 
     let i = 0;
@@ -1575,8 +1575,14 @@ function startTourismNeonAnimation() {
 
         if (i < text.length) {
 
-            tourismNeonType.textContent +=
-                text.charAt(i);
+            const ch = text.charAt(i);
+
+            if (ch === "Ü" || ch === "ü") {
+                tourismNeonType.innerHTML +=
+                    '<span class="hero-neon-u">' + ch + '</span>';
+            } else {
+                tourismNeonType.innerHTML += ch;
+            }
 
             i++;
 

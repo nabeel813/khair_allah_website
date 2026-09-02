@@ -1076,7 +1076,7 @@ document.addEventListener("DOMContentLoaded", () => {
 "team-role-7": "Job Role",
 "team-role-8": "Job Role",
 "tourism-neon-text":
-    "“Makes you happy”",
+    "Makes <span class=\"hero-neon-u\">Ü</span> Happy",
     "senior-facilitator": "Senior Facilitator | 10+ Years of Experience",
 
 "coordinator-facilitation": "Coordinator | Facilitation Executive | Communication",
@@ -2235,8 +2235,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
 "team-role-8":
     "الوظيفة",
-    "tourism-neon-text":
-    "“يجعلك سعيدًا”",
+        "tourism-neon-text":
+    "يجعلك سعيدًا",
 
     "senior-facilitator": "منسق أول | خبرة أكثر من 10 سنوات",
 

@@ -6239,25 +6239,27 @@ NEON TAGLINE — Tourism Hero (main statement)
 
     display:block;
 
-    font-family:'Dancing Script', cursive;
+    font-family:'Poppins', sans-serif;
 
-    font-weight:700;
+    font-weight:600;
 
     font-size:64px;
 
     letter-spacing:.5px;
 
-    color:#FFD98A;
+    color:#ffffff;
 
-    text-shadow:
-        0 0 6px rgba(255,217,138,.85),
-        0 0 16px rgba(214,179,90,.75),
-        0 0 34px rgba(214,179,90,.55),
-        0 0 60px rgba(214,179,90,.35);
+    text-shadow:none;
 
-    animation:neonGlowPulse 2.6s ease-in-out infinite;
+}
 
-    animation-play-state:paused;
+.hero-neon-u{
+
+    color:#f4c41a;
+
+    font-weight:800;
+
+    font-size:1.05em;
 
 }
 
@@ -6265,17 +6267,15 @@ NEON TAGLINE — Tourism Hero (main statement)
 
     display:inline-block;
 
-    font-family:'Dancing Script', cursive;
+    font-family:'Poppins', sans-serif;
 
     font-weight:600;
 
     font-size:64px;
 
-    color:#FFD98A;
+    color:#ffffff;
 
-    text-shadow:
-        0 0 6px rgba(255,217,138,.85),
-        0 0 16px rgba(214,179,90,.75);
+    text-shadow:none;
 
     margin-left:2px;
 
