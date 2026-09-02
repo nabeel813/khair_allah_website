@@ -9,8 +9,7 @@
 <link rel="apple-touch-icon" href="{% static 'assets/favicon-180.png' %}">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cairo:wght@400;600;900&family=Work+Sans:wght@300;400;500;600;700&family=Dancing+Script:wght@600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cairo:wght@400;600;900&family=Work+Sans:wght@300;400;500;600;700&family=Dancing+Script:wght@600;700&family=Poppins:wght@500;600;700;800;900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="{% static 'css/style.css' %}">
 
 <style>
@@ -348,6 +347,30 @@
 </head>
 
 <body class="tourism-page">
+
+<!-- ================= TOURISM SECTION LOADER ================= -->
+<div id="tourismLoader" class="tourism-loader">
+
+    <div class="tl-wrap">
+
+        <div class="tl-row">
+            <span class="tl-line"></span>
+            <h1 class="tl-logo">
+                <span class="tl-base">Makes <span class="tl-u">Ü</span> Happy</span>
+                <span class="tl-fill" aria-hidden="true">Makes <span class="tl-u">Ü</span> Happy</span>
+            </h1>
+            <span class="tl-line"></span>
+        </div>
+
+        <div class="tl-percent">
+            <span data-i18n="loading">loading…</span> <span class="tl-percent-num">0</span>%
+        </div>
+
+    </div>
+
+</div>
+
+
 
 <!-- NAVBAR -->
 <nav class="navbar">
@@ -1587,6 +1610,48 @@ document.addEventListener(
 
     }
 );
+</script>
+
+<!-- Tourism loader fill animation -->
+<script>
+(function () {
+    var loader = document.getElementById("tourismLoader");
+    if (!loader) return;
+
+    var numEl = loader.querySelector(".tl-percent-num");
+    var duration = 1500;
+    var start = null;
+
+    function easeInOutCubic(t){
+        return t < 0.5 ? 4*t*t*t : 1 - Math.pow(-2*t + 2, 3) / 2;
+    }
+
+    function step(timestamp){
+        if (!start) start = timestamp;
+        var elapsed = timestamp - start;
+        var t = Math.min(elapsed / duration, 1);
+        var eased = easeInOutCubic(t);
+        var pct = Math.round(eased * 100);
+
+        loader.style.setProperty("--tl-fill", pct);
+        if (numEl) numEl.textContent = pct;
+
+        if (t < 1) {
+            requestAnimationFrame(step);
+        } else {
+            setTimeout(function () {
+                loader.classList.add("tl-done");
+                setTimeout(function () {
+                    loader.style.display = "none";
+                }, 900);
+            }, 400);
+        }
+    }
+
+    window.addEventListener("load", function () {
+        requestAnimationFrame(step);
+    });
+})();
 </script>
 </body>
 </html>

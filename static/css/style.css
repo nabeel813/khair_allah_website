@@ -5677,6 +5677,137 @@ LOADER
 
 }
 
+
+/*==================================================
+  TOURISM SECTION — "MAKES Ü HAPPY" FILL LOADER
+==================================================*/
+.tourism-page #tourismLoader.tourism-loader{
+
+    position:fixed;
+    inset:0;
+    z-index:99999;
+    background:linear-gradient(135deg, #17171b 0%, #232228 55%, #1c1c20 100%);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    transition:opacity .9s ease;
+
+}
+
+
+.tourism-page #tourismLoader.tourism-loader.tl-done{
+
+    opacity:0;
+    pointer-events:none;
+
+}
+
+.tl-wrap{
+
+    position:relative;
+    display:inline-block;
+    padding-bottom:34px;
+
+}
+
+.tl-row{
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:18px;
+    padding:0 20px;
+
+}
+
+.tl-line{
+
+    flex:1 1 60px;
+    max-width:120px;
+    height:2px;
+    background:#f4c41a;
+
+}
+
+.tl-logo{
+
+    position:relative;
+    display:inline-block;
+    margin:0;
+    font-family:'Poppins', sans-serif;
+    font-weight:600;
+    font-size:clamp(28px,6vw,64px);
+    letter-spacing:0.5px;
+    white-space:nowrap;
+
+}
+
+.tl-logo .tl-u{
+
+    font-weight:800;
+    font-size:1.05em;
+    margin:0 2px;
+    display:inline-block;
+
+}
+
+.tl-base{
+
+    color:#3a3a3a;
+
+}
+
+.tl-base .tl-u{
+
+    color:#7a5c12;
+
+}
+
+.tl-fill{
+
+    position:absolute;
+    inset:0;
+    color:#ffffff;
+    clip-path:inset(calc(100% - (var(--tl-fill,0) * 1%)) 0 0 0);
+    will-change:clip-path;
+
+}
+
+.tl-fill .tl-u{
+
+    color:#f4c41a;
+
+}
+
+.tl-percent{
+
+    position:absolute;
+    right:0;
+    bottom:0;
+    font-family:'Cairo', sans-serif;
+    font-weight:400;
+    font-size:14px;
+    letter-spacing:.5px;
+    color:#7a7a7a;
+    text-transform:lowercase;
+
+}
+
+.tl-percent-num{
+
+    color:#ffffff;
+    font-weight:600;
+
+}
+
+@media (max-width:480px){
+
+    .tl-logo{ font-size:26px; }
+    .tl-line{ max-width:40px; }
+    .tl-percent{ font-size:12px; }
+
+}
+
 /* =========================================================
    LOGISTICS PAGE
    ========================================================= */
