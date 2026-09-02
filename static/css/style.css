@@ -6263,25 +6263,7 @@ NEON TAGLINE — Tourism Hero (main statement)
 
 }
 
-.hero-neon-cursor{
 
-    display:inline-block;
-
-    font-family:'Poppins', sans-serif;
-
-    font-weight:600;
-
-    font-size:64px;
-
-    color:#ffffff;
-
-    text-shadow:none;
-
-    margin-left:2px;
-
-    animation:neonCursorBlink 1s step-end infinite;
-
-}
 
 .hero-neon-caption{
 
