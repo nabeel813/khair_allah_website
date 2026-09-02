@@ -7681,19 +7681,19 @@ html[dir="rtl"] .hero-background-image {
    --------------------------------------------------------- */
 
 .tourism-hero .hero-neon-wrap {
-    position: absolute;
-    top: 55px;
-    right: 5%;
+    position: static;
+    top: auto;
+    right: auto;
     left: auto;
     transform: none;
-    z-index: 5;
+    z-index: auto;
 
-    width: 420px;
-    max-width: 40%;
-    text-align: right;
+    width: 100%;
+    max-width: 100%;
+    text-align: center;
+    margin: 0 auto 18px;
     padding: 0;
 }
-
 .tourism-hero .about-hero-content {
     position: relative;
     z-index: 4;
@@ -7768,17 +7768,18 @@ html[dir="ltr"] .tourism-hero h1 {
 
 @media (max-width: 991px) {
 
-    .tourism-hero .hero-neon-wrap {
-        position: absolute;
-        top: 35px;
-        right: 50%;
+      .tourism-hero .hero-neon-wrap {
+        position: static;
+        top: auto;
+        right: auto;
         left: auto;
-        transform: translateX(50%);
+        transform: none;
 
-        width: 90%;
-        max-width: 600px;
+        width: 100%;
+        max-width: 100%;
 
         text-align: center;
+        margin: 0 auto 16px;
     }
 
     .tourism-hero .about-hero-content {
@@ -7810,7 +7811,7 @@ html[dir="ltr"] .tourism-hero h1 {
     }
 
     .tourism-hero .hero-neon-wrap {
-        position: relative;
+        position: static;
         top: auto;
         right: auto;
         left: auto;
@@ -7819,7 +7820,7 @@ html[dir="ltr"] .tourism-hero h1 {
         width: 100%;
         max-width: 100%;
 
-        margin: 0 auto 35px;
+        margin: 0 auto 14px;
         padding: 0 20px;
 
         text-align: center;
