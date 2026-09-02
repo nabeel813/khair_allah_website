@@ -3025,13 +3025,18 @@ COMPANY INTRODUCTION
 }
 
 .company-image img,
-.company-logo-img{
-    width: auto;
-    max-width: 100%;
+.company-logo-img {
+    display: block;
+    width: 100%;
+    max-width: 420px;
     height: auto;
-    border-radius: 20px;
-    box-shadow: 0 20px 45px rgba(0,0,0,.12);
-    transition: .5s;
+
+    margin: 0 auto;
+
+    background: transparent;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
 }
 
 .company-image:hover img{
