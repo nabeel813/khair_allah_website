@@ -2654,6 +2654,13 @@ footer hr{
     color:rgba(255,255,255,.55);
     margin-top:2px;
 }
+
+.contact-card .footer-phone-label{
+    color:#888;
+    font-weight:400;
+    margin-top:1px;
+    margin-bottom:10px;
+}
 @media(max-width:991px){
 
 .footer-grid{
