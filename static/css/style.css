@@ -3033,7 +3033,7 @@ COMPANY INTRODUCTION
     transition: .5s;
 }
 
-.company-logo-img{
+.company-image img.company-logo-img{
     width: auto;
     max-width: 100%;
     height: auto;
@@ -3042,7 +3042,6 @@ COMPANY INTRODUCTION
     background: transparent;
     transition: .5s;
 }
-
 .company-image:hover img{
     transform: scale(1.03);
 }
