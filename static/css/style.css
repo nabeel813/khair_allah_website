@@ -3024,19 +3024,23 @@ COMPANY INTRODUCTION
     flex-wrap: wrap;
 }
 
-.company-image img,
-.company-logo-img {
-    display: block;
-    width: 100%;
-    max-width: 420px;
+.company-image img{
+    width: auto;
+    max-width: 100%;
     height: auto;
+    border-radius: 20px;
+    box-shadow: 0 20px 45px rgba(0,0,0,.12);
+    transition: .5s;
+}
 
-    margin: 0 auto;
-
-    background: transparent;
-    border: none;
+.company-logo-img{
+    width: auto;
+    max-width: 100%;
+    height: auto;
     border-radius: 0;
     box-shadow: none;
+    background: transparent;
+    transition: .5s;
 }
 
 .company-image:hover img{
@@ -4004,9 +4008,9 @@ About Clients
 
     width:100%;
 
-    border-radius:25px;
+    border-radius:0;
 
-    box-shadow:0 25px 60px rgba(0,0,0,.15);
+    box-shadow:none;
 
     transition:.5s;
 
