@@ -7420,9 +7420,8 @@ html[dir="rtl"] .hero-background-image {
     }
 
     .hero-background-image {
-        background-position: 50% center;
+        background-position: center center;
     }
-
     .hero-stats {
         max-width: 100%;
     }
@@ -7461,11 +7460,16 @@ html[dir="rtl"] .hero-background-image {
         max-width: 100%;
     }
 
-        .hero-background-image {
-        inset: -3%;
-        background-position: 50% center;
+    .hero-background-image {
+        inset: 0;
 
-        animation-duration: 30s;
+        background-size: 100% 100%, contain;
+        background-position: center center, center center;
+        background-repeat: no-repeat;
+        background-color: #050b12;
+
+        transform: none;
+        animation: none;
     }
 
     .hero-background-glow {
