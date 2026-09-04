@@ -339,7 +339,7 @@ Hero
 
     inset:0;
 
-    background-image:url("../assets/jj.png");
+    background-image:url("../assets/jj.webp");
     background-repeat:no-repeat;
     background-size:cover;
     background-position:75% center;
@@ -6640,7 +6640,7 @@ OUR TEAM
             rgba(3, 9, 15, 0.45) 58%,
             rgba(3, 9, 15, 0.72) 100%
         ),
-        url("../assets/jj.png");
+        url("../assets/jj.webp");
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
