@@ -138,7 +138,7 @@ Navbar
 }
 
 .logo-mark {
-    width: 260px;
+    width: 150px;
     height: auto;
     object-fit: contain;
     object-position: center;
@@ -1196,7 +1196,7 @@ Mobile Menu
 }
 
 .navbar .logo-mark {
-    width: 190px;
+    width: 110px;
     height: auto;
     object-fit: contain;
 }
@@ -7997,11 +7997,12 @@ html[dir="ltr"] .tourism-hero h1 {
         font-size: 0.65rem;
     }
 
-}
 
-body.medical-page .services-grid {
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-    gap: 30px;
+@media (min-width: 1101px) {
+    body.medical-page .services-grid {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 30px;
+    }
 }
 
 body.medical-page .service-card {
