@@ -334,7 +334,6 @@ Hero
     min-height: 100vh;
     display: flex;
     align-items: center;
-    padding: 100px 0;
 }
 .hero-background{
 
@@ -1163,8 +1162,6 @@ Mobile Menu
 .hero{
 
     min-height:100vh;
-
-    padding-top:120px;
 
 }
 
