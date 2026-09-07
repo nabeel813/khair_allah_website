@@ -3020,10 +3020,9 @@ COMPANY INTRODUCTION
 
     gap:80px;
 
-    align-items:center;
+    align-items:start;
 
 }
-
 .company-image{
     display: flex;
     align-items: center;
