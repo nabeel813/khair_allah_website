@@ -7997,7 +7997,7 @@ html[dir="ltr"] .tourism-hero h1 {
         font-size: 0.65rem;
     }
 
-
+}
 @media (min-width: 1101px) {
     body.medical-page .services-grid {
         grid-template-columns: repeat(4, minmax(0, 1fr));
