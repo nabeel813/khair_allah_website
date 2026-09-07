@@ -1479,11 +1479,10 @@ WHY CHOOSE US
 ========================================= */
 
 .why-choose {
-    padding: 120px 0;
+    padding: 120px 0 60px;
     background: #f7fafc;
     position: relative;
 }
-
 
 /* Section Heading */
 
@@ -1767,7 +1766,7 @@ OUR SERVICES
 ========================================== */
 
 .services {
-    padding: 120px 0;
+    padding: 60px 0 120px;
     background: #f8fbfd;
 }
 
