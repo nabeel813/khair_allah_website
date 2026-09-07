@@ -7475,8 +7475,8 @@ html[dir="rtl"] .hero-background-image {
                 rgba(3, 9, 15, 0.72) 100%
             ),
             url("../assets/jj.webp");
-        background-size: 100% 100%, contain;
-        background-position: center center, center center;
+        background-size: 100% 100%, cover;
+        background-position: center center, center 25%;
         background-repeat: no-repeat;
         background-color: #050b12;
 
