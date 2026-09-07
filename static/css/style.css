@@ -486,7 +486,8 @@ body.arabic .hero p{
 
 .hero-heading-gold{
 
-    color:var(--gold);
+    color:#FEF110;
+    text-transform:uppercase;
 
 }
 
@@ -6932,10 +6933,10 @@ OUR TEAM
 
     margin-left: 10px;
 
-    color: #c9a34a;
+    color: #FEF110;
 
     text-shadow:
-        0 0 30px rgba(201, 163, 74, 0.16);
+        0 0 30px rgba(254, 241, 16, 0.16);
 }
 
 .hero-heading-brand::after {
