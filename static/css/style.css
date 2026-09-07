@@ -4353,12 +4353,11 @@ grid-template-columns:1fr;
 /*==================================
 CONTACT BANNER
 ===================================*/
-
 .contact-banner{
 
     padding:180px 0 100px;
 
-    background:#f8fbfd;
+    background:linear-gradient(135deg, #041A2E, #063A63);
 
     text-align:center;
 
@@ -4368,7 +4367,7 @@ CONTACT BANNER
 
     font-size:60px;
 
-    color:#063A63;
+    color:#fff;
 
     margin:20px 0;
 
@@ -4386,7 +4385,7 @@ CONTACT BANNER
 
     line-height:1.8;
 
-    color:#666;
+    color:rgba(255,255,255,.85);
 
 }
 
