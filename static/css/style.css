@@ -3412,6 +3412,8 @@ LEADERSHIP
 
     object-fit:cover;
 
+    object-position: top center;
+
     transition:.6s;
 
 }
@@ -6545,6 +6547,8 @@ OUR TEAM
     height:100%;
 
     object-fit:cover;
+
+    object-position: top center;
 
     display:block;
 
