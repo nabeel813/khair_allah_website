@@ -24,13 +24,12 @@
 
   <nav class="navbar">
 
-    <div class="container nav-wrapper">
+     <div class="container nav-wrapper">
        <a href="{% url 'home' %}" class="logo">
 
     <img src="{% static 'assets/about-company.jpg' %}" alt="Khair Allah Logo" class="logo-mark">
     <span class="logo-text">
-        <span class="logo-title">Khair Allah</span>
-        <span class="logo-subtitle">Medical &amp; Tourism</span>
+    
     </span>
 
 
@@ -39,27 +38,18 @@
          <ul class="nav-menu">
   <li><a href="{% url 'home' %}" data-i18n="Home">Home</a></li>
   <li><a href="{% url 'about' %}" data-i18n="About">About</a></li>
- <li><a href="{% url 'medical' %}" class="nav-highlight" data-i18n="Medical">Medical</a></li>
+  <li><a href="{% url 'medical' %}" class="nav-highlight" data-i18n="Medical">Medical</a></li>
 <li><a href="{% url 'tourism' %}" class="nav-highlight" data-i18n="Tourism">Tourism</a></li>
   <li><a href="{% url 'logistics' %}" data-i18n="Logistics">Logistics</a></li>
-  <li><a href="{% url 'clients' %}" class="active" data-i18n="Clients">Clients</a></li>
+  <li><a href="{% url 'clients' %}" data-i18n="Clients">Clients</a></li>
   <li><a href="{% url 'terms' %}" data-i18n="Terms & Conditions">Terms</a></li>
-  <li><a href="{% url 'contact' %}" data-i18n="Contact">Contact</a></li>
+  <li><a href="{% url 'contact' %}" class="active" data-i18n="Contact">Contact</a></li>
 </ul>
 
-<a href="https://wa.me/+919895099665" class="nav-button" target="_blank" rel="noopener noreferrer" data-i18n="Plan Your Visit">
+<a href="https://wa.me/919895099665" class="nav-button" target="_blank" rel="noopener noreferrer" data-i18n="Plan Your Visit">
   <i class="fa-brands fa-whatsapp"></i>
   Plan Your Visit
 </a>
-
-
-        <button class="mobile-toggle">
-
-            <i class="fa-solid fa-bars"></i>
-
-        </button>
-
-    </div>
 
         <div class="language-switcher" aria-label="Language selection">
 
@@ -72,10 +62,15 @@
 
         </div>
 
+        <button class="mobile-toggle">
+
+            <i class="fa-solid fa-bars"></i>
+
+        </button>
+
     </div>
 
-</nav>
-
+</nav>  
 
 
     <!-- =========================================
