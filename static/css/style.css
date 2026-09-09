@@ -3969,26 +3969,23 @@ Clients Hero
 Clients Hero
 ==========================*/
 
-.clients-hero{
-
-    position:relative;
-
-    min-height:100vh;
-
-    display:flex;
-
-    align-items:center;
-
-    overflow:hidden;
+.clients-hero {
+    position: relative;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
 
     /* Same background as Medical page */
-    background:linear-gradient(
+    background: linear-gradient(
         135deg,
         var(--dark) 0%,
         var(--primary) 55%,
         #0B4A52 100%
     );
 
+    /* Better section height */
+    min-height: auto;
+    padding: 120px 0 100px;
 }
 
 
