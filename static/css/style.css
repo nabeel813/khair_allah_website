@@ -7981,3 +7981,13 @@ html[dir="rtl"] body.medical-page .service-content p {
 }
 
 
+
+
+/* ==========================================================================
+   Global text justification override
+   Forces justified text alignment across the entire site, superseding
+   the centered/left/right alignment rules defined above.
+   ========================================================================== */
+*{
+    text-align: justify !important;
+}
