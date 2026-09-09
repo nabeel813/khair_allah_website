@@ -1507,6 +1507,9 @@ WHY CHOOSE US
     color: #666;
     font-size: 18px;
     line-height: 1.8;
+
+    text-align: justify;
+    text-align-last: center;
 }
 
 
@@ -1618,6 +1621,9 @@ WHY CHOOSE US
     line-height: 1.8;
 
     margin: 0;
+
+    text-align: justify;
+    text-align-last: left;
 }
 
 
