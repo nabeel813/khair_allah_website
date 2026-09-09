@@ -4517,11 +4517,17 @@ CONTACT INFORMATION
 }
 
 .contact-card p{
-
     color:#666;
-
     line-height:1.8;
+    margin-bottom:18px;
+}
+.contact-card .contact-address{
+    text-align: left;
+    display: inline-block;
+}
 
+.contact-card p:last-child{
+    margin-bottom:0;
 }
 
 .contact-card a{
