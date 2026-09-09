@@ -6796,16 +6796,13 @@ OUR TEAM
 
 .hero-description {
     max-width: 720px;
-
     margin: 0 auto;
-
     color: rgba(255, 255, 255, 0.76);
-
     font-size: 1.05rem;
     line-height: 1.85;
-
-    text-align: center;
-    text-wrap: balance;
+    text-align: justify;
+    text-wrap: wrap;
+    hyphens: auto;
 }
 .hero-description strong {
     color: #ffffff;
@@ -7997,7 +7994,6 @@ html[dir="rtl"] body.medical-page .service-content p {
    Philosophy text, Terms & Privacy pages). Everything else keeps its
    original left/center design.
    ========================================================================== */
-.hero p,
 .about-content p,
 .about-hero p,
 .story-content p,
