@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+{% load static %}
 <html dir="ltr" lang="en">
  <head>
   <meta charset="utf-8"/>
@@ -6,8 +7,8 @@
   <title>
    Khair Allah Medical Tourism
   </title>
-  <link href="assets/favicon.png" rel="icon" type="image/png"/>
-  <link href="assets/favicon-180.png" rel="apple-touch-icon"/>
+  <link href="{% static 'assets/favicon.png' %}" rel="icon" type="image/png"/>
+  <link href="{% static 'assets/favicon-180.png' %}" rel="apple-touch-icon"/>
   <meta content="Trusted Medical Tourism in Kerala. More than 15 years of excellence serving GCC and international patients." name="description"/>
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com" rel="preconnect"/>
@@ -16,74 +17,15 @@
   <!-- Font Awesome -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" rel="stylesheet"/>
   <!-- CSS -->
-  <link href="css/style.css" rel="stylesheet"/>
- 
-  <!-- Home page layout fix: Why Choose Us -->
-  <style>
-    .why-choose { padding: 90px 0; }
-    .why-choose .container { width: min(1200px, 90%); margin: 0 auto; }
-    .why-choose .section-heading { max-width: 780px; margin: 0 auto 50px; padding: 0 12px; }
-    .why-choose .section-heading h2 { font-size: clamp(38px, 4vw, 52px); line-height: 1.15; margin: 14px 0 18px; }
-    .why-choose .section-heading p { font-size: 17px; line-height: 1.75; }
-    .why-choose .choose-grid {
-      width: 100%;
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 24px;
-    }
-    .why-choose .choose-card {
-      min-width: 0;
-      min-height: 340px;
-      padding: 0;
-      border-radius: 20px;
-      background: #063A63;
-      overflow: hidden;
-      position: relative;
-      isolation: isolate;
-    }
-    .why-choose .choose-card > img {
-      position: absolute;
-      inset: 0;
-      width: 100%;
-      height: 100%;
-      max-width: none;
-      object-fit: cover;
-      z-index: -2;
-      transition: transform .6s ease;
-    }
-    .why-choose .choose-card::before {
-      z-index: -1;
-      background: linear-gradient(180deg, rgba(4,26,46,.12) 0%, rgba(4,26,46,.88) 100%);
-    }
-    .why-choose .choose-card-content {
-      min-height: 340px;
-      padding: 28px;
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-end;
-    }
-    .why-choose .choose-card h3 { margin: 0 0 12px; font-size: 24px; }
-    .why-choose .choose-card p { margin: 0; line-height: 1.65; }
-    .why-choose .choose-card:hover > img { transform: scale(1.06); }
-    @media (max-width: 992px) {
-      .why-choose .choose-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-    }
-    @media (max-width: 640px) {
-      .why-choose { padding: 70px 0; }
-      .why-choose .choose-grid { grid-template-columns: 1fr; gap: 18px; }
-      .why-choose .section-heading { margin-bottom: 36px; }
-      .why-choose .section-heading h2 { font-size: 34px; }
-      .why-choose .choose-card, .why-choose .choose-card-content { min-height: 300px; }
-    }
-  </style>
-</head>
+  <link href="{% static 'css/style.css' %}" rel="stylesheet"/>
+ </head>
  <body>
   <!-- ================= LOADER ================= -->
   <div id="loader">
    <div class="loader-content">
-    <img alt="Khair Allah Medical Tourism" class="loader-logo" data-i18n-alt="Khair Allah Medical Tourism" src="assets/about-company.png"/>
-    <h2 data-i18n="Khair Allah Medical Tourism">
-     Khair Allah Medical Tourism
+    <img alt="Khair Allah Medical Tourism" class="loader-logo" data-i18n-alt="Khair Allah Medical Tourism" src="{% static 'assets/logo2.jpg' %}"/>
+    <h2 data-i18n="Khair Allah Medical & Tourism">
+     Khair Allah Medical & Tourism
     </h2>
     <p data-i18n="Your Journey to Better Healthcare">
      Your Journey to Better Healthcare
@@ -97,28 +39,29 @@
   <!-- ================= NAVBAR ================= -->
  <nav class="navbar">
   <div class="container nav-wrapper">
-    <a href="index.html" class="logo">
-      <img src="assets/logo.png" alt="Khair Allah Logo" class="logo-mark">
+    <a href="{% url 'home' %}" class="logo">
+      <img src="{% static 'assets/about-company.jpg' %}" alt="Khair Allah Logo" class="logo-mark">
       <span class="logo-text">
         
       </span>
     </a>
 
-    <ul class="nav-menu">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="medical.html">Medical</a></li>
-      <li><a href="tourism.html">Tourism</a></li>
-      <li><a href="logistics.html" data-i18n="Logistics">Logistics</a></li>
-      <li><a href="clients.html">Clients</a></li>
-      <li><a href="terms.html">Terms</a></li>   <!-- shortened -->
-      <li><a href="contact.html" class="active">Contact</a></li>
-    </ul>
+     <ul class="nav-menu">
+  <li><a href="{% url 'home' %}" class="active" data-i18n="Home">Home</a></li>
+  <li><a href="{% url 'about' %}" data-i18n="About">About</a></li>
+  <li><a href="{% url 'medical' %}" class="nav-highlight" data-i18n="Medical">Medical</a></li>
+<li><a href="{% url 'tourism' %}" class="nav-highlight" data-i18n="Tourism">Tourism</a></li>
+  <li><a href="{% url 'logistics' %}" data-i18n="Logistics">Logistics</a></li>
+  <li><a href="{% url 'clients' %}" data-i18n="Clients">Clients</a></li>
+  <li><a href="{% url 'terms' %}" data-i18n="Terms & Conditions">Terms</a></li>
+<li><a href="{% url 'contact' %}" data-i18n="Contact">Contact</a></li>
+</ul>
 
-    <a href="https://wa.me/919895099669" class="nav-button" target="_blank" rel="noopener noreferrer">
-      <i class="fa-brands fa-whatsapp"></i>
-      Plan Your Visit
-    </a>
+<a href="https://wa.me/+919895099665" class="nav-button" target="_blank" rel="noopener noreferrer" data-i18n="Plan Your Visit">
+  <i class="fa-brands fa-whatsapp"></i>
+  Plan Your Visit
+</a>
+
 
     <div class="language-switcher" aria-label="Language selection">
       <i class="fa-solid fa-globe" aria-hidden="true"></i>
@@ -134,312 +77,664 @@
 </nav>
 
   <!-- ================= HERO ================= -->
-  <header class="hero">
-   <div class="hero-background">
-   </div>
-   <div class="hero-overlay">
-   </div>
-   <div class="container hero-container">
-    <div class="hero-content">
-     <span class="hero-badge" data-i18n="KOCHI • KERALA • INDIA">
-      <i class="fa-solid fa-location-dot">
-      </i>
-      KOCHI • KERALA • INDIA
-     </span>
-     <h1 class="hero-heading-gold" data-i18n-html="hero-heading">
-      <span data-i18n="Every Journey">
-       Every Journey
-      </span>
-      <br/>
-      <span data-i18n="to Healing">
-       to Healing
-      </span>
-      <br/>
-      <span data-i18n="Begins with">
-       Begins with
-      </span>
-      <span data-i18n="Khair Allah">
-       Khair Allah
-      </span>
-     </h1>
-     <p data-i18n-html="hero-paragraph">
-      For more than
-      <strong>
-       15 years
-      </strong>
-      , we have welcomed thousands
+<header class="hero" id="hero">
+
+    <!-- Cinematic Background -->
+    <div class="hero-background" aria-hidden="true">
+        <div class="hero-background-image"></div>
+        <div class="hero-background-glow"></div>
+        <div class="hero-background-vignette"></div>
+    </div>
+
+    <!-- Cinematic Overlay -->
+    <div class="hero-overlay" aria-hidden="true"></div>
+
+    <!-- Decorative Light -->
+    <div class="hero-light hero-light-one" aria-hidden="true"></div>
+    <div class="hero-light hero-light-two" aria-hidden="true"></div>
+
+    <div class="container hero-container">
+
+        <div class="hero-content">
+
+            <!-- Location Badge -->
+            <span
+                class="hero-badge hero-reveal hero-reveal-1"
+                data-i18n="KOCHI • KERALA • INDIA"
+            >
+                <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+
+                <span data-i18n="KOCHI • KERALA • INDIA">
+                    KOCHI • KERALA • INDIA
+                </span>
+            </span>
+
+
+            <!-- Main Heading -->
+            <h1
+                class="hero-heading-gold cinematic-heading hero-reveal hero-reveal-2"
+            >
+
+                <span class="hero-heading-line">
+                    <span data-i18n="Every Journey">
+                        Every Journey
+                    </span>
+                </span>
+
+                <span class="hero-heading-line">
+                    <span data-i18n="to Healing">
+                        to Healing
+                    </span>
+                </span>
+
+                <span class="hero-heading-line">
+                    <span data-i18n="Begins with">
+                        Begins with
+                    </span>
+
+                    <span
+                        class="hero-heading-brand"
+                        data-i18n="Khair Allah"
+                    >
+                        Khair Allah
+                    </span>
+                </span>
+
+            </h1>
+
+
+            <!-- Gold Divider -->
+            <div
+                class="hero-divider hero-reveal hero-reveal-3"
+                aria-hidden="true"
+            >
+                <span></span>
+            </div>
+
+
+            <!-- Description -->
+            <p
+                class="hero-description hero-reveal hero-reveal-4"
+                data-i18n-html="hero-paragraph"
+            >
+                For more than
+                <strong>15 years</strong>,
+                we have welcomed thousands
                 of international guests, especially from the GCC,
                 providing trusted medical tourism services with compassion,
                 professionalism, and Kerala's renowned hospitality.
-     </p>
-     <div class="hero-buttons">
-      <a class="btn-primary" data-i18n="Plan Your Visit" href="https://wa.me/919895099669" rel="noopener noreferrer" target="_blank">
-       <i class="fa-solid fa-calendar-check">
-       </i>
-       Plan Your Visit
-      </a>
-      <a class="btn-secondary" data-i18n="Our Story" href="about.html">
-       Our Story
-       <i class="fa-solid fa-arrow-right">
-       </i>
-      </a>
-     </div>
-     <div class="hero-stats">
-      <div class="glass-card">
-       <i class="fa-solid fa-award">
-       </i>
-       <h2>
-        15+
-       </h2>
-       <p data-i18n="Years of Excellence">
-        Years of Excellence
-       </p>
-      </div>
-      <div class="glass-card">
-       <i class="fa-solid fa-users">
-       </i>
-       <h2>
-        10,000+
-       </h2>
-       <p data-i18n="Happy Guests">
-        Happy Guests
-       </p>
-      </div>
-      <div class="glass-card">
-       <i class="fa-solid fa-user-doctor">
-       </i>
-       <h2>
-        22+
-       </h2>
-       <p data-i18n="Team Members">
-        Team Members
-       </p>
-      </div>
-     </div>
+            </p>
+
+
+            <!-- CTA Buttons -->
+            <div class="hero-buttons hero-reveal hero-reveal-5">
+
+                <!-- Primary CTA -->
+                <a
+                    class="btn-primary hero-cta"
+                    href="https://wa.me/+919895099665"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                >
+
+                    <i
+                        class="fa-solid fa-calendar-check"
+                        aria-hidden="true"
+                    ></i>
+
+                    <span data-i18n="Plan Your Visit">
+                        Plan Your Visit
+                    </span>
+
+                </a>
+
+
+                <!-- Secondary CTA -->
+                <a
+                    class="btn-secondary hero-cta"
+                    href="{% url 'about' %}"
+                >
+
+                    <span data-i18n="Our Story">
+                        Our Story
+                    </span>
+
+                    <i
+                        class="fa-solid fa-arrow-right"
+                        aria-hidden="true"
+                    ></i>
+
+                </a>
+
+            </div>
+
+
+            <!-- Hero Statistics -->
+            <div class="hero-stats hero-reveal hero-reveal-6">
+
+
+                <!-- Years -->
+                <div class="glass-card hero-stat-card">
+
+                    <div class="hero-stat-icon">
+                        <i
+                            class="fa-solid fa-award"
+                            aria-hidden="true"
+                        ></i>
+                    </div>
+
+                    <div class="hero-stat-content">
+
+                        <!-- Years -->
+<h2
+    data-count="15"
+    data-suffix="+"
+>
+    15+
+</h2>
+
+                        <p data-i18n="Years of Excellence">
+                            Years of Excellence
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Guests -->
+                <div class="glass-card hero-stat-card">
+
+                    <div class="hero-stat-icon">
+                        <i
+                            class="fa-solid fa-users"
+                            aria-hidden="true"
+                        ></i>
+                    </div>
+
+                    <div class="hero-stat-content">
+
+                        <!-- Guests -->
+<h2
+    data-count="10000"
+    data-suffix="+"
+>
+    10,000+
+</h2>
+
+                        <p data-i18n="Happy Guests">
+                            Happy Guests
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Team -->
+                <div class="glass-card hero-stat-card">
+
+                    <div class="hero-stat-icon">
+                        <i
+                            class="fa-solid fa-user-doctor"
+                            aria-hidden="true"
+                        ></i>
+                    </div>
+
+                    <div class="hero-stat-content">
+
+                       <!-- Team -->
+<h2
+    data-count="22"
+    data-suffix="+"
+>
+    22+
+</h2>
+
+                        <p data-i18n="Team Members">
+                            Team Members
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
     </div>
-   </div>
-   <!-- Scroll Indicator -->
-   <div class="scroll-indicator">
-    <span>
-    </span>
-   </div>
-  </header>
+
+
+    <!-- Scroll Indicator -->
+    <div
+        class="hero-scroll-indicator hero-reveal hero-reveal-7"
+        aria-hidden="true"
+    >
+
+        <span class="hero-scroll-line"></span>
+
+        <span class="hero-scroll-text">
+            SCROLL
+        </span>
+
+    </div>
+
+</header>
   <!--=========================================
 WHY CHOOSE KHAIR ALLAH
 ==========================================-->
-  <section class="why-choose">
-   <div class="container">
-    <div class="section-heading reveal">
-     <span class="section-tag" data-i18n="WHY CHOOSE US">
-      WHY CHOOSE US
-     </span>
-     <h2 data-i18n="Trusted by Thousands of International Patients">
-      Trusted by Thousands of International Patients
-     </h2>
-     <p data-i18n="why-choose-desc">
-      For over 15 years, Khair Allah Medical Tourism has been helping
+<!--=========================================
+WHY CHOOSE KHAIR ALLAH
+==========================================-->
+<section class="why-choose">
+
+    <div class="container">
+
+        <div class="section-heading reveal">
+            <span class="section-tag" data-i18n="WHY CHOOSE US">
+                WHY CHOOSE US
+            </span>
+
+            <h2 data-i18n="Trusted by Thousands of International Patients">
+                Trusted by Thousands of International Patients
+            </h2>
+
+            <p data-i18n="why-choose-desc">
+                For over 15 years, Khair Allah Medical Tourism has been helping
                 international guests experience world-class healthcare in Kerala
                 with comfort, transparency, and complete peace of mind.
-     </p>
+            </p>
+        </div>
+
+
+        <div class="choose-grid">
+
+            <!-- Card 1 -->
+            <div class="choose-card reveal">
+                <img
+                    src="assets/gc.jpg"
+                    alt="15+ Years of Experience"
+                >
+
+                <div class="choose-card-content">
+                    <h3 data-i18n="15+ Years of Experience">
+                        15+ Years of Experience
+                    </h3>
+
+                    <p data-i18n="choose-desc-1">
+                        More than a decade of trusted medical tourism experience
+                        serving patients from across the GCC and beyond.
+                    </p>
+                </div>
+            </div>
+
+
+            <!-- Card 2 -->
+            <div class="choose-card reveal">
+                <img
+                    src="assets/happ.jpg"
+                    alt="10,000+ Happy Guests"
+                >
+
+                <div class="choose-card-content">
+                    <h3 data-i18n="10,000+ Happy Guests">
+                        10,000+ Happy Guests
+                    </h3>
+
+                    <p data-i18n="choose-desc-2">
+                        Thousands of successful medical journeys built on trust,
+                        honesty and compassionate care.
+                    </p>
+                </div>
+            </div>
+
+
+            <!-- Card 3 -->
+            <div class="choose-card reveal">
+                <img
+                    src="assets/ld.jpg"
+                    alt="Leading Hospitals"
+                >
+
+                <div class="choose-card-content">
+                    <h3 data-i18n="Leading Hospitals">
+                        Leading Hospitals
+                    </h3>
+
+                    <p data-i18n="choose-desc-3">
+                        We coordinate with reputed hospitals and specialists across
+                        Kerala to provide quality healthcare.
+                    </p>
+                </div>
+            </div>
+
+
+            <!-- Card 4 -->
+            <div class="choose-card reveal">
+                <img
+                    src="assets/lan.jpg"
+                    alt="Arabic Support"
+                >
+
+                <div class="choose-card-content">
+                    <h3 data-i18n="Arabic Support">
+                        Arabic Support
+                    </h3>
+
+                    <p data-i18n="choose-desc-4">
+                        Friendly communication and language assistance throughout
+                        your medical journey.
+                    </p>
+                </div>
+            </div>
+
+
+            <!-- Card 5 -->
+            <div class="choose-card reveal">
+                <img
+                    src="assets/ass.jpg"
+                    alt="Complete Travel Assistance"
+                >
+
+                <div class="choose-card-content">
+                    <h3 data-i18n="Complete Travel Assistance">
+                        Complete Travel Assistance
+                    </h3>
+
+                    <p data-i18n="choose-desc-5">
+                        Airport pickup, accommodation, transportation and medical
+                        coordination under one roof.
+                    </p>
+                </div>
+            </div>
+
+
+            <!-- Card 6 -->
+            <div class="choose-card reveal">
+                <img
+                    src="assets/kk.jpg"
+                    alt="Personal Care"
+                >
+
+                <div class="choose-card-content">
+                    <h3 data-i18n="Personal Care">
+                        Personal Care
+                    </h3>
+
+                    <p data-i18n="choose-desc-6">
+                        Every guest is treated with dignity, respect and genuine
+                        hospitality inspired by Kerala's traditions.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
     </div>
-    <div class="choose-grid">
-     <!-- Card 1 -->
-     <div class="choose-card reveal">
-      <img alt="15+ Years of Experience" src="assets/gc.jpg"/>
-      <div class="choose-card-content">
-       <h3 data-i18n="15+ Years of Experience">
-        15+ Years of Experience
-       </h3>
-       <p data-i18n="choose-desc-1">
-        More than a decade of trusted medical tourism experience
-            serving patients from across the GCC and beyond.
-       </p>
-      </div>
-     </div>
-     <!-- Card 2 -->
-     <div class="choose-card reveal">
-      <img alt="15+ Years of Experience" src="assets/happ.jpg"/>
-      <div class="choose-card-content">
-      <h3 data-i18n="10,000+ Happy Guests">
-       10,000+ Happy Guests
-      </h3>
-      <p data-i18n="choose-desc-2">
-       Thousands of successful medical journeys built on trust,
-                    honesty and compassionate care.
-      </p>
-      </div>
-     </div>
-     <!-- Card 3 -->
-     <div class="choose-card reveal">
-      <img alt="15+ Years of Experience" src="assets/ld.jpg"/>
-      <div class="choose-card-content">
-      <h3 data-i18n="Leading Hospitals">
-       Leading Hospitals
-      </h3>
-      <p data-i18n="choose-desc-3">
-       We coordinate with reputed hospitals and specialists across
-                    Kerala to provide quality healthcare.
-      </p>
-      </div>
-     </div>
-     <!-- Card 4 -->
-     <div class="choose-card reveal">
-      <img alt="15+ Years of Experience" src="assets/lan.jpg"/>
-      <div class="choose-card-content">
-      <h3 data-i18n="Arabic Support">
-       Arabic Support
-      </h3>
-      <p data-i18n="choose-desc-4">
-       Friendly communication and language assistance throughout
-                    your medical journey.
-      </p>
-      </div>
-     </div>
-     <!-- Card 5 -->
-     <div class="choose-card reveal">
-      <img alt="15+ Years of Experience" src="assets/ass.jpg"/>
-      <div class="choose-card-content">
-      <h3 data-i18n="Complete Travel Assistance">
-       Complete Travel Assistance
-      </h3>
-      <p data-i18n="choose-desc-5">
-       Airport pickup, accommodation, transportation and medical
-                    coordination under one roof.
-      </p>
-      </div>
-     </div>
-     <!-- Card 6 -->
-     <div class="choose-card reveal">
-      <img alt="15+ Years of Experience" src="assets/kk.jpg"/>
-      <div class="choose-card-content">
-      <h3 data-i18n="Personal Care">
-       Personal Care
-      </h3>
-      <p data-i18n="choose-desc-6">
-       Every guest is treated with dignity, respect and genuine
-                    hospitality inspired by Kerala's traditions.
-      </p>
-      </div>
-     </div>
-    </div>
-   </div>
-  </section>
+
+</section>
   <!-- =========================================
      OUR SERVICES
 ========================================= -->
-  <section class="services">
-   <div class="container">
-    <div class="section-heading reveal">
-     <span class="section-tag" data-i18n="OUR SERVICES">
-      OUR SERVICES
-     </span>
-     <h2 data-i18n="Complete Medical Tourism Support">
-      Complete Medical Tourism Support
-     </h2>
-     <p data-i18n="services-desc">
-      Everything you need for a smooth, comfortable and stress-free medical journey under one roof.
-     </p>
+<!-- =========================================
+     OUR SERVICES
+========================================= -->
+
+<section class="services">
+
+    <div class="container">
+
+        <div class="section-heading reveal">
+
+            <span class="section-tag" data-i18n="OUR SERVICES">
+                OUR SERVICES
+            </span>
+
+            <h2 data-i18n="Complete Medical Tourism Support">
+                Complete Medical Tourism Support
+            </h2>
+
+            <p data-i18n="services-desc">
+                Everything you need for a smooth, comfortable and
+                stress-free medical journey under one roof.
+            </p>
+
+        </div>
+
+
+        <div class="services-grid">
+
+
+            <!-- =========================================
+                 CARD 1
+            ========================================== -->
+
+            <div class="service-card reveal">
+
+                <img
+                    alt="Medical Consultation"
+                    data-i18n-alt="Medical Consultation"
+                    src="{% static 'assets/Card-bg/medicalcon.jpg' %}"
+                >
+
+                <div class="service-content">
+
+                    <h3 data-i18n="Medical Consultation">
+                        Medical Consultation
+                    </h3>
+
+                    <p data-i18n="service-desc-1">
+                        Consultation with specialists before your
+                        arrival for better treatment planning.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- =========================================
+                 CARD 2
+            ========================================== -->
+
+            <div class="service-card reveal">
+
+                <img
+                    alt="Hospital Coordination"
+                    data-i18n-alt="Hospital Coordination"
+                    src="{% static 'assets/Card-bg/hospitalcord.jpg' %}"
+                >
+
+                <div class="service-content">
+
+                    <h3 data-i18n="Hospital Coordination">
+                        Hospital Coordination
+                    </h3>
+
+                    <p data-i18n="service-desc-2">
+                        Seamless coordination with leading hospitals
+                        and doctors across Kerala.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- =========================================
+                 CARD 3
+            ========================================== -->
+
+            <div class="service-card reveal">
+
+                <img
+                    alt="Airport Reception"
+                    data-i18n-alt="Airport Reception"
+                    src="{% static 'assets/Card-bg/reception.jpg' %}"
+                >
+
+                <div class="service-content">
+
+                    <h3 data-i18n="Airport Reception">
+                        Airport Reception
+                    </h3>
+
+                    <p data-i18n="service-desc-3">
+                        Warm airport welcome with comfortable
+                        transfers to your accommodation.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- =========================================
+                 CARD 4
+            ========================================== -->
+
+            <div class="service-card reveal">
+
+                <img
+                    alt="Accommodation"
+                    data-i18n-alt="Accommodation"
+                    src="{% static 'assets/Card-bg/accomodation.jpg' %}"
+                >
+
+                <div class="service-content">
+
+                    <h3 data-i18n="Accommodation">
+                        Accommodation
+                    </h3>
+
+                    <p data-i18n="service-desc-4">
+                        Comfortable stays carefully selected for
+                        convenience and peace of mind.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- =========================================
+                 CARD 5
+            ========================================== -->
+
+            <div class="service-card reveal">
+
+                <img
+                    alt="Language Assistance"
+                    data-i18n-alt="Language Assistance"
+                    src="{% static 'assets/Card-bg/languageassist.jpg' %}"
+                >
+
+                <div class="service-content">
+
+                    <h3 data-i18n="Language Assistance">
+                        Language Assistance
+                    </h3>
+
+                    <p data-i18n="service-desc-5">
+                        Arabic and multilingual support throughout
+                        your medical journey.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- =========================================
+                 CARD 6
+            ========================================== -->
+
+            <div class="service-card reveal">
+
+                <img
+                    alt="Local Transportation"
+                    data-i18n-alt="Local Transportation"
+                    src="{% static 'assets/Card-bg/transport.jpg' %}"
+                >
+
+                <div class="service-content">
+
+                    <h3 data-i18n="Local Transportation">
+                        Local Transportation
+                    </h3>
+
+                    <p data-i18n="service-desc-6">
+                        Safe, reliable transportation for hospital
+                        visits and local travel.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- =========================================
+                 CARD 7
+            ========================================== -->
+
+            <div class="service-card reveal">
+
+                <img
+                    alt="Tourism"
+                    data-i18n-alt="Tourism"
+                    src="{% static 'assets/Card-bg/ptnt.jpg' %}"
+                >
+
+                <div class="service-content">
+
+                    <h3 data-i18n="Tourism &amp; Sightseeing">
+                        Tourism &amp; Sightseeing
+                    </h3>
+
+                    <p data-i18n="service-desc-7">
+                        Discover Kerala's beautiful destinations
+                        during your recovery.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- =========================================
+                 CARD 8
+            ========================================== -->
+
+            <div class="service-card reveal">
+
+                <img
+                    alt="Post Treatment"
+                    data-i18n-alt="Post Treatment"
+                    src="{% static 'assets/Card-bg/abcd.jpg' %}"
+                >
+
+                <div class="service-content">
+
+                    <h3 data-i18n="Post-Treatment Support">
+                        Post-Treatment Support
+                    </h3>
+
+                    <p data-i18n="service-desc-8">
+                        Continued assistance and follow-up care
+                        after your treatment.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
     </div>
-    <div class="services-grid">
-     <!-- Card 1 -->
-     <div class="service-card reveal">
-      <img alt="Medical Consultation" data-i18n-alt="Medical Consultation" src="assets/Card-bg/medicalcon.jpg"/>
-      <div class="service-content">
-       <h3 data-i18n="Medical Consultation">
-        Medical Consultation
-       </h3>
-       <p data-i18n="service-desc-1">
-        Consultation with specialists before your arrival for better treatment planning.
-       </p>
-      </div>
-     </div>
-     <!-- Card 2 -->
-     <div class="service-card reveal">
-      <img alt="Hospital Coordination" data-i18n-alt="Hospital Coordination" src="assets/Card-bg/hospitalcord.jpg"/>
-      <div class="service-content">
-       <h3 data-i18n="Hospital Coordination">
-        Hospital Coordination
-       </h3>
-       <p data-i18n="service-desc-2">
-        Seamless coordination with leading hospitals and doctors across Kerala.
-       </p>
-      </div>
-     </div>
-     <!-- Card 3 -->
-     <div class="service-card reveal">
-      <img alt="Airport Reception" data-i18n-alt="Airport Reception" src="assets/Card-bg/reception.jpg"/>
-      <div class="service-content">
-       <h3 data-i18n="Airport Reception">
-        Airport Reception
-       </h3>
-       <p data-i18n="service-desc-3">
-        Warm airport welcome with comfortable transfers to your accommodation.
-       </p>
-      </div>
-     </div>
-     <!-- Card 4 -->
-     <div class="service-card reveal">
-      <img alt="Accommodation" data-i18n-alt="Accommodation" src="assets/Card-bg/accomodation.jpg"/>
-      <div class="service-content">
-       <h3 data-i18n="Accommodation">
-        Accommodation
-       </h3>
-       <p data-i18n="service-desc-4">
-        Comfortable stays carefully selected for convenience and peace of mind.
-       </p>
-      </div>
-     </div>
-     <!-- Card 5 -->
-     <div class="service-card reveal">
-      <img alt="Language Assistance" data-i18n-alt="Language Assistance" src="assets/Card-bg/languageassist.jpg"/>
-      <div class="service-content">
-       <h3 data-i18n="Language Assistance">
-        Language Assistance
-       </h3>
-       <p data-i18n="service-desc-5">
-        Arabic and multilingual support throughout your medical journey.
-       </p>
-      </div>
-     </div>
-     <!-- Card 6 -->
-     <div class="service-card reveal">
-      <img alt="Local Transportation" data-i18n-alt="Local Transportation" src="assets/Card-bg/transport.jpg"/>
-      <div class="service-content">
-       <h3 data-i18n="Local Transportation">
-        Local Transportation
-       </h3>
-       <p data-i18n="service-desc-6">
-        Safe, reliable transportation for hospital visits and local travel.
-       </p>
-      </div>
-     </div>
-     <!-- Card 7 -->
-     <div class="service-card reveal">
-      <img alt="Tourism" data-i18n-alt="Tourism" src="assets/Card-bg/ptnt.jpg"/>
-      <div class="service-content">
-       <h3 data-i18n="Tourism &amp; Sightseeing">
-        Tourism &amp; Sightseeing
-       </h3>
-       <p data-i18n="service-desc-7">
-        Discover Kerala's beautiful destinations during your recovery.
-       </p>
-      </div>
-     </div>
-     <!-- Card 8 -->
-     <div class="service-card reveal">
-      <img alt="Post Treatment" data-i18n-alt="Post Treatment" src="assets/Card-bg/abcd.jpg"/>
-      <div class="service-content">
-       <h3 data-i18n="Post-Treatment Support">
-        Post-Treatment Support
-       </h3>
-       <p data-i18n="service-desc-8">
-        Continued assistance and follow-up care after your treatment.
-       </p>
-      </div>
-     </div>
-    </div>
-   </div>
-  </section>
+
+</section>
   <!-- =========================================
      OUR JOURNEY IN NUMBERS
 ========================================= -->
@@ -551,7 +846,7 @@ OUR STORY
        while maintaining the same values of compassion,
                     transparency and hospitality.
       </p>
-      <a class="story-btn" data-i18n="Read Our Complete Story" href="about.html">
+      <a class="story-btn" data-i18n="Read Our Complete Story" href="{% url 'about' %}">
        Read Our Complete Story
        <i class="fa-solid fa-arrow-right">
        </i>
@@ -559,7 +854,7 @@ OUR STORY
      </div>
      <!-- Right -->
      <div class="story-image reveal">
-      <img alt="Khair Allah Medical Tourism" data-i18n-alt="Khair Allah Medical Tourism" src="assets/Founder.jpeg"/>
+      <img alt="Khair Allah Medical Tourism" data-i18n-alt="Khair Allah Medical Tourism" src="{% static 'assets/Founder.jpeg' %}"/>
       <div class="floating-box">
        <h3>
         2011
@@ -610,11 +905,9 @@ OUR STORY
   <section class="philosophy">
    <div class="container">
     <div class="philosophy-content reveal">
-     <span class="section-tag" data-i18n="OUR PHILOSOPHY">
-      OUR PHILOSOPHY
-     </span>
+     
      <h2>
-      "Atithi Devo Bhava"
+      "ATHITHI DEVO BHAVA"
      </h2>
      <h3 data-i18n="The Guest is God">
       The Guest is God
@@ -635,9 +928,7 @@ CTA
   <section class="cta">
    <div class="container">
     <div class="cta-box reveal">
-     <span class="section-tag" data-i18n="LET'S PLAN YOUR VISIT">
-      LET'S PLAN YOUR VISIT
-     </span>
+     
      <h2 data-i18n="Ready to Begin Your Healing Journey?">
       Ready to Begin Your Healing Journey?
      </h2>
@@ -646,7 +937,7 @@ CTA
                 plan a safe, comfortable, and successful medical trip to Kerala.
      </p>
      <div class="cta-buttons">
-      <a class="btn-primary" data-i18n="WhatsApp Us" href="https://wa.me/919895099669">
+      <a class="btn-primary" data-i18n="WhatsApp Us" href="https://wa.me/+919895099665">
        <i class="fa-brands fa-whatsapp">
        </i>
        WhatsApp Us
@@ -669,7 +960,7 @@ FOOTER
     <div class="footer-grid">
      <!-- Company -->
      <div class="footer-column">
-      <img alt="Khair Allah Medical Tourism" class="footer-logo" data-i18n-alt="Khair Allah Medical Tourism" src="assets/about-company.jpg"/>
+      <img alt="Khair Allah Medical Tourism" class="footer-logo" data-i18n-alt="Khair Allah Medical Tourism" src="{% static 'assets/about-company.jpg' %}"/>
       <p data-i18n="footer-desc">
        Khair Allah Medical Tourism connects international clients
                     with trusted hospitals and healthcare services in Kerala,
@@ -680,7 +971,7 @@ FOOTER
         <i class="fa-brands fa-instagram">
         </i>
        </a>
-       <a href="https://wa.me/919895099669" target="_blank">
+       <a href="https://wa.me/+919895099665" target="_blank">
         <i class="fa-brands fa-whatsapp">
         </i>
        </a>
@@ -697,32 +988,32 @@ FOOTER
       </h3>
       <ul>
        <li>
-        <a data-i18n="Home" href="index.html">
+        <a data-i18n="Home" href="{% url 'home' %}">
          Home
         </a>
        </li>
        <li>
-        <a data-i18n="About" href="about.html">
+        <a data-i18n="About" href="{% url 'about' %}">
          About
         </a>
        </li>
        <li>
-        <a data-i18n="Medical" href="medical.html">
+        <a data-i18n="Medical" href="{% url 'medical' %}">
          Medical
         </a>
        </li>
        <li>
-        <a data-i18n="Tourism" href="tourism.html">
+        <a data-i18n="Tourism" href="{% url 'tourism' %}">
          Tourism
         </a>
        </li>
        <li>
-        <a data-i18n="Clients" href="clients.html">
+        <a data-i18n="Clients" href="{% url 'clients' %}">
          Clients
         </a>
        </li>
        <li>
-        <a data-i18n="Contact" href="contact.html">
+        <a data-i18n="Contact" href="{% url 'contact' %}">
          Contact
         </a>
        </li>
@@ -764,22 +1055,34 @@ FOOTER
        </i>
        <span data-i18n-html="footer-address">
         Nettoor, Maradu,
-        <br/>
+        
         Ernakulam, Kerala - 682040
        </span>
       </p>
+
+
       <p>
-       <i class="fa-solid fa-phone">
-       </i>
-       <a href="tel:+919895099669">
-        +91 98950 99669
-       </a>
-      </p>
+    <i class="fa-solid fa-phone"></i>
+    <a href="tel:+919895099665">+91 98950 99665</a>
+    <span class="footer-phone-label">For Enquiry</span>
+</p>
+
+      <p>
+    <i class="fa-solid fa-phone"></i>
+    <a href="tel:+919895077669">+91 98950 77669</a>
+    <span class="footer-phone-label">Guest Relation Executive</span>
+</p>
+
+<p>
+    <i class="fa-solid fa-phone"></i>
+    <a href="tel:+919778299669">+91 97782 99669</a>
+    <span class="footer-phone-label">Corporate Contact</span>
+</p>
       <p>
        <i class="fa-solid fa-envelope">
        </i>
        <a href="mailto:info@khairallah.in">
-        info@khairallah.in
+            info@khairallah.in
        </a>
       </p>
      </div>
@@ -790,11 +1093,11 @@ FOOTER
       © 2026 Khair Allah Medical Tourism. All Rights Reserved.
      </p>
      <div>
-      <a data-i18n="Privacy Policy" href="privacy.html">
+      <a data-i18n="Privacy Policy" href="#">
        Privacy Policy
       </a>
       |
-      <a data-i18n="Terms &amp; Conditions" href="terms.html">
+      <a data-i18n="Terms &amp; Conditions" href="{% url 'terms' %}">
        Terms &amp; Conditions
       </a>
      </div>
@@ -916,7 +1219,19 @@ FOOTER
       setLanguage(localStorage.getItem('khairAllahLanguage') || 'en');
   });
   </script>
-  <script src="js/main.js"></script>
-  <script src="js/language.js"></script>
+  <script src="{% static 'js/main.js' %}"></script>
+  <script src="{% static 'js/language.js' %}"></script>
+  <script src="{% static 'js/hero.js' %}"></script>
+ 
+<!-- ================= FLOATING WHATSAPP BUTTON ================= -->
+<a href="https://wa.me/+919895099665"
+   class="whatsapp-float"
+   target="_blank"
+   rel="noopener noreferrer"
+   aria-label="Chat on WhatsApp">
+    <i class="fa-brands fa-whatsapp"></i>
+</a>
+
+</body>
 </body>
 </html>
