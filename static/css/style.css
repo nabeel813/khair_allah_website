@@ -1508,8 +1508,8 @@ WHY CHOOSE US
     font-size: 18px;
     line-height: 1.8;
 
-    text-align: justify;
-    text-align-last: center;
+    text-align: center;
+    text-wrap: balance;
 }
 
 
@@ -1623,7 +1623,7 @@ WHY CHOOSE US
     margin: 0;
 
     text-align: left;
-    text-wrap: pretty;
+    text-wrap: balance;
 }
 
 
@@ -6805,7 +6805,7 @@ OUR TEAM
     line-height: 1.85;
 
     text-align: center;
-    text-wrap: pretty;
+    text-wrap: balance;
 }
 .hero-description strong {
     color: #ffffff;
