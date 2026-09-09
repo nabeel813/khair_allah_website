@@ -29,7 +29,8 @@
 
     <img src="{% static 'assets/about-company.jpg' %}" alt="Khair Allah Logo" class="logo-mark">
     <span class="logo-text">
-        
+        <span class="logo-title">Khair Allah</span>
+        <span class="logo-subtitle">Medical &amp; Tourism</span>
     </span>
 
 
@@ -51,6 +52,15 @@
   Plan Your Visit
 </a>
 
+
+        <button class="mobile-toggle">
+
+            <i class="fa-solid fa-bars"></i>
+
+        </button>
+
+    </div>
+
         <div class="language-switcher" aria-label="Language selection">
 
             <i class="fa-solid fa-globe" aria-hidden="true"></i>
@@ -61,12 +71,6 @@
             <button id="lang-ar" class="lang-btn" type="button">العربية</button>
 
         </div>
-
-        <button class="mobile-toggle">
-
-            <i class="fa-solid fa-bars"></i>
-
-        </button>
 
     </div>
 
@@ -618,7 +622,7 @@
                     <div class="footer-social">
 
 
-                        
+                        <a
                             href="https://instagram.com/khairallah_kochi"
                             target="_blank">
 
@@ -627,7 +631,7 @@
                         </a>
 
 
-                        
+                        <a
                             href="https://wa.me/+919895099665"
                             target="_blank">
 
@@ -636,7 +640,7 @@
                         </a>
 
 
-                        
+                        <a
                             href="mailto:info@khairallah.in">
 
                             <i class="fa-solid fa-envelope"></i>
@@ -817,8 +821,8 @@
 
                 <div>
 
-                    
-                       <a href="#"
+                    <a
+                        href="#"
                         data-i18n="Privacy Policy">
 
                         Privacy Policy
@@ -827,8 +831,8 @@
 
                     |
 
-                    
-                       <a href="{% url 'terms' %}"
+                    <a
+                        href="{% url 'terms' %}"
                         data-i18n="Terms & Conditions">
 
                         Terms & Conditions
@@ -861,6 +865,8 @@
    aria-label="Chat on WhatsApp">
     <i class="fa-brands fa-whatsapp"></i>
 </a>
+
+</body>
 
 </body>
 
