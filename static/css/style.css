@@ -201,6 +201,8 @@ Navbar
 
     transition:.4s;
 
+    white-space:nowrap;
+
 }
 
 .nav-menu a::after{
@@ -5867,46 +5869,6 @@ LOADER
 
 /* ---------- PAGE HEADER ---------- */
 
-.logistics-page-header {
-    position: relative;
-    background:
-        linear-gradient(
-            135deg,
-            rgba(4, 26, 46, 0.96),
-            rgba(6, 58, 99, 0.90)
-        );
-    min-height: 420px;
-    display: flex;
-    align-items: center;
-    overflow: hidden;
-}
-
-.logistics-page-header::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background:
-        radial-gradient(
-            circle at 20% 30%,
-            rgba(214, 179, 90, 0.10),
-            transparent 35%
-        ),
-        radial-gradient(
-            circle at 80% 70%,
-            rgba(15, 143, 115, 0.12),
-            transparent 40%
-        );
-    pointer-events: none;
-}
-
-.logistics-page-header .page-header-content {
-    position: relative;
-    z-index: 2;
-}
-
-.logistics-page-header h1 {
-    max-width: 900px;
-}
 
 
 /* ---------- MAIN LOGISTICS SECTION ---------- */
