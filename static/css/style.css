@@ -7990,4 +7990,15 @@ html[dir="rtl"] body.medical-page .service-content p {
    ========================================================================== */
 *{
     text-align: justify !important;
+    -webkit-hyphens: auto;
+    -ms-hyphens: auto;
+    hyphens: auto; /* fills short/narrow lines more evenly, reducing gaps */
+}
+
+/* Headings have very few words per line (often just 1-4), so justifying
+   them stretches spacing into ugly gaps instead of a clean paragraph
+   edge. Keep headings left-aligned; justify still applies to the
+   paragraph/body text underneath them. */
+h1, h2, h3, h4, h5, h6{
+    text-align: left !important;
 }
