@@ -871,7 +871,7 @@ document.addEventListener("DOMContentLoaded", () => {
     "Office Address",
 
 "contact.address":
-    "Khair Allah Medical Tourism Office<br>Nettoor, Maradu<br>Ernakulam, Kerala - 682040",
+    "Khair Allah Medical Tourism Office<br>Nettoor, Maradu<br>Ernakulam, Kerala – 682040",
 
 
 "contact.phone.title":
