@@ -7984,21 +7984,34 @@ html[dir="rtl"] body.medical-page .service-content p {
 
 
 /* ==========================================================================
-   Global text justification override
-   Forces justified text alignment across the entire site, superseding
-   the centered/left/right alignment rules defined above.
-   ========================================================================== */
-*{
-    text-align: justify !important;
-    -webkit-hyphens: auto;
-    -ms-hyphens: auto;
-    hyphens: auto; /* fills short/narrow lines more evenly, reducing gaps */
-}
+   Text justification (scoped)
+   ==========================================================================
+   Earlier attempt applied justify to every element site-wide, which broke
+   headings, narrow grid/card blurbs, and centered subtitles (they only fit
+   a few words per line, so justify stretched the spacing into ugly gaps).
 
-/* Headings have very few words per line (often just 1-4), so justifying
-   them stretches spacing into ugly gaps instead of a clean paragraph
-   edge. Keep headings left-aligned; justify still applies to the
-   paragraph/body text underneath them. */
-h1, h2, h3, h4, h5, h6{
-    text-align: left !important;
+   This site was originally built left-aligned by default everywhere, with
+   only a couple of deliberately centered subtitle blocks. Rather than fight
+   that, justify is now applied ONLY to the genuine long-form narrative /
+   legal paragraphs where it reads well (hero intro, About/Story narrative,
+   Philosophy text, Terms & Privacy pages). Everything else keeps its
+   original left/center design.
+   ========================================================================== */
+.hero p,
+.about-content p,
+.about-hero p,
+.story-content p,
+.philosophy p,
+.company-content p,
+.hospitality-content p,
+.logistics-introduction-content p,
+.logistics-trust-content p,
+.clients-about-content p,
+.timeline-content p,
+.leader-content p,
+.contact-banner p,
+.contact-cta p,
+.terms-box p,
+.future-box p{
+    text-align: justify !important;
 }
