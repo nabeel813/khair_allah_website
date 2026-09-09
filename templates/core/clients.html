@@ -29,8 +29,7 @@
 
     <img src="{% static 'assets/about-company.jpg' %}" alt="Khair Allah Logo" class="logo-mark">
     <span class="logo-text">
-        <span class="logo-title">Khair Allah</span>
-        <span class="logo-subtitle">Medical &amp; Tourism</span>
+        
     </span>
 
 
@@ -42,7 +41,7 @@
  <li><a href="{% url 'medical' %}" class="nav-highlight" data-i18n="Medical">Medical</a></li>
 <li><a href="{% url 'tourism' %}" class="nav-highlight" data-i18n="Tourism">Tourism</a></li>
   <li><a href="{% url 'logistics' %}" data-i18n="Logistics">Logistics</a></li>
-  <li><a href="{% url 'clients' %}" class="active" data-i18n="Clients">Clients</a></li>
+  <li><a href="{% url 'clients' %}" class="nav-highlight active" data-i18n="Clients">Clients</a></li>
   <li><a href="{% url 'terms' %}" data-i18n="Terms & Conditions">Terms</a></li>
   <li><a href="{% url 'contact' %}" data-i18n="Contact">Contact</a></li>
 </ul>
@@ -51,15 +50,6 @@
   <i class="fa-brands fa-whatsapp"></i>
   Plan Your Visit
 </a>
-
-
-        <button class="mobile-toggle">
-
-            <i class="fa-solid fa-bars"></i>
-
-        </button>
-
-    </div>
 
         <div class="language-switcher" aria-label="Language selection">
 
@@ -71,6 +61,12 @@
             <button id="lang-ar" class="lang-btn" type="button">العربية</button>
 
         </div>
+
+        <button class="mobile-toggle">
+
+            <i class="fa-solid fa-bars"></i>
+
+        </button>
 
     </div>
 
@@ -622,7 +618,7 @@
                     <div class="footer-social">
 
 
-                        <a
+                        
                             href="https://instagram.com/khairallah_kochi"
                             target="_blank">
 
@@ -631,7 +627,7 @@
                         </a>
 
 
-                        <a
+                        
                             href="https://wa.me/+919895099665"
                             target="_blank">
 
@@ -640,7 +636,7 @@
                         </a>
 
 
-                        <a
+                        
                             href="mailto:info@khairallah.in">
 
                             <i class="fa-solid fa-envelope"></i>
@@ -821,7 +817,7 @@
 
                 <div>
 
-                    <a
+                    
                         href="#"
                         data-i18n="Privacy Policy">
 
@@ -831,7 +827,7 @@
 
                     |
 
-                    <a
+                    
                         href="{% url 'terms' %}"
                         data-i18n="Terms & Conditions">
 
@@ -865,8 +861,6 @@
    aria-label="Chat on WhatsApp">
     <i class="fa-brands fa-whatsapp"></i>
 </a>
-
-</body>
 
 </body>
 
