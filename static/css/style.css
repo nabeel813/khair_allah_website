@@ -1622,8 +1622,8 @@ WHY CHOOSE US
 
     margin: 0;
 
-    text-align: justify;
-    text-align-last: left;
+    text-align: left;
+    text-wrap: pretty;
 }
 
 
@@ -6804,10 +6804,9 @@ OUR TEAM
     font-size: 1.05rem;
     line-height: 1.85;
 
-    text-align: justify;
-    text-align-last: center;
+    text-align: center;
+    text-wrap: pretty;
 }
-
 .hero-description strong {
     color: #ffffff;
     font-weight: 700;
