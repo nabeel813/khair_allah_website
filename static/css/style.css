@@ -3965,6 +3965,10 @@ padding:35px 25px;
 Clients Hero
 ==========================*/
 
+/*==========================
+Clients Hero
+==========================*/
+
 .clients-hero{
 
     position:relative;
@@ -3977,9 +3981,16 @@ Clients Hero
 
     overflow:hidden;
 
-    background:url("../assets/clients/placeholder.jpg") center center/cover no-repeat;
+    /* Same background as Medical page */
+    background:linear-gradient(
+        135deg,
+        var(--dark) 0%,
+        var(--primary) 55%,
+        #0B4A52 100%
+    );
 
 }
+
 
 .clients-overlay{
 
@@ -3987,12 +3998,8 @@ Clients Hero
 
     inset:0;
 
-    background:linear-gradient(
-        100deg,
-        rgba(4,26,46,.90),
-        rgba(6,58,99,.70),
-        rgba(6,58,99,.25)
-    );
+    /* No dark image overlay needed */
+    background:transparent;
 
 }
 
