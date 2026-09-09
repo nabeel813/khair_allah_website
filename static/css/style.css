@@ -8194,13 +8194,3 @@ html[dir="rtl"] body.medical-page .service-content p {
 }
 
 
-body, p, li, td, blockquote, div {
-  text-align: justify;
-  text-justify: inter-word;
-  hyphens: auto;
-}
-
-/* Keep headings and nav looking natural — justify usually looks bad on short lines */
-h1, h2, h3, h4, h5, h6, nav, .navbar, button, .btn {
-  text-align: left;
-}
