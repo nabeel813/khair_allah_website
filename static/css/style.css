@@ -378,11 +378,10 @@ body.arabic .hero h1{
 
 }
 
-body.arabic .hero p {
+body.arabic .hero p{
 
     line-height:2;
 
-    text-wrap: balance;
 }
 
 .hero-container{
@@ -520,7 +519,7 @@ body.arabic .hero p {
 
 }
 
-.hero p {
+.hero p{
 
     font-size:20px;
 
@@ -536,7 +535,6 @@ body.arabic .hero p {
 
     animation:fadeUp 1.2s ease .4s forwards;
 
-    text-wrap: balance;
 }
 
 .hero-buttons{
@@ -658,13 +656,12 @@ body.arabic .hero p {
 
 }
 
-.glass-card p {
+.glass-card p{
 
     font-size:14px;
 
     margin-top:8px;
 
-    text-wrap: balance;
 }
 
 /*==========================
@@ -1111,11 +1108,10 @@ Mobile Menu
 
 }
 
-.hero p {
+.hero p{
 
     font-size:18px;
 
-    text-wrap: balance;
 }
 
 .hero-buttons{
@@ -1178,11 +1174,10 @@ Mobile Menu
 
 }
 
-.hero p {
+.hero p{
 
     font-size:16px;
 
-    text-wrap: balance;
 }
 
 
@@ -1233,13 +1228,12 @@ body.arabic .hero h1{
 
 }
 
-body.arabic .hero p {
+body.arabic .hero p{
 
     max-width:100%;
 
     text-align:right;
 
-    text-wrap: balance;
 }
 
 body.arabic .hero-buttons{
@@ -1364,7 +1358,7 @@ ABOUT PREVIEW
 
 }
 
-.about-content p {
+.about-content p{
 
     font-size:18px;
 
@@ -1374,7 +1368,6 @@ ABOUT PREVIEW
 
     margin-bottom:25px;
 
-    text-wrap: balance;
 }
 
 .about-features{
@@ -1904,8 +1897,6 @@ OUR SERVICES
     line-height: 1.65;
 
     margin: 0;
-
-    text-wrap: balance;
 }
 /* ==========================================
    MEDICAL CARDS — ARABIC
@@ -1932,8 +1923,6 @@ body.arabic .service-content p {
     font-size: 16px;
 
     line-height: 1.9;
-
-    text-wrap: balance;
 }
 /* ==========================================
    HOVER
@@ -2027,9 +2016,7 @@ body.arabic .service-content p {
         font-size: 16px;
 
         line-height: 1.6;
-
-    text-wrap: balance;
-}
+    }
 
 }
 
@@ -2066,9 +2053,7 @@ body.arabic .service-content p {
         font-size: 15px;
 
         line-height: 1.65;
-
-    text-wrap: balance;
-}
+    }
 
 }
 
@@ -2179,7 +2164,7 @@ OUR JOURNEY IN NUMBERS
 
 }
 
-.stat-card p {
+.stat-card p{
 
     color:rgba(255,255,255,.9);
 
@@ -2187,7 +2172,6 @@ OUR JOURNEY IN NUMBERS
 
     font-size:17px;
 
-    text-wrap: balance;
 }
 
 @media(max-width:991px){
@@ -2248,7 +2232,7 @@ OUR STORY
 
 }
 
-.story-content p {
+.story-content p{
 
     font-size:18px;
 
@@ -2258,7 +2242,6 @@ OUR STORY
 
     margin-bottom:25px;
 
-    text-wrap: balance;
 }
 
 .story-image{
@@ -2409,7 +2392,7 @@ TRUST
 
 }
 
-.trust-box p {
+.trust-box p{
 
     font-size:22px;
 
@@ -2419,7 +2402,6 @@ TRUST
 
     margin-bottom:45px;
 
-    text-wrap: balance;
 }
 
 .supporters{
@@ -2456,11 +2438,10 @@ padding:40px 25px;
 
 }
 
-.trust-box p {
+.trust-box p{
 
 font-size:18px;
 
-    text-wrap: balance;
 }
 
 }
@@ -2517,7 +2498,7 @@ PHILOSOPHY
 
 }
 
-.philosophy p {
+.philosophy p{
 
     font-size:20px;
 
@@ -2525,7 +2506,6 @@ PHILOSOPHY
 
     color:rgba(255,255,255,.92);
 
-    text-wrap: balance;
 }
 /*==========================================
 CTA
@@ -2566,7 +2546,7 @@ CTA
 
 }
 
-.cta-box p {
+.cta-box p{
 
     font-size:19px;
 
@@ -2576,7 +2556,6 @@ CTA
 
     margin:auto;
 
-    text-wrap: balance;
 }
 
 .cta-buttons{
@@ -2823,7 +2802,7 @@ animation:fadeUp 1s;
 
 }
 
-.about-hero p {
+.about-hero p{
 
 font-size:20px;
 
@@ -2837,7 +2816,6 @@ margin-left:auto;
 
 margin-right:auto;
 
-    text-wrap: balance;
 }
 
 /*==========================================
@@ -3122,13 +3100,12 @@ COMPANY INTRODUCTION
 
 }
 
-.experience-box p {
+.experience-box p{
 
     font-size:15px;
 
     line-height:1.6;
 
-    text-wrap: balance;
 }
 
 .company-content h2{
@@ -3143,7 +3120,7 @@ COMPANY INTRODUCTION
 
 }
 
-.company-content p {
+.company-content p{
 
     color:#666;
 
@@ -3153,7 +3130,6 @@ COMPANY INTRODUCTION
 
     margin-bottom:20px;
 
-    text-wrap: balance;
 }
 
 .intro-highlights{
@@ -3361,7 +3337,7 @@ TIMELINE
 
 }
 
-.timeline-content p {
+.timeline-content p{
 
     color:#666;
 
@@ -3369,7 +3345,6 @@ TIMELINE
 
     font-size:17px;
 
-    text-wrap: balance;
 }
 
 @media(max-width:768px){
@@ -3508,7 +3483,7 @@ LEADERSHIP
 
 }
 
-.leader-content p {
+.leader-content p{
 
     color:#666;
 
@@ -3516,7 +3491,6 @@ LEADERSHIP
 
     font-size:16px;
 
-    text-wrap: balance;
 }
 
 @media(max-width:991px){
@@ -3645,13 +3619,12 @@ LEGACY
 
 }
 
-.legacy-card p {
+.legacy-card p{
 
     color:#666;
 
     line-height:1.9;
 
-    text-wrap: balance;
 }
 
 .legacy-quote{
@@ -3680,7 +3653,7 @@ LEGACY
 
 }
 
-.legacy-quote p {
+.legacy-quote p{
 
     font-size:22px;
 
@@ -3690,7 +3663,6 @@ LEGACY
 
     margin:auto;
 
-    text-wrap: balance;
 }
 
 .legacy-quote h4{
@@ -3719,11 +3691,10 @@ padding:45px 30px;
 
 }
 
-.legacy-quote p {
+.legacy-quote p{
 
 font-size:18px;
 
-    text-wrap: balance;
 }
 
 }
@@ -3792,7 +3763,7 @@ margin-bottom:25px;
 
 }
 
-.hospitality-content p {
+.hospitality-content p{
 
 font-size:18px;
 
@@ -3802,7 +3773,6 @@ color:#666;
 
 margin-bottom:20px;
 
-    text-wrap: balance;
 }
 
 @media(max-width:991px){
@@ -3849,7 +3819,7 @@ margin:25px 0;
 
 }
 
-.future-box p {
+.future-box p{
 
 font-size:19px;
 
@@ -3859,7 +3829,6 @@ color:#666;
 
 margin-bottom:25px;
 
-    text-wrap: balance;
 }
 
 /*==========================================
@@ -3942,7 +3911,7 @@ font-size:30px;
 
 }
 
-.terms-box p {
+.terms-box p{
 
 color:#666;
 
@@ -3950,7 +3919,6 @@ line-height:2;
 
 font-size:17px;
 
-    text-wrap: balance;
 }
 
 @media(max-width:768px){
@@ -4027,7 +3995,7 @@ Clients Hero
 
 }
 
-.clients-hero p {
+.clients-hero p{
 
     font-size:20px;
 
@@ -4037,7 +4005,6 @@ Clients Hero
 
     color:rgba(255,255,255,.92);
 
-    text-wrap: balance;
 }
 
 /*==========================
@@ -4100,7 +4067,7 @@ About Clients
 
 }
 
-.clients-about-content p {
+.clients-about-content p{
 
     font-size:18px;
 
@@ -4108,7 +4075,6 @@ About Clients
 
     color:#666;
 
-    text-wrap: balance;
 }
 
 .client-features{
@@ -4383,13 +4349,12 @@ Client Journey
 
 }
 
-.journey-card p {
+.journey-card p{
 
     color:#666;
 
     line-height:1.8;
 
-    text-wrap: balance;
 }
 
 @media(max-width:991px){
@@ -4437,7 +4402,7 @@ CONTACT BANNER
 
 }
 
-.contact-banner p {
+.contact-banner p{
 
     max-width:700px;
 
@@ -4449,7 +4414,6 @@ CONTACT BANNER
 
     color:rgba(255,255,255,.85);
 
-    text-wrap: balance;
 }
 
 @media(max-width:768px){
@@ -4466,11 +4430,10 @@ font-size:42px;
 
 }
 
-.contact-banner p {
+.contact-banner p{
 
 font-size:17px;
 
-    text-wrap: balance;
 }
 
 }
@@ -4559,12 +4522,10 @@ CONTACT INFORMATION
 
 }
 
-.contact-card p {
+.contact-card p{
     color:#666;
     line-height:1.8;
     margin-bottom:18px;
-
-    text-wrap: balance;
 }
 .contact-card .contact-address{
     text-align: left;
@@ -4659,7 +4620,7 @@ CONTACT FORM
 
 }
 
-.contact-form p {
+.contact-form p{
 
     color:#666;
 
@@ -4667,7 +4628,6 @@ CONTACT FORM
 
     line-height:1.8;
 
-    text-wrap: balance;
 }
 
 .contact-form form{
@@ -4874,7 +4834,7 @@ CONTACT CTA
 
 }
 
-.contact-cta p {
+.contact-cta p{
 
     max-width:700px;
 
@@ -4884,7 +4844,6 @@ CONTACT CTA
 
     line-height:1.8;
 
-    text-wrap: balance;
 }
 
 .cta-buttons{
@@ -4955,7 +4914,7 @@ FOOTER
 
 }
 
-.footer-column p {
+.footer-column p{
 
     color:#d8d8d8;
 
@@ -4963,7 +4922,6 @@ FOOTER
 
     margin-bottom:14px;
 
-    text-wrap: balance;
 }
 
 .footer-column h3{
@@ -5204,7 +5162,7 @@ LOADER
 
 }
 
-.loader-content p {
+.loader-content p{
 
     color:#666;
 
@@ -5212,7 +5170,6 @@ LOADER
 
     font-size:17px;
 
-    text-wrap: balance;
 }
 
 .loader-bar{
@@ -5408,8 +5365,6 @@ LOADER
     color: #596570;
     font-size: 17px;
     line-height: 1.9;
-
-    text-wrap: balance;
 }
 
 .logistics-introduction-content p:last-child {
@@ -5523,8 +5478,6 @@ LOADER
     color: #66727d;
     font-size: 16px;
     line-height: 1.8;
-
-    text-wrap: balance;
 }
 
 
@@ -5580,8 +5533,6 @@ LOADER
     color: #66727d;
     font-size: 17px;
     line-height: 1.85;
-
-    text-wrap: balance;
 }
 
 
@@ -5630,9 +5581,7 @@ LOADER
     .logistics-introduction-content p {
         font-size: 16px;
         line-height: 1.8;
-
-    text-wrap: balance;
-}
+    }
 
     .logistics-experience {
         max-width: 360px;
@@ -5659,9 +5608,7 @@ LOADER
 
     .logistics-card-content p {
         font-size: 15.5px;
-
-    text-wrap: balance;
-}
+    }
 
     .logistics-trust {
         grid-template-columns: 1fr;
@@ -5682,9 +5629,7 @@ LOADER
     .logistics-trust-content p {
         font-size: 16px;
         line-height: 1.8;
-
-    text-wrap: balance;
-}
+    }
 
 }
 
@@ -5984,9 +5929,7 @@ LOADER
     .logistics-introduction-content p {
         font-size: 16px;
         line-height: 1.8;
-
-    text-wrap: balance;
-}
+    }
 
     .logistics-experience {
         max-width: 360px;
@@ -6013,9 +5956,7 @@ LOADER
 
     .logistics-card-content p {
         font-size: 15.5px;
-
-    text-wrap: balance;
-}
+    }
 
     .logistics-trust {
         grid-template-columns: 1fr;
@@ -6036,9 +5977,7 @@ LOADER
     .logistics-trust-content p {
         font-size: 16px;
         line-height: 1.8;
-
-    text-wrap: balance;
-}
+    }
 
 }
 
@@ -6301,11 +6240,9 @@ NEON TAGLINE — Tourism Hero (main statement)
         font-size:34px;
     }
 
-    .about-hero p {
+    .about-hero p{
         font-size:16px;
-
-    text-wrap: balance;
-}
+    }
 
     .clients-hero{
         min-height:auto;
@@ -6317,11 +6254,9 @@ NEON TAGLINE — Tourism Hero (main statement)
         font-size:38px;
     }
 
-    .clients-hero p {
+    .clients-hero p{
         font-size:16px;
-
-    text-wrap: balance;
-}
+    }
 
 }
 
@@ -7038,8 +6973,6 @@ OUR TEAM
 
     font-size: 0.75rem;
     line-height: 1.35;
-
-    text-wrap: balance;
 }
 
 
@@ -7434,9 +7367,7 @@ html[dir="rtl"] .hero-background-image {
 
     .hero-stat-content p {
         font-size: 0.7rem;
-
-    text-wrap: balance;
-}
+    }
 
     .hero-scroll-indicator {
         display: none;
@@ -7645,8 +7576,6 @@ html[dir="rtl"] .tourism-hero p {
     font-size: 21px;
     line-height: 2;
     text-align: center;
-
-    text-wrap: balance;
 }
 
 /* ---------------------------------------------------------
@@ -7664,8 +7593,6 @@ html[dir="ltr"] .tourism-hero h1 {
     margin-left: auto;
     margin-right: auto;
     text-align: center;
-
-    text-wrap: balance;
 }
 
 
@@ -7758,9 +7685,7 @@ html[dir="ltr"] .tourism-hero h1 {
     html[dir="rtl"] .tourism-hero p {
         font-size: 18px;
         line-height: 2;
-
-    text-wrap: balance;
-}
+    }
 
 }
 
@@ -7823,9 +7748,7 @@ html[dir="ltr"] .tourism-hero h1 {
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
-
-    text-wrap: balance;
-}
+    }
 
 }
 
@@ -7858,9 +7781,7 @@ html[dir="ltr"] .tourism-hero h1 {
 
     .hero-stat-content p {
         font-size: 0.65rem;
-
-    text-wrap: balance;
-}
+    }
 
 }
 @media (min-width: 1101px) {
@@ -7898,8 +7819,6 @@ body.medical-page .service-content p {
     font-size: 15px;
     line-height: 1.6;
     margin: 0;
-
-    text-wrap: balance;
 }
 
 html[dir="rtl"] body.medical-page .service-content {
@@ -7915,8 +7834,6 @@ html[dir="rtl"] body.medical-page .service-content h3 {
 html[dir="rtl"] body.medical-page .service-content p {
     font-family: 'Amiri', serif;
     line-height: 1.9;
-
-    text-wrap: balance;
 }
 
 /*==================================================
@@ -8062,4 +7979,5 @@ html[dir="rtl"] body.medical-page .service-content p {
     }
 
 }
+
 
