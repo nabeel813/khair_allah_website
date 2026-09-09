@@ -1330,18 +1330,13 @@ ABOUT PREVIEW
 
 }
 
-.section-tag{
-
-    display:inline-block;
-
-    color:#0F8F73;
-
-    font-weight:700;
-
-    letter-spacing:2px;
-
-    margin-bottom:20px;
-
+.section-tag {
+    display: inline-block;
+    color: #0F8F73;
+    font-size: 17px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
 }
 
 .about-content h2{
