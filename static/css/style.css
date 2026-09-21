@@ -1743,6 +1743,12 @@ WHY CHOOSE US
 
 @media (max-width: 768px) {
 
+
+    .choose-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
     .section-tag {
         font-size: 42px;
     }
